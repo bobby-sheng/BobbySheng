@@ -1,0 +1,6 @@
+public
+themes/PaperMod/.git
+.hugo_build.lock
+.idea
+.DS_Store
+upload.sh

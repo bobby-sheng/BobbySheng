@@ -1,4 +1,4 @@
-baseURL: https://BobbySheng
+baseURL: https://github.com/bobby-sheng/BobbySheng
 languageCode: zh-cn # en-us
 title: Bobby Blog
 theme: PaperMod  # 主题名字，和themes文件夹下的一致

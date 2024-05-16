@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/BobbySheng/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=BobbySheng/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>🏗️ Blog | Bobby Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="记录一下本博客的搭建流程、各种优化、功能实现、以及一些踩到的坑">
+<meta name="author" content="Author:&nbsp;Bobby">
+<link rel="canonical" href="http://localhost:1313/BobbySheng/en/posts/blog/">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.bf23098b7a6e772bd8d8042fab463fc72741c292b4f7daa6acccee6953d46edc.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/BobbySheng/img/title.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/BobbySheng/img/title.png">
+<link rel="mask-icon" href="http://localhost:1313/BobbySheng/img/title.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/BobbySheng/en/posts/blog/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/BobbySheng/en/posts/blog/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta property="og:title" content="🏗️ Blog" />
+<meta property="og:description" content="记录一下本博客的搭建流程、各种优化、功能实现、以及一些踩到的坑" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/BobbySheng/en/posts/blog/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="🏗️ Blog"/>
+<meta name="twitter:description" content="记录一下本博客的搭建流程、各种优化、功能实现、以及一些踩到的坑"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "⌛ Thought",
+      "item": "http://localhost:1313/BobbySheng/en/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "🏗️ Blog",
+      "item": "http://localhost:1313/BobbySheng/en/posts/blog/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/BobbySheng/en/" accesskey="h" title="Bobby Blog (Alt + H)">
+                <img src="http://localhost:1313/BobbySheng/img/title.png" alt="" aria-label="logo"
+                    height="35">Bobby Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li class="menu-item">
+                <a href="http://localhost:1313/BobbySheng/en/search" title="🔍 Search (Alt &#43; /)" accesskey=/>
+                    <span>🔍 Search</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="http://localhost:1313/BobbySheng/en/posts" title="📜 Blog">
+                    <span>📜 Blog</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="http://localhost:1313/BobbySheng/en/archives" title="💾 History">
+                    <span>💾 History</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="http://localhost:1313/BobbySheng/en/about" title="🙋🏻‍♂️ About">
+                    <span>🙋🏻‍♂️ About</span>
+                    
+                </a>
+            
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/BobbySheng/en/posts/">⌛ Thought</a></div>
+    <h1>🏗️ Blog</h1>
+    <div class="post-description">
+        记录一下本博客的搭建流程、各种优化、功能实现、以及一些踩到的坑
+    </div>
+</header>
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        <div> 
+        </div>
+        <br>
+        <header class="entry-header">
+            <h2>
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                python文档读写方法 2022-07-14 · bobby 一、文档读写实用方法 1、readline()函数 解释：此函数读取文件默认打印第一行，后面可以接参数打印字符个数 with open(p, &#39;rt&#39;) as f: rows = f.readline() print rows 2、readlines()函数 file.readline()[index] 解释：此函数把文件作列表全部读取出来，可通过for循环获取每一行的值 with open(p, &#39;rt&#39;) as f: rows = f.readlines() for i,
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>0001-01-01
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>886字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>2分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div>
+    <a class="entry-link" aria-label="post link to " href="http://localhost:1313/BobbySheng/en/posts/blog/python%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99%E6%96%B9%E6%B3%95/"></a>
+</article>
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        <div> 
+        </div>
+        <br>
+        <header class="entry-header">
+            <h2>
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                Python离线安装包地址 2022-06-15 · bobby 1、py官方库 https://www.lfd.uci.edu/~gohlke/pythonlibs/ 2、pypc网站 https://pypi.org/project/ 3、py各大镜像库 https://pypi.tuna.tsinghua.edu.cn/simple http://mirrors.aliyun.com/pypi/simple/ http://pypi.douban.com/simple/ http://pypi.hustunique.com/ http://pypi.sdutlinux.org/ http://pypi.mirrors.ustc.edu.cn/
+                
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>0001-01-01
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>48字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>1分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div>
+    <a class="entry-link" aria-label="post link to " href="http://localhost:1313/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/"></a>
+</article>
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        <div> 
+        </div>
+        <br>
+        <header class="entry-header">
+            <h2>
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                Python集合详解 2022-07-27 · bobby 用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序 一、集合常用方法 1、长度len c={&#34;c&#34;,&#34;1&#34;,&#34;o&#34;,&#34;r&#34;} print len(c) #4 2、成员运算in和not in c={&#34;c&#34;,&#34;1&#34;,&#34;o&#34;,&#34;r&#34;} print &#34;c&#34; in c #True print &#34;b&#34; in c #False 3、|并集、union #两个集合去重复拼接 c={&#34;oen&#34;,&#34;tow&#34;,&#34;nike&#34;,&#34;bobby&#34;} b={&#34;three&#34;,&#34;four&#34;,&#34;nike&#34;,&#34;hello&#34;} print c|b print
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>0001-01-01
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>745字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>2分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div>
+    <a class="entry-link" aria-label="post link to " href="http://localhost:1313/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/"></a>
+</article>
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        <div> 
+        </div>
+        <br>
+        <header class="entry-header">
+            <h2>
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                压测需求定制计算方法 2022-07-15 · bobby 1、普通计算方法 计算公式：TPS= 总请求数 / 总时间 按照需求所示，在2019年第32周，有4.13万的浏览量，那么总请求数，我们可以认为估算为4.13万（1次浏览都至少对应1个请求） 总请求数 = 4.13 万请求数 = 41300 请求数 总时间：由于不知道每个请求的具体时间，我们按
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>0001-01-01
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>813字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>2分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div>
+    <a class="entry-link" aria-label="post link to " href="http://localhost:1313/BobbySheng/en/posts/blog/%E5%8E%8B%E6%B5%8B%E9%9C%80%E6%B1%82%E5%AE%9A%E5%88%B6%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/"></a>
+</article>
+<footer class="page-footer">
+    <nav class="pagination">
+        
+        
+        
+        <span class="numFirst">
+        <a class="pageFirst" href="http://localhost:1313/BobbySheng/en/posts/blog/">1</a>
+      </span>
+
+        <span class="pageNum">
+      <a class="pageNow" href="http://localhost:1313/BobbySheng/en/posts/blog/page/2/">2</a>
+    </span>
+
+        
+    </nav>
+</footer>
+</main>
+
+
+<footer class="footer">
+
+    <a href="https://gohugo.io/" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/frame-hugo-blue?style=flat&logo=hugo">
+    </a>
+    <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/theme-papermod-lightgrey?style=flat&logo=BookStack">
+    </a>
+
+    <br>
+
+    <span id="runtime_span"></span>
+    <script
+        type="text/javascript">function show_runtime() { window.setTimeout("show_runtime()", 1000); X = new Date("7/13/2021 1:00:00"); Y = new Date(); T = (Y.getTime() - X.getTime()); M = 24 * 60 * 60 * 1000; a = T / M; A = Math.floor(a); b = (a - A) * 24; B = Math.floor(b); c = (b - B) * 60; C = Math.floor((b - B) * 60); D = Math.floor((c - C) * 60); runtime_span.innerHTML = "网站已运行" + A + "天" + B + "小时" + C + "分" + D + "秒" } show_runtime();</script>
+    |
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container">
+        
+        总访客数:  <span id="busuanzi_value_site_uv"></span>
+        |
+        总访问量:  <span id="busuanzi_value_site_pv"></span>
+    </span>
+
+    <br>
+
+    <a href="https://beian.miit.gov.cn/" target="_blank" style="border-bottom:1px solid">Bobby</a>&nbsp;
+    |
+    <span>
+        Copyright
+        &copy;
+        2018-2024
+        <a href="http://localhost:1313/BobbySheng/en/" style="border-bottom:1px solid">Bobby Blog</a>
+    </span>
+
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+
+
+</body>
+
+</html>

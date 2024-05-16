@@ -1,9 +1,9 @@
 - id: prev_page
-  translation: "上一页"
+  translation: "Prev Page"
   # translation: "Prev Page"
 
 - id: next_page
-  translation: "下一页"
+  translation: "Next Page"
   # translation: "Next Page"
 
 - id: read_time
@@ -30,12 +30,12 @@
   # translation: "Home"
 
 - id: edit_post
-  translation: "编辑"
+  translation: "Edit_post"
 
 - id: code_copy
   translation: "📄copy"
   # translation: "copy"
 
 - id: code_copied
-  translation: "👌🏻已复制!"
+  translation: "👌🏻Code_copied!"
   # translation: "copied!"

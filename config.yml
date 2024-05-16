@@ -160,7 +160,7 @@ params:
 
   label:
     text: "Bobby Blog"
-    icon: "img/alipay.png"
+    icon: "img/title.png"
     iconHeight: 35
 
   analytics:
@@ -168,11 +168,11 @@ params:
       SiteVerificationTag: ""
 
   assets:
-    favicon: "img/avatar.gif"
-    favicon16x16: "img/avatar.gif"
-    favicon32x32: "img/avatar.gif"
-    apple_touch_icon: "img/avatar.gif"
-    safari_pinned_tab: "img/avatar.gif"
+    favicon: "img/title.png"
+    favicon16x16: "img/title.png"
+    favicon32x32: "img/title.png"
+    apple_touch_icon: "img/title.png"
+    safari_pinned_tab: "img/title.png"
 
   cover:
     hidden: false          # 隐藏cover图片，但是不在格式化数据中隐藏
@@ -189,7 +189,7 @@ params:
     keys: ["title", "permalink", "summary"]
 
   # footer配置
-  StartYear: 2020 # 底部开始年份
+  StartYear: 2018 # 底部开始年份
   FilingNo: Bobby # 底部备案号
   # PublicSecurityIconLink: 填自己的公安图标链接 # 填自己的公安图标链接,可用绝对路径，相对路径如 img/beian.png
   # PublicNetworkSecurity: 填自己的公网安备 # 底部公网安备号

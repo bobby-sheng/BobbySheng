@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/BobbySheng/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=BobbySheng/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Bobby Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Python列表方法详解 2022-07-21 · bobby 笔记背景 好记性不如烂笔头，在需要的时经常断片忘记基础方法，写这笔记目的一是加深印象，二是实在记不得也不需要去外网寻找找影响效率。 一、列表常用方法 1、索引取值-list[index] 按索引取值（正向取值&#43;反向取值），即可存也可以取 # list之索引取值 name_list">
+<meta name="author" content="Author:&nbsp;Bobby">
+<link rel="canonical" href="http://localhost:1313/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.bf23098b7a6e772bd8d8042fab463fc72741c292b4f7daa6acccee6953d46edc.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/BobbySheng/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js"
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://localhost:1313/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/BobbySheng/img/title.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/BobbySheng/img/title.png">
+<link rel="mask-icon" href="http://localhost:1313/BobbySheng/img/title.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Python列表方法详解 2022-07-21 · bobby 笔记背景 好记性不如烂笔头，在需要的时经常断片忘记基础方法，写这笔记目的一是加深印象，二是实在记不得也不需要去外网寻找找影响效率。 一、列表常用方法 1、索引取值-list[index] 按索引取值（正向取值&#43;反向取值），即可存也可以取 # list之索引取值 name_list" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/" /><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Python列表方法详解 2022-07-21 · bobby 笔记背景 好记性不如烂笔头，在需要的时经常断片忘记基础方法，写这笔记目的一是加深印象，二是实在记不得也不需要去外网寻找找影响效率。 一、列表常用方法 1、索引取值-list[index] 按索引取值（正向取值&#43;反向取值），即可存也可以取 # list之索引取值 name_list"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "⌛ Thought",
+      "item": "http://localhost:1313/BobbySheng/en/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "🏗️ Blog",
+      "item": "http://localhost:1313/BobbySheng/en/posts/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "",
+      "item": "http://localhost:1313/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "name": "",
+  "description": "Python列表方法详解 2022-07-21 · bobby 笔记背景 好记性不如烂笔头，在需要的时经常断片忘记基础方法，写这笔记目的一是加深印象，二是实在记不得也不需要去外网寻找找影响效率。 一、列表常用方法 1、索引取值-list[index] 按索引取值（正向取值+反向取值），即可存也可以取 # list之索引取值 name_list",
+  "keywords": [
+    
+  ],
+  "articleBody": "Python列表方法详解 2022-07-21 · bobby\n笔记背景 好记性不如烂笔头，在需要的时经常断片忘记基础方法，写这笔记目的一是加深印象，二是实在记不得也不需要去外网寻找找影响效率。\n一、列表常用方法 1、索引取值-list[index] 按索引取值（正向取值+反向取值），即可存也可以取\n# list之索引取值 name_list = ['nick', 'jason', 'tank', 'sean'] name_list[0] = 'nick handsom' 存入到第一个索引位置中 # name_list[1000] = 'tank sb' # 报错 #\"nick handsom\" pring name_list[0] 2、切片 切片操作基本表达式：[start_index：stop_index：step] start 值\n2.1、获取单个元素 list =[\"red\",\"green\",\"blue\",\"yellow\",\"white\",\"black\"] #red print(list[0]) # black print(list[-1]) 2.2、获取列表对象 list = [\"red\",\"green\",\"blue\",\"yellow\",\"white\",\"black\"] ''' 从左往右获取索引,['red', 'green', 'blue', 'yellow', 'white', 'black'] ''' print(list[:]) print(list[::]) print(list[::1]) ''' 从右往左获取索引（反向索引）,['black', 'white', 'yellow', 'blue', 'green', 'red'] ''' print(list[::-1]) 2.3、获取列表部分的值 （1）正向索引\nlist = [\"red\",\"green\",\"blue\",\"yellow\",\"white\",\"black\"] ''' 反向索引：step为负数 ''' # 正向索引：start_index为0到end_index为6 print(list[0:6]) # ['red', 'green', 'blue', 'yellow', 'white', 'black'] # start_index没有填写，默认从第一个开始,一直取到end_index=6 print(list[:6]) # ['red', 'green', 'blue', 'yellow', 'white', 'black'] # step没有填写，默认是1，start_index为0,一直取到end_index=2 print(list[0:2]) #['red', 'green'] # step没有填写，默认是1，start_index为1,一直取到end_index=4 print(list[1:4]) # ['green', 'blue', 'yellow'] # start_index为1,一直取到end_index=5，step是2 print(list[1:5:2]) # ['green', 'yellow'] （2）反向索引\nlist = [\"red\",\"green\",\"blue\",\"yellow\",\"white\",\"black\"] ''' 反向索引：step为负数 ''' print(\"反向索引=============\") # step=1，反向索引，从start_index=-6开始，一直取到end_index=0为止。 print(list[-6::]) #['red', 'green', 'blue', 'yellow', 'white', 'black'] # step=-1，反向索引，从start_index=3开始，一直取到end_index=0为止。 print(list[3:0:-1]) #['yellow', 'blue', 'green'] # step=-2，反向索引，从start_index=6开始，一直取到end_index=0为止。 print(list[6::-2]) #['black', 'yellow', 'green'] # step=-3，反向索引，从start_index=5开始，一直取到end_index=2为止。 print(list[5:2:-3]) #['black'] # step=-1，反向索引，从start_index=-3开始，一直取到end_index=-5为止。 print(list[-3:-5:-1]) #['yellow', 'blue'] # start_index \u003e end_index时，取出的结果为空 print(list[4:2]) #[] print(list[-5:-3:-1]) # [] 2.4、列表多层切片 '''多层切片''' list = [\"red\",\"green\",\"blue\",\"yellow\",\"white\",\"black\"] # 链式列表切片 print(list[:6][2:5][-1:]) '''上边的链式列表与下边的步骤是相等的''' list2 = list[:6] # ['red', 'green', 'blue', 'yellow', 'white', 'black'] print(list2) list3 = list2[2:5] # ['blue', 'yellow', 'white'] print(list3) list4 = list3[-1:] # ['white'] print(list4) 3、长度-len(list) # list之长度 name_list = ['nick', 'jason', 'tank', 'sean'] # 4 print(len(name_list)) # list之多维列表长度 name_list = ['nick', 'jason', 'tank', 'sean',[\"1\",\"2\",\"3\"]] # 3 print(len(name_list[4])) 4、成员运算in和not in # list之成员运算in和not in name_list = ['nick', 'jason', 'tank', 'sean'] #False print('tank sb' in name_list) #Ture print('nick handsome' not in name_list) 5、追加值-append（值） # list之追加值 name_list = ['nick', 'jason', 'tank', 'sean'] name_list.append('tank sb') #['nick', 'jason', 'tank', 'sean','tank sb'] print name_list 6、删除值-del list[index] # list之删除值 name_list = ['nick', 'jason', 'tank', 'sean'] del name_list[2] #['nick', 'jason', 'sean','tank sb'] print name_list 7、列表循环取值 # list之列表循环取值 name_list = ['nick', 'jason', 'tank', 'sean'] 第一种：for name in name_list: print(name) 第二种：li=[i for i in name_list] 二、列表内置方法 1、列表插入-insert(index) #使用方法insert(index,list) #注意：如果索引超出范围,则如果索引为正,则该项目将追加到末尾；如果索引为负,则将其追加到开头，没有例外. \u003e\u003e\u003e my_list = ['a', 'b'] \u003e\u003e\u003e my_list.insert(5, 'item') \u003e\u003e\u003e my_list ['a', 'b', 'item'] \u003e\u003e\u003e my_list = ['a', 'b'] \u003e\u003e\u003e my_list.insert(-3, 'item') \u003e\u003e\u003e my_list ['item', 'a', 'b'] 2、列表删除-pop(index) #使用方法 list.pop(),index为空默认删除最后一个值[-1] #注意：此方法会返回删除数据的值 name_list = ['nick', 'jason', 'tank', 'sean'] name_list.pop(1) #['nick', 'tank', 'sean'] print(name_list) 3、列表删除-remove(值) # 使用方法list.remove(值),会删除匹配到的第一个值 name_list = ['nick', 'jason', 'jason','tank', 'sean'] name_list.remove('jason') #['nick', 'jason','tank', 'sean'] print name_list 4、列表重复值统计-count(值) # 使用方法list.count(值),会统计列表中值的个数 name_list = ['nick', 'jason', 'jason','tank', 'sean'] # 2 print name_list.count('jason') 5、列表值的索引位置-index(值) # 使用方法list.index(值),会查找出列表中匹配到的第一个值的位置 name_list = ['nick', 'jason', 'jason','tank', 'sean'] # 1 print name_list.index('jason') 6、列表清除内容-clear() # 使用方法list.clear(),清除列表内容 name_list = ['nick', 'jason', 'jason','tank', 'sean'] name_list.clear() # [] print name_list 7、列表复制-copy() # 使用方法list.copy(),清除列表内容 name_list = ['nick', 'jason', 'jason','tank', 'sean'] name_list_copy=name_list.copy() # ['nick', 'jason', 'jason','tank', 'sean'] print name_list_copy 8、列表合并-extend(list2) # 使用方法list1.extend(list2),合并两个值列表为一个 name_list = ['nick', 'jason', 'jason','tank', 'sean'] name_list_copy=[\"nick_aaaa\"] name_list.extend(name_list_copy) # ['nick', 'jason', 'jason','tank', 'sean',\"nick_aaaa\"] print name_list 9、列表反转-reverse() # 使用方法list.reverse(),列表反转 name_list = ['nick', 'jason', 'jason','tank', 'sean'] name_list.reverse() # ['sean', 'tank', 'jason','jason', 'nick'] print name_list 10、列表排序-sort() # 使用方法list.sort(),使用sort列表的元素必须是同类型的 #列表内的元素，按照由小到大顺序进行排序。 list_val = [12,32,9,89,10,3,100,45,56] list_val.sort() # [3, 9, 10, 12, 32, 45, 56, 89, 100] print(list_val) #列表内的元素，按照由大到小顺序排序。 list_val = [12,32,9,89,10,3,100,45,56] list_val.sort(reverse=Ture) # [100, 89, 56, 45, 32, 12, 10, 9, 3] print(list_val) ",
+  "wordCount" : "2017",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Bobby"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bobby Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/BobbySheng/img/title.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/BobbySheng/en/" accesskey="h" title="Bobby Blog (Alt + H)">
+                <img src="http://localhost:1313/BobbySheng/img/title.png" alt="" aria-label="logo"
+                    height="35">Bobby Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li class="menu-item">
+                <a href="http://localhost:1313/BobbySheng/en/search" title="🔍 Search (Alt &#43; /)" accesskey=/>
+                    <span>🔍 Search</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="http://localhost:1313/BobbySheng/en/posts" title="📜 Blog">
+                    <span>📜 Blog</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="http://localhost:1313/BobbySheng/en/archives" title="💾 History">
+                    <span>💾 History</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="http://localhost:1313/BobbySheng/en/about" title="🙋🏻‍♂️ About">
+                    <span>🙋🏻‍♂️ About</span>
+                    
+                </a>
+            
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="http://localhost:1313/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/BobbySheng/en/posts/">⌛ Thought</a>&nbsp;»&nbsp;<a href="http://localhost:1313/BobbySheng/en/posts/blog/">🏗️ Blog</a></div>
+            <h1 class="post-title">
+                
+            </h1>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>0001-01-01
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2017字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>5分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.6.15/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "http://localhost:1313/BobbySheng/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId:  null , 
+                                region:  null , 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Catalogue</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#python%e5%88%97%e8%a1%a8%e6%96%b9%e6%b3%95%e8%af%a6%e8%a7%a3" aria-label="Python列表方法详解">Python列表方法详解</a><ul>
+                        
+                <li>
+                    <a href="#%e7%ac%94%e8%ae%b0%e8%83%8c%e6%99%af" aria-label="笔记背景">笔记背景</a></li>
+                <li>
+                    <a href="#%e4%b8%80%e5%88%97%e8%a1%a8%e5%b8%b8%e7%94%a8%e6%96%b9%e6%b3%95" aria-label="一、列表常用方法">一、列表常用方法</a><ul>
+                        
+                <li>
+                    <a href="#1%e7%b4%a2%e5%bc%95%e5%8f%96%e5%80%bc-listindex" aria-label="1、索引取值-list[index]">1、索引取值-list[index]</a></li>
+                <li>
+                    <a href="#2%e5%88%87%e7%89%87" aria-label="2、切片">2、切片</a><ul>
+                        
+                <li>
+                    <a href="#21%e8%8e%b7%e5%8f%96%e5%8d%95%e4%b8%aa%e5%85%83%e7%b4%a0" aria-label="2.1、获取单个元素">2.1、获取单个元素</a></li>
+                <li>
+                    <a href="#22%e8%8e%b7%e5%8f%96%e5%88%97%e8%a1%a8%e5%af%b9%e8%b1%a1" aria-label="2.2、获取列表对象">2.2、获取列表对象</a></li>
+                <li>
+                    <a href="#23%e8%8e%b7%e5%8f%96%e5%88%97%e8%a1%a8%e9%83%a8%e5%88%86%e7%9a%84%e5%80%bc" aria-label="2.3、获取列表部分的值">2.3、获取列表部分的值</a></li>
+                <li>
+                    <a href="#24%e5%88%97%e8%a1%a8%e5%a4%9a%e5%b1%82%e5%88%87%e7%89%87" aria-label="2.4、列表多层切片">2.4、列表多层切片</a></li></ul>
+                </li>
+                <li>
+                    <a href="#3%e9%95%bf%e5%ba%a6-lenlist" aria-label="3、长度-len(list)">3、长度-len(list)</a></li>
+                <li>
+                    <a href="#4%e6%88%90%e5%91%98%e8%bf%90%e7%ae%97in%e5%92%8cnot-in" aria-label="4、成员运算in和not in">4、成员运算in和not in</a></li>
+                <li>
+                    <a href="#5%e8%bf%bd%e5%8a%a0%e5%80%bc-append%e5%80%bc" aria-label="5、追加值-append（值）">5、追加值-append（值）</a></li>
+                <li>
+                    <a href="#6%e5%88%a0%e9%99%a4%e5%80%bc-del-listindex" aria-label="6、删除值-del list[index]">6、删除值-del list[index]</a></li>
+                <li>
+                    <a href="#7%e5%88%97%e8%a1%a8%e5%be%aa%e7%8e%af%e5%8f%96%e5%80%bc" aria-label="7、列表循环取值">7、列表循环取值</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e4%ba%8c%e5%88%97%e8%a1%a8%e5%86%85%e7%bd%ae%e6%96%b9%e6%b3%95" aria-label="二、列表内置方法">二、列表内置方法</a><ul>
+                        
+                <li>
+                    <a href="#1%e5%88%97%e8%a1%a8%e6%8f%92%e5%85%a5-insertindex" aria-label="1、列表插入-insert(index)">1、列表插入-insert(index)</a></li>
+                <li>
+                    <a href="#2%e5%88%97%e8%a1%a8%e5%88%a0%e9%99%a4-popindex" aria-label="2、列表删除-pop(index)">2、列表删除-pop(index)</a></li>
+                <li>
+                    <a href="#3%e5%88%97%e8%a1%a8%e5%88%a0%e9%99%a4-remove%e5%80%bc" aria-label="3、列表删除-remove(值)">3、列表删除-remove(值)</a></li>
+                <li>
+                    <a href="#4%e5%88%97%e8%a1%a8%e9%87%8d%e5%a4%8d%e5%80%bc%e7%bb%9f%e8%ae%a1-count%e5%80%bc" aria-label="4、列表重复值统计-count(值)">4、列表重复值统计-count(值)</a></li>
+                <li>
+                    <a href="#5%e5%88%97%e8%a1%a8%e5%80%bc%e7%9a%84%e7%b4%a2%e5%bc%95%e4%bd%8d%e7%bd%ae-index%e5%80%bc" aria-label="5、列表值的索引位置-index(值)">5、列表值的索引位置-index(值)</a></li>
+                <li>
+                    <a href="#6%e5%88%97%e8%a1%a8%e6%b8%85%e9%99%a4%e5%86%85%e5%ae%b9-clear" aria-label="6、列表清除内容-clear()">6、列表清除内容-clear()</a></li>
+                <li>
+                    <a href="#7%e5%88%97%e8%a1%a8%e5%a4%8d%e5%88%b6-copy" aria-label="7、列表复制-copy()">7、列表复制-copy()</a></li>
+                <li>
+                    <a href="#8%e5%88%97%e8%a1%a8%e5%90%88%e5%b9%b6-extendlist2" aria-label="8、列表合并-extend(list2)">8、列表合并-extend(list2)</a></li>
+                <li>
+                    <a href="#9%e5%88%97%e8%a1%a8%e5%8f%8d%e8%bd%ac-reverse" aria-label="9、列表反转-reverse()">9、列表反转-reverse()</a></li>
+                <li>
+                    <a href="#10%e5%88%97%e8%a1%a8%e6%8e%92%e5%ba%8f-sort" aria-label="10、列表排序-sort()">10、列表<strong>排序</strong>-sort()</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+            const id = encodeURI(element.getAttribute('id')).toLowerCase();
+            if (element === activeElement){
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+            } else {
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+            }
+        })
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h1 id="python列表方法详解">Python列表方法详解<a hidden class="anchor" aria-hidden="true" href="#python列表方法详解">#</a></h1>
+<p>2022-07-21 · bobby</p>
+<h2 id="笔记背景">笔记背景<a hidden class="anchor" aria-hidden="true" href="#笔记背景">#</a></h2>
+<p>好记性不如烂笔头，在需要的时经常断片忘记基础方法，写这笔记目的一是加深印象，二是实在记不得也不需要去外网寻找找影响效率。</p>
+<h2 id="一列表常用方法">一、列表常用方法<a hidden class="anchor" aria-hidden="true" href="#一列表常用方法">#</a></h2>
+<h3 id="1索引取值-listindex">1、索引取值-list[index]<a hidden class="anchor" aria-hidden="true" href="#1索引取值-listindex">#</a></h3>
+<p>按索引取值（正向取值+反向取值），即可存也可以取</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># list之索引取值</span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>name_list[<span style="color:#f99b15">0</span>] <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#39;nick handsom&#39;</span> 存入到第一个索引位置中
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># name_list[1000] = &#39;tank sb&#39;  # 报错</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#&#34;nick handsom&#34;</span>
+</span></span><span style="display:flex;"><span>pring name_list[<span style="color:#f99b15">0</span>]
+</span></span></code></pre></div><h3 id="2切片">2、切片<a hidden class="anchor" aria-hidden="true" href="#2切片">#</a></h3>
+<p>切片操作基本表达式：[start_index：stop_index：step] start 值</p>
+<h4 id="21获取单个元素">2.1、获取单个元素<a hidden class="anchor" aria-hidden="true" href="#21获取单个元素">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>list <span style="color:#5bc4bf">=</span>[<span style="color:#48b685">&#34;red&#34;</span>,<span style="color:#48b685">&#34;green&#34;</span>,<span style="color:#48b685">&#34;blue&#34;</span>,<span style="color:#48b685">&#34;yellow&#34;</span>,<span style="color:#48b685">&#34;white&#34;</span>,<span style="color:#48b685">&#34;black&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#red</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#f99b15">0</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># black</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>])
+</span></span></code></pre></div><h4 id="22获取列表对象">2.2、获取列表对象<a hidden class="anchor" aria-hidden="true" href="#22获取列表对象">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#34;red&#34;</span>,<span style="color:#48b685">&#34;green&#34;</span>,<span style="color:#48b685">&#34;blue&#34;</span>,<span style="color:#48b685">&#34;yellow&#34;</span>,<span style="color:#48b685">&#34;white&#34;</span>,<span style="color:#48b685">&#34;black&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">从左往右获取索引,[&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;yellow&#39;, &#39;white&#39;, &#39;black&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>print(list[:])
+</span></span><span style="display:flex;"><span>print(list[::])
+</span></span><span style="display:flex;"><span>print(list[::<span style="color:#f99b15">1</span>])
+</span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">从右往左获取索引（反向索引）,[&#39;black&#39;, &#39;white&#39;, &#39;yellow&#39;, &#39;blue&#39;, &#39;green&#39;, &#39;red&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>print(list[::<span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>])
+</span></span></code></pre></div><h4 id="23获取列表部分的值">2.3、获取列表部分的值<a hidden class="anchor" aria-hidden="true" href="#23获取列表部分的值">#</a></h4>
+<p>（1）正向索引</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#34;red&#34;</span>,<span style="color:#48b685">&#34;green&#34;</span>,<span style="color:#48b685">&#34;blue&#34;</span>,<span style="color:#48b685">&#34;yellow&#34;</span>,<span style="color:#48b685">&#34;white&#34;</span>,<span style="color:#48b685">&#34;black&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">反向索引：step为负数
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># 正向索引：start_index为0到end_index为6</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#f99b15">0</span>:<span style="color:#f99b15">6</span>]) <span style="color:#776e71"># [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;yellow&#39;, &#39;white&#39;, &#39;black&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># start_index没有填写，默认从第一个开始,一直取到end_index=6</span>
+</span></span><span style="display:flex;"><span>print(list[:<span style="color:#f99b15">6</span>]) <span style="color:#776e71"># [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;yellow&#39;, &#39;white&#39;, &#39;black&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># step没有填写，默认是1，start_index为0,一直取到end_index=2</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#f99b15">0</span>:<span style="color:#f99b15">2</span>])  <span style="color:#776e71">#[&#39;red&#39;, &#39;green&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># step没有填写，默认是1，start_index为1,一直取到end_index=4</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#f99b15">1</span>:<span style="color:#f99b15">4</span>])  <span style="color:#776e71"># [&#39;green&#39;, &#39;blue&#39;, &#39;yellow&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># start_index为1,一直取到end_index=5，step是2</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#f99b15">1</span>:<span style="color:#f99b15">5</span>:<span style="color:#f99b15">2</span>])  <span style="color:#776e71"># [&#39;green&#39;, &#39;yellow&#39;]</span>
+</span></span></code></pre></div><p>（2）反向索引</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#34;red&#34;</span>,<span style="color:#48b685">&#34;green&#34;</span>,<span style="color:#48b685">&#34;blue&#34;</span>,<span style="color:#48b685">&#34;yellow&#34;</span>,<span style="color:#48b685">&#34;white&#34;</span>,<span style="color:#48b685">&#34;black&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">反向索引：step为负数
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#48b685">&#34;反向索引=============&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># step=1，反向索引，从start_index=-6开始，一直取到end_index=0为止。</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#5bc4bf">-</span><span style="color:#f99b15">6</span>::])  <span style="color:#776e71">#[&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;yellow&#39;, &#39;white&#39;, &#39;black&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># step=-1，反向索引，从start_index=3开始，一直取到end_index=0为止。</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#f99b15">3</span>:<span style="color:#f99b15">0</span>:<span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>])  <span style="color:#776e71">#[&#39;yellow&#39;, &#39;blue&#39;, &#39;green&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># step=-2，反向索引，从start_index=6开始，一直取到end_index=0为止。</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#f99b15">6</span>::<span style="color:#5bc4bf">-</span><span style="color:#f99b15">2</span>])  <span style="color:#776e71">#[&#39;black&#39;, &#39;yellow&#39;, &#39;green&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># step=-3，反向索引，从start_index=5开始，一直取到end_index=2为止。</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#f99b15">5</span>:<span style="color:#f99b15">2</span>:<span style="color:#5bc4bf">-</span><span style="color:#f99b15">3</span>])  <span style="color:#776e71">#[&#39;black&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># step=-1，反向索引，从start_index=-3开始，一直取到end_index=-5为止。</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#5bc4bf">-</span><span style="color:#f99b15">3</span>:<span style="color:#5bc4bf">-</span><span style="color:#f99b15">5</span>:<span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>])  <span style="color:#776e71">#[&#39;yellow&#39;, &#39;blue&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># start_index &gt; end_index时，取出的结果为空</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#f99b15">4</span>:<span style="color:#f99b15">2</span>])  <span style="color:#776e71">#[]</span>
+</span></span><span style="display:flex;"><span>print(list[<span style="color:#5bc4bf">-</span><span style="color:#f99b15">5</span>:<span style="color:#5bc4bf">-</span><span style="color:#f99b15">3</span>:<span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>])  <span style="color:#776e71"># []</span>
+</span></span></code></pre></div><h4 id="24列表多层切片">2.4、列表多层切片<a hidden class="anchor" aria-hidden="true" href="#24列表多层切片">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#48b685">&#39;&#39;&#39;多层切片&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#34;red&#34;</span>,<span style="color:#48b685">&#34;green&#34;</span>,<span style="color:#48b685">&#34;blue&#34;</span>,<span style="color:#48b685">&#34;yellow&#34;</span>,<span style="color:#48b685">&#34;white&#34;</span>,<span style="color:#48b685">&#34;black&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># 链式列表切片</span>
+</span></span><span style="display:flex;"><span>print(list[:<span style="color:#f99b15">6</span>][<span style="color:#f99b15">2</span>:<span style="color:#f99b15">5</span>][<span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>:])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;&#39;&#39;上边的链式列表与下边的步骤是相等的&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>list2 <span style="color:#5bc4bf">=</span> list[:<span style="color:#f99b15">6</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;yellow&#39;, &#39;white&#39;, &#39;black&#39;]</span>
+</span></span><span style="display:flex;"><span>print(list2)
+</span></span><span style="display:flex;"><span>list3 <span style="color:#5bc4bf">=</span> list2[<span style="color:#f99b15">2</span>:<span style="color:#f99b15">5</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># [&#39;blue&#39;, &#39;yellow&#39;, &#39;white&#39;]</span>
+</span></span><span style="display:flex;"><span>print(list3)
+</span></span><span style="display:flex;"><span>list4 <span style="color:#5bc4bf">=</span> list3[<span style="color:#5bc4bf">-</span><span style="color:#f99b15">1</span>:]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># [&#39;white&#39;]</span>
+</span></span><span style="display:flex;"><span>print(list4)
+</span></span></code></pre></div><h3 id="3长度-lenlist">3、长度-len(list)<a hidden class="anchor" aria-hidden="true" href="#3长度-lenlist">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># list之长度</span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># 4</span>
+</span></span><span style="display:flex;"><span>print(len(name_list))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># list之多维列表长度</span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>,[<span style="color:#48b685">&#34;1&#34;</span>,<span style="color:#48b685">&#34;2&#34;</span>,<span style="color:#48b685">&#34;3&#34;</span>]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># 3</span>
+</span></span><span style="display:flex;"><span>print(len(name_list[<span style="color:#f99b15">4</span>]))
+</span></span></code></pre></div><h3 id="4成员运算in和not-in">4、成员运算in和not in<a hidden class="anchor" aria-hidden="true" href="#4成员运算in和not-in">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># list之成员运算in和not in</span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#False</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#48b685">&#39;tank sb&#39;</span> <span style="color:#5bc4bf">in</span> name_list)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#Ture</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#48b685">&#39;nick handsome&#39;</span> <span style="color:#5bc4bf">not</span> <span style="color:#5bc4bf">in</span> name_list)
+</span></span></code></pre></div><h3 id="5追加值-append值">5、追加值-append（值）<a hidden class="anchor" aria-hidden="true" href="#5追加值-append值">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># list之追加值</span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>name_list<span style="color:#5bc4bf">.</span>append(<span style="color:#48b685">&#39;tank sb&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#[&#39;nick&#39;, &#39;jason&#39;, &#39;tank&#39;, &#39;sean&#39;,&#39;tank sb&#39;]</span>
+</span></span><span style="display:flex;"><span>print name_list
+</span></span></code></pre></div><h3 id="6删除值-del-listindex">6、删除值-del list[index]<a hidden class="anchor" aria-hidden="true" href="#6删除值-del-listindex">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># list之删除值</span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">del</span> name_list[<span style="color:#f99b15">2</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#[&#39;nick&#39;, &#39;jason&#39;, &#39;sean&#39;,&#39;tank sb&#39;]</span>
+</span></span><span style="display:flex;"><span>print name_list
+</span></span></code></pre></div><h3 id="7列表循环取值">7、列表循环取值<a hidden class="anchor" aria-hidden="true" href="#7列表循环取值">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># list之列表循环取值</span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>第一种<span style="color:#ef6155">：</span><span style="color:#815ba4">for</span> name <span style="color:#5bc4bf">in</span> name_list:
+</span></span><span style="display:flex;"><span>    		print(name)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>第二种<span style="color:#ef6155">：</span>li<span style="color:#5bc4bf">=</span>[i <span style="color:#815ba4">for</span> i <span style="color:#5bc4bf">in</span> name_list]
+</span></span></code></pre></div><h2 id="二列表内置方法">二、列表内置方法<a hidden class="anchor" aria-hidden="true" href="#二列表内置方法">#</a></h2>
+<h3 id="1列表插入-insertindex">1、列表插入-insert(index)<a hidden class="anchor" aria-hidden="true" href="#1列表插入-insertindex">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#使用方法insert(index,list)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#注意：如果索引超出范围,则如果索引为正,则该项目将追加到末尾；如果索引为负,则将其追加到开头，没有例外.</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> my_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;a&#39;</span>, <span style="color:#48b685">&#39;b&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> my_list<span style="color:#5bc4bf">.</span>insert(<span style="color:#f99b15">5</span>, <span style="color:#48b685">&#39;item&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> my_list
+</span></span><span style="display:flex;"><span>[<span style="color:#48b685">&#39;a&#39;</span>, <span style="color:#48b685">&#39;b&#39;</span>, <span style="color:#48b685">&#39;item&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> my_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;a&#39;</span>, <span style="color:#48b685">&#39;b&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> my_list<span style="color:#5bc4bf">.</span>insert(<span style="color:#5bc4bf">-</span><span style="color:#f99b15">3</span>, <span style="color:#48b685">&#39;item&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> my_list
+</span></span><span style="display:flex;"><span>[<span style="color:#48b685">&#39;item&#39;</span>, <span style="color:#48b685">&#39;a&#39;</span>, <span style="color:#48b685">&#39;b&#39;</span>]
+</span></span></code></pre></div><h3 id="2列表删除-popindex">2、列表删除-pop(index)<a hidden class="anchor" aria-hidden="true" href="#2列表删除-popindex">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#使用方法 list.pop(),index为空默认删除最后一个值[-1]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#注意：此方法会返回删除数据的值</span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>name_list<span style="color:#5bc4bf">.</span>pop(<span style="color:#f99b15">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#[&#39;nick&#39;, &#39;tank&#39;, &#39;sean&#39;]</span>
+</span></span><span style="display:flex;"><span>print(name_list)
+</span></span></code></pre></div><h3 id="3列表删除-remove值">3、列表删除-remove(值)<a hidden class="anchor" aria-hidden="true" href="#3列表删除-remove值">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># 使用方法list.remove(值),会删除匹配到的第一个值</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>,<span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>name_list<span style="color:#5bc4bf">.</span>remove(<span style="color:#48b685">&#39;jason&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#[&#39;nick&#39;, &#39;jason&#39;,&#39;tank&#39;, &#39;sean&#39;]</span>
+</span></span><span style="display:flex;"><span>print name_list
+</span></span></code></pre></div><h3 id="4列表重复值统计-count值">4、列表重复值统计-count(值)<a hidden class="anchor" aria-hidden="true" href="#4列表重复值统计-count值">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># 使用方法list.count(值),会统计列表中值的个数</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>,<span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># 2</span>
+</span></span><span style="display:flex;"><span>print name_list<span style="color:#5bc4bf">.</span>count(<span style="color:#48b685">&#39;jason&#39;</span>)
+</span></span></code></pre></div><h3 id="5列表值的索引位置-index值">5、列表值的索引位置-index(值)<a hidden class="anchor" aria-hidden="true" href="#5列表值的索引位置-index值">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># 使用方法list.index(值),会查找出列表中匹配到的第一个值的位置</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>,<span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># 1</span>
+</span></span><span style="display:flex;"><span>print name_list<span style="color:#5bc4bf">.</span>index(<span style="color:#48b685">&#39;jason&#39;</span>)
+</span></span></code></pre></div><h3 id="6列表清除内容-clear">6、列表清除内容-clear()<a hidden class="anchor" aria-hidden="true" href="#6列表清除内容-clear">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># 使用方法list.clear(),清除列表内容</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>,<span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>name_list<span style="color:#5bc4bf">.</span>clear()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># []</span>
+</span></span><span style="display:flex;"><span>print name_list
+</span></span></code></pre></div><h3 id="7列表复制-copy">7、列表复制-copy()<a hidden class="anchor" aria-hidden="true" href="#7列表复制-copy">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># 使用方法list.copy(),清除列表内容</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>,<span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>name_list_copy<span style="color:#5bc4bf">=</span>name_list<span style="color:#5bc4bf">.</span>copy()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># [&#39;nick&#39;, &#39;jason&#39;, &#39;jason&#39;,&#39;tank&#39;, &#39;sean&#39;]</span>
+</span></span><span style="display:flex;"><span>print name_list_copy
+</span></span></code></pre></div><h3 id="8列表合并-extendlist2">8、列表合并-extend(list2)<a hidden class="anchor" aria-hidden="true" href="#8列表合并-extendlist2">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># 使用方法list1.extend(list2),合并两个值列表为一个</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>,<span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>name_list_copy<span style="color:#5bc4bf">=</span>[<span style="color:#48b685">&#34;nick_aaaa&#34;</span>]
+</span></span><span style="display:flex;"><span>name_list<span style="color:#5bc4bf">.</span>extend(name_list_copy)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># [&#39;nick&#39;, &#39;jason&#39;, &#39;jason&#39;,&#39;tank&#39;, &#39;sean&#39;,&#34;nick_aaaa&#34;]</span>
+</span></span><span style="display:flex;"><span>print name_list
+</span></span></code></pre></div><h3 id="9列表反转-reverse">9、列表反转-reverse()<a hidden class="anchor" aria-hidden="true" href="#9列表反转-reverse">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># 使用方法list.reverse(),列表反转</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name_list <span style="color:#5bc4bf">=</span> [<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>,<span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>]
+</span></span><span style="display:flex;"><span>name_list<span style="color:#5bc4bf">.</span>reverse()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># [&#39;sean&#39;, &#39;tank&#39;, &#39;jason&#39;,&#39;jason&#39;, &#39;nick&#39;]</span>
+</span></span><span style="display:flex;"><span>print name_list
+</span></span></code></pre></div><h3 id="10列表排序-sort">10、列表<strong>排序</strong>-sort()<a hidden class="anchor" aria-hidden="true" href="#10列表排序-sort">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># 使用方法list.sort(),使用sort列表的元素必须是同类型的</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#列表内的元素，按照由小到大顺序进行排序。</span>
+</span></span><span style="display:flex;"><span>list_val <span style="color:#5bc4bf">=</span> [<span style="color:#f99b15">12</span>,<span style="color:#f99b15">32</span>,<span style="color:#f99b15">9</span>,<span style="color:#f99b15">89</span>,<span style="color:#f99b15">10</span>,<span style="color:#f99b15">3</span>,<span style="color:#f99b15">100</span>,<span style="color:#f99b15">45</span>,<span style="color:#f99b15">56</span>]
+</span></span><span style="display:flex;"><span>list_val<span style="color:#5bc4bf">.</span>sort()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># [3, 9, 10, 12, 32, 45, 56, 89, 100]</span>
+</span></span><span style="display:flex;"><span>print(list_val)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71">#列表内的元素，按照由大到小顺序排序。</span>
+</span></span><span style="display:flex;"><span>list_val <span style="color:#5bc4bf">=</span> [<span style="color:#f99b15">12</span>,<span style="color:#f99b15">32</span>,<span style="color:#f99b15">9</span>,<span style="color:#f99b15">89</span>,<span style="color:#f99b15">10</span>,<span style="color:#f99b15">3</span>,<span style="color:#f99b15">100</span>,<span style="color:#f99b15">45</span>,<span style="color:#f99b15">56</span>]
+</span></span><span style="display:flex;"><span>list_val<span style="color:#5bc4bf">.</span>sort(reverse<span style="color:#5bc4bf">=</span>Ture)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># [100, 89, 56, 45, 32, 12, 10, 9, 3]</span>
+</span></span><span style="display:flex;"><span>print(list_val)
+</span></span></code></pre></div>
+
+        </div>
+        <div class="post-reward">
+            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
+                <div id="QR" style="opacity: 0;">
+                    <div id="wechat" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="wechat_qr" src="http://localhost:1313/BobbySheng/img/wechat_pay.png" alt="wechat_pay"></a>
+                        <p>微信</p>
+                    </div>
+                    <div id="alipay" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="alipay_qr" src="http://localhost:1313/BobbySheng/img/alipay.png" alt="alipay"></a>
+                        <p>支付宝</p>
+                    </div>
+                </div>
+                <button id="rewardButton"
+                        onclick="
+                    var qr = document.getElementById('QR');
+                    if (qr.style.opacity === '0') {
+                        qr.style.opacity='1';
+                    } else {
+                        qr.style.opacity='0'
+                    }"
+                >
+                    <span>🧧 鼓励</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/">
+    <span class="title">« Prev Page</span>
+    <br>
+    <span></span>
+  </a>
+  <a class="next" href="http://localhost:1313/BobbySheng/en/posts/blog/python%E5%AD%97%E5%85%B8%E8%AF%A6%E8%A7%A3/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span></span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+
+
+<div>
+    <div class="pagination__title">
+        <span class="pagination__title-h" style="font-size: 20px;">💬评论</span>
+        <hr />
+    </div>
+
+    <div id="tcomment"></div>
+
+    <script src="https://cdn.staticfile.org/twikoo/1.6.15/twikoo.all.min.js">
+    </script>
+    
+
+    
+
+    <script>
+        twikoo.init({
+            envId: "https://twikoo.Bobby.cn/", 
+            el: "#tcomment",
+            lang: 'zh-CN',
+            
+            path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+            
+            
+            
+            
+            
+            
+            
+        });
+    </script>
+
+</div>
+</article>
+</main>
+
+
+<footer class="footer">
+
+    <a href="https://gohugo.io/" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/frame-hugo-blue?style=flat&logo=hugo">
+    </a>
+    <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/theme-papermod-lightgrey?style=flat&logo=BookStack">
+    </a>
+
+    <br>
+
+    <span id="runtime_span"></span>
+    <script
+        type="text/javascript">function show_runtime() { window.setTimeout("show_runtime()", 1000); X = new Date("7/13/2021 1:00:00"); Y = new Date(); T = (Y.getTime() - X.getTime()); M = 24 * 60 * 60 * 1000; a = T / M; A = Math.floor(a); b = (a - A) * 24; B = Math.floor(b); c = (b - B) * 60; C = Math.floor((b - B) * 60); D = Math.floor((c - C) * 60); runtime_span.innerHTML = "网站已运行" + A + "天" + B + "小时" + C + "分" + D + "秒" } show_runtime();</script>
+    |
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container">
+        
+        总访客数:  <span id="busuanzi_value_site_uv"></span>
+        |
+        总访问量:  <span id="busuanzi_value_site_pv"></span>
+    </span>
+
+    <br>
+
+    <a href="https://beian.miit.gov.cn/" target="_blank" style="border-bottom:1px solid">Bobby</a>&nbsp;
+    |
+    <span>
+        Copyright
+        &copy;
+        2018-2024
+        <a href="http://localhost:1313/BobbySheng/en/" style="border-bottom:1px solid">Bobby Blog</a>
+    </span>
+
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '📄copy';
+
+        function copyingDone() {
+            copybutton.innerText = '👌🏻Code_copied!';
+            setTimeout(() => {
+                copybutton.innerText = '📄copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {
+            }
+            ;
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild === container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName === "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+
+</body>
+
+</html>

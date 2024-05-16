@@ -1,5 +1,5 @@
 ---
-title: "🏖️ 生活"
+title: "🏖️ Life"
 date: 2023-12-29
 lastmod: 2024-01-10
 tags:

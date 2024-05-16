@@ -1,5 +1,5 @@
 ---
-title: "🏗️ 建站"
+title: "🏗️ Blog"
 date: 2023-12-29
 lastmod: 2024-01-10
 tags:

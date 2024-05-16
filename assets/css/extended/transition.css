@@ -124,7 +124,7 @@ button#theme-toggle {
 /* .list {
 } */
 
-/*时间轴*/
+/*Timeline*/
 .archive-entry {
     -webkit-transition: box-shadow 0.4s ease, transform 0.4s ease;
     -moz-transition: box-shadow 0.4s ease, transform 0.4s ease;

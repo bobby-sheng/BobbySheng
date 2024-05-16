@@ -16,24 +16,24 @@
 - id: words
   translation:
     one : "word"
-    other: "{{ .Count }} 字"
+    other: "{{ .Count }} Char"
 
 - id: toc
-  translation: "文章目录"
+  translation: "Catalogue"
   # translation: "Table of Contents"
 
 - id: translations
   translation: "Translations"
 
 - id: home
-  translation: "主页"
+  translation: "Home"
   # translation: "Home"
 
 - id: edit_post
   translation: "编辑"
 
 - id: code_copy
-  translation: "📄复制"
+  translation: "📄copy"
   # translation: "copy"
 
 - id: code_copied

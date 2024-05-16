@@ -1,5 +1,5 @@
 ---
-title: "📚 文章"
+title: "⌛ Thought"
 date: 2023-12-29
 lastmod: 2024-01-10
 tags:

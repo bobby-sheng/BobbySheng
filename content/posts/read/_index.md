@@ -1,5 +1,5 @@
 ---
-title: "📖 阅读"
+title: "📖 Read"
 date: 2023-12-29
 lastmod: 2024-01-10
 tags:

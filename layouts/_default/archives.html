@@ -5,7 +5,7 @@
 
 <header class="page-header">
   <h1>
-    {{ .Title }} <sup class="archive-count-title" style="font-size: 20px; color: var(--secondary);">&nbsp;&nbsp; 文章总数 {{ $postCount }} </sup>
+    {{ .Title }} <sup class="archive-count-title" style="font-size: 20px; color: var(--secondary);">&nbsp;&nbsp;Total number of articles {{ $postCount }} </sup>
   </h1>
   {{- if .Description }}
   <div class="post-description">
@@ -24,46 +24,46 @@
 {{- if ne .Key "0001" }}
 <div class="archive-year">
   <h2 class="archive-year-header">
-    {{- replace .Key "0001" "" }} 年<sup class="archive-count">&nbsp;&nbsp; 年度文章数 {{ len .Pages }}</sup>
+    {{- replace .Key "0001" "" }} Year <sup class="archive-count">&nbsp;&nbsp; Annual Article Count {{ len .Pages }}</sup>
   </h2>
   {{- range .Pages.GroupByDate "January" }}
   <div class="archive-month">
     <h3 class="archive-month-header">
       {{- if eq .Key "December" }}
-      {{ "12月" }}
+      {{ "12 Month" }}
       {{- end }}
       {{- if eq .Key "November" }}
-      {{ "11月" }}
+      {{ "11 Month" }}
       {{- end }}
       {{- if eq .Key "October" }}
-      {{ "10月" }}
+      {{ "10 Month" }}
       {{- end }}
       {{- if eq .Key "September" }}
-      {{ "9月" }}
+      {{ "9 Month" }}
       {{- end }}
       {{- if eq .Key "August" }}
-      {{ "8月" }}
+      {{ "8 Month" }}
       {{- end }}
       {{- if eq .Key "July" }}
-      {{ "7月" }}
+      {{ "7 Month" }}
       {{- end }}
       {{- if eq .Key "June" }}
-      {{ "6月" }}
+      {{ "6 Month" }}
       {{- end }}
       {{- if eq .Key "May" }}
-      {{ "5月" }}
+      {{ "5 Month" }}
       {{- end }}
       {{- if eq .Key "April" }}
-      {{ "4月" }}
+      {{ "4 Month" }}
       {{- end }}
       {{- if eq .Key "March" }}
-      {{ "3月" }}
+      {{ "3 Month" }}
       {{- end }}
       {{- if eq .Key "February" }}
-      {{ "2月" }}
+      {{ "2 Month" }}
       {{- end }}
       {{- if eq .Key "January" }}
-      {{ "1月" }}
+      {{ "1 Month" }}
       {{- end }}
       <!-- {{- .Key }} -->
       <sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}

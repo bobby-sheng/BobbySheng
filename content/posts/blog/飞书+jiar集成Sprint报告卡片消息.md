@@ -26,7 +26,7 @@ cover:
 ## Jira收集数据方法
 
 在python中可以使用JIRA第三方库对Jira进行操作，通过GPT我们可知道JIRA的可操作情况
-
+![img.png](../../../../img/feishujira007.png)
 通过回答我们可知道是可以操作Sprint管理，熟悉JIRA这个包的知道，Sprint管理是可以获取到当前Sprint所有工单的key，通过key可以获取到这个工单的详情信息，有负责人、工单类型、优先级等数据。
 
 ## 如何发送飞书卡片消息

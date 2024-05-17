@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/BobbySheng/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=BobbySheng/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,18 +9,18 @@
 <meta name="keywords" content="">
 <meta name="description" content="Python集合详解 2022-07-27 · bobby 用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序 一、集合常用方法 1、长度len c={&#34;c&#34;,&#34;1&#34;,&#34;o&#34;,&#34;r&#34;} print len(c) #4 2、成员运算in和not in c={&#34;c&#34;,&#34;1&#34;,&#34;o&#34;,&#34;r&#34;} print &#34;c&#34; in c #True print &#34;b&#34; in c #False 3、|并集、union #两个集合去重复拼接 c={&#34;oen&#34;,&#34;tow&#34;,&#34;nike&#34;,&#34;bobby&#34;} b={&#34;three&#34;,&#34;four&#34;,&#34;nike&#34;,&#34;hello&#34;} print c|b print">
 <meta name="author" content="Author:&nbsp;Bobby">
-<link rel="canonical" href="http://localhost:1313/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/">
-<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.bf23098b7a6e772bd8d8042fab463fc72741c292b4f7daa6acccee6953d46edc.css" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/BobbySheng/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js"
+<link rel="canonical" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.36912c877a94473d8accde2ca62d94a475c105f02e84337f8893df83b1631be4.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/BobbySheng/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js"
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://localhost:1313/BobbySheng/img/title.png">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/BobbySheng/img/title.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/BobbySheng/img/title.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/BobbySheng/img/title.png">
-<link rel="mask-icon" href="http://localhost:1313/BobbySheng/img/title.png">
+<link rel="icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="apple-touch-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="mask-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/">
+<link rel="alternate" hreflang="en" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/">
 <noscript>
     <style>
         #theme-toggle,
@@ -70,10 +70,13 @@ var _hmt = _hmt || [];
 
 
 
+
+  
+
 <meta property="og:title" content="" />
 <meta property="og:description" content="Python集合详解 2022-07-27 · bobby 用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序 一、集合常用方法 1、长度len c={&#34;c&#34;,&#34;1&#34;,&#34;o&#34;,&#34;r&#34;} print len(c) #4 2、成员运算in和not in c={&#34;c&#34;,&#34;1&#34;,&#34;o&#34;,&#34;r&#34;} print &#34;c&#34; in c #True print &#34;b&#34; in c #False 3、|并集、union #两个集合去重复拼接 c={&#34;oen&#34;,&#34;tow&#34;,&#34;nike&#34;,&#34;bobby&#34;} b={&#34;three&#34;,&#34;four&#34;,&#34;nike&#34;,&#34;hello&#34;} print c|b print" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/" /><meta property="article:section" content="posts" />
 
 
 
@@ -91,19 +94,19 @@ var _hmt = _hmt || [];
       "@type": "ListItem",
       "position":  1 ,
       "name": "⌛ Thought",
-      "item": "http://localhost:1313/BobbySheng/en/posts/"
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "🏗️ Blog",
-      "item": "http://localhost:1313/BobbySheng/en/posts/blog/"
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/"
     }, 
     {
       "@type": "ListItem",
       "position":  3 ,
       "name": "",
-      "item": "http://localhost:1313/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/"
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/"
     }
   ]
 }
@@ -129,14 +132,14 @@ var _hmt = _hmt || [];
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:1313/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/"
+    "@id": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Bobby Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:1313/BobbySheng/img/title.png"
+      "url": "https://bobby-sheng.github.io/BobbySheng/img/title.png"
     }
   }
 }
@@ -158,8 +161,8 @@ var _hmt = _hmt || [];
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/BobbySheng/en/" accesskey="h" title="Bobby Blog (Alt + H)">
-                <img src="http://localhost:1313/BobbySheng/img/title.png" alt="" aria-label="logo"
+            <a href="https://bobby-sheng.github.io/BobbySheng/en/" accesskey="h" title="Bobby Blog (Alt + H)">
+                <img src="https://bobby-sheng.github.io/BobbySheng/img/title.png" alt="" aria-label="logo"
                     height="35">Bobby Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
@@ -188,28 +191,28 @@ var _hmt = _hmt || [];
         </div>
         <ul id="menu">
             <li class="menu-item">
-                <a href="http://localhost:1313/BobbySheng/en/search" title="🔍 Search (Alt &#43; /)" accesskey=/>
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/search" title="🔍 Search (Alt &#43; /)" accesskey=/>
                     <span>🔍 Search</span>
                     
                 </a>
             
             </li>
             <li class="menu-item">
-                <a href="http://localhost:1313/BobbySheng/en/posts" title="📜 Blog">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/posts" title="📜 Blog">
                     <span>📜 Blog</span>
                     
                 </a>
             
             </li>
             <li class="menu-item">
-                <a href="http://localhost:1313/BobbySheng/en/archives" title="💾 History">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/archives" title="💾 History">
                     <span>💾 History</span>
                     
                 </a>
             
             </li>
             <li class="menu-item">
-                <a href="http://localhost:1313/BobbySheng/en/about" title="🙋🏻‍♂️ About">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/about" title="🙋🏻‍♂️ About">
                     <span>🙋🏻‍♂️ About</span>
                     
                 </a>
@@ -222,7 +225,7 @@ var _hmt = _hmt || [];
 <article class="post-single">
     <div id="single-content">
         <header class="post-header">
-            <div class="breadcrumbs"><a href="http://localhost:1313/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/BobbySheng/en/posts/">⌛ Thought</a>&nbsp;»&nbsp;<a href="http://localhost:1313/BobbySheng/en/posts/blog/">🏗️ Blog</a></div>
+            <div class="breadcrumbs"><a href="https://bobby-sheng.github.io/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/">⌛ Thought</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/">🏗️ Blog</a></div>
             <h1 class="post-title">
                 
             </h1>
@@ -296,7 +299,7 @@ var _hmt = _hmt || [];
                             <script>
                                 let url = document.documentURI
                                 
-                                let dnsUrl = "http://localhost:1313/BobbySheng/"
+                                let dnsUrl = "https://bobby-sheng.github.io/BobbySheng/"
                                 let urlSplit = url.split(dnsUrl)
                                 let finalUrl = urlSplit[1]
                                 if (finalUrl[0] !== '/') {
@@ -566,12 +569,12 @@ var _hmt = _hmt || [];
                 <div id="QR" style="opacity: 0;">
                     <div id="wechat" style="display: inline-block">
                         <a class="fancybox" rel="group">
-                            <img id="wechat_qr" src="http://localhost:1313/BobbySheng/img/wechat_pay.png" alt="wechat_pay"></a>
+                            <img id="wechat_qr" src="https://bobby-sheng.github.io/BobbySheng/img/wechat_pay.png" alt="wechat_pay"></a>
                         <p>微信</p>
                     </div>
                     <div id="alipay" style="display: inline-block">
                         <a class="fancybox" rel="group">
-                            <img id="alipay_qr" src="http://localhost:1313/BobbySheng/img/alipay.png" alt="alipay"></a>
+                            <img id="alipay_qr" src="https://bobby-sheng.github.io/BobbySheng/img/alipay.png" alt="alipay"></a>
                         <p>支付宝</p>
                     </div>
                 </div>
@@ -592,12 +595,12 @@ var _hmt = _hmt || [];
         <footer class="post-footer">
             
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/">
+  <a class="prev" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/">
     <span class="title">« Prev Page</span>
     <br>
     <span></span>
   </a>
-  <a class="next" href="http://localhost:1313/BobbySheng/en/posts/blog/%E5%8E%8B%E6%B5%8B%E9%9C%80%E6%B1%82%E5%AE%9A%E5%88%B6%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">
+  <a class="next" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E5%8E%8B%E6%B5%8B%E9%9C%80%E6%B1%82%E5%AE%9A%E5%88%B6%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">
     <span class="title">Next Page »</span>
     <br>
     <span></span>
@@ -676,7 +679,7 @@ var _hmt = _hmt || [];
         Copyright
         &copy;
         2018-2024
-        <a href="http://localhost:1313/BobbySheng/en/" style="border-bottom:1px solid">Bobby Blog</a>
+        <a href="https://bobby-sheng.github.io/BobbySheng/en/" style="border-bottom:1px solid">Bobby Blog</a>
     </span>
 
     

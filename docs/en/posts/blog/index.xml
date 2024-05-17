@@ -2,179 +2,179 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>🏗️ Blog on Bobby Blog</title>
-    <link>http://localhost:1313/BobbySheng/en/posts/blog/</link>
+    <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/</link>
     <description>Recent content in 🏗️ Blog on Bobby Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/BobbySheng/en/posts/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flask_SQLAlchemy数据库 </title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/flask_sqlalchemy%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/flask_sqlalchemy%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
       <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/flask_sqlalchemy%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/flask_sqlalchemy%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
       <description>flask-SQLAlchemy对sqlite数据库的连接与增删改查</description>
     </item>
     
     <item>
       <title>Docker命令大全</title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/docker%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/docker%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</link>
       <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/docker%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/docker%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</guid>
       <description>docker主要分为镜像、容器。个人理解镜像是一个封装好的仓库，容器就是把这个仓库拿过来，里面的东西原封不动，可以随意操作而不会影响镜像内容，一个镜像可以创建多个容器。比较方便</description>
     </item>
     
     <item>
       <title>docker 部署 piclist</title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/docker-deploy-piclist/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/docker-deploy-piclist/</link>
       <pubDate>Thu, 05 May 2022 00:18:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/docker-deploy-piclist/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/docker-deploy-piclist/</guid>
       <description>介绍如何使用 docker 部署 piclist 实现 obsidian 远程上传图片至阿里云 OSS 图床</description>
     </item>
     
     <item>
       <title>wordpress | 迁移到 docker</title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/wordpress-to-docker/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/wordpress-to-docker/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/wordpress-to-docker/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/wordpress-to-docker/</guid>
       <description>记录从阿里云轻量应用服务器 (wordpress 应用) 迁移到 docker 部署，并针对博客的一些优化</description>
     </item>
     
     <item>
       <title>markdown 图片存储方案 | typora &#43; picgo &#43; 七牛云</title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/typora-picgo-qiniu-upload-image/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/typora-picgo-qiniu-upload-image/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/typora-picgo-qiniu-upload-image/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/typora-picgo-qiniu-upload-image/</guid>
       <description>在使用 markdown 写作的过程中，图片的存储是困扰很多人的一个问题，分享下我目前采用的 typora &#43; picgo &#43; 七牛云 的图床配置流程</description>
     </item>
     
     <item>
       <title>wordpress | 加载图片失败</title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/wordpress-load-image-failed/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/wordpress-load-image-failed/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/wordpress-load-image-failed/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/wordpress-load-image-failed/</guid>
       <description>1 现象 博客加载不出来我在七牛云的图片资源 使用浏览器直接访问图片 url 却是可以成功的 我将之前 csdn 的博客迁移到了 wordpress，图片外链地址就是 csdn 的，都可以正常加载。 使用浏览器直接访问图片 url 却是可以成功的 我将之前 csdn 的博客迁移到了 wordpress，图片外链地址就是 csdn 的，都可以正常加载。</description>
     </item>
     
     <item>
       <title>wordpress | 添加 icp 备案号</title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/wordpress-add-icp/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/wordpress-add-icp/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/wordpress-add-icp/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/wordpress-add-icp/</guid>
       <description>记录wordpress中如何添加icp备案号</description>
     </item>
     
     <item>
       <title>wordpress | 配置免费 ssl 证书和 https 强制跳转</title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/wordpress-ssl/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/wordpress-ssl/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/wordpress-ssl/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/wordpress-ssl/</guid>
       <description>介绍如何为阿里轻量应用服务器 (wordpress 应用) 配置 ssl 证书，开启 https 访问且实现https 强制跳转</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/github%E8%BF%9E%E6%8E%A5%E8%B6%85%E6%97%B6%E5%A4%84%E7%90%86/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/github%E8%BF%9E%E6%8E%A5%E8%B6%85%E6%97%B6%E5%A4%84%E7%90%86/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/github%E8%BF%9E%E6%8E%A5%E8%B6%85%E6%97%B6%E5%A4%84%E7%90%86/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/github%E8%BF%9E%E6%8E%A5%E8%B6%85%E6%97%B6%E5%A4%84%E7%90%86/</guid>
       <description>Github连接超时处理 2022-06-16 · bobby 1、通过以下地址获取速度较快的ip作为映射地址(需要在本地可以ping通的) https://ping.chinaz.com/github.com 2、Windows系统配置 a.打开host文件，路径一般是下面这个 C:\Windows\System32\drivers\etc\ b.在host文件中加找到的ip做github.com的映射 52.192.72.89 github.com c.Windows系统需要重启DNS解析</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/hugo%E6%90%AD%E5%BB%BA%E6%89%8B%E6%8A%84/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/hugo%E6%90%AD%E5%BB%BA%E6%89%8B%E6%8A%84/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/hugo%E6%90%AD%E5%BB%BA%E6%89%8B%E6%8A%84/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/hugo%E6%90%AD%E5%BB%BA%E6%89%8B%E6%8A%84/</guid>
       <description>Hugo搭建手抄 2022-06-07 · bobby md文件开端 #title: &amp;#34;{{ replace .Name &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#34; #date: {{ .Date }} #lastmod: {{ .Date }} #author: [&amp;#34;Sulv&amp;#34;] #categories: #- 分类1 #- 分类2 tags: - 标签1 - 标签2 description: &amp;#34;&amp;#34; weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序 slug: &amp;#34;&amp;#34; draft: false # 是否为草稿 comments: true showToc: true # 显示目录 TocOpen: true # 自动展开目录 hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/</guid>
       <description>Pytest详解 2022-08-25 · bobby 一、pytest概念 pytest是python的第三方测试框架，与python自带的unittest框架类似，但是比unittest框架要简洁，方便。 二、pytest特点 pytest是非常成熟的测试框架，主要有一下几个特点 1、非常容易上手，有丰富的文档 2、可</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/</guid>
       <description>Python元组详解 2022-07-27 · bobby 一、元组和列表的区别 1、元组无法增删改查，只能通过重新赋值修改元素，可以把元组理解为只可读的列表 2、元组占用内存比列表小，python程序缓存机制对于静态资源占用内存较小的会留缓存，新建相同内存大小的元组时可以从缓存中获取，列表就需要从操作系统寻找内存，</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/</guid>
       <description>Python列表方法详解 2022-07-21 · bobby 笔记背景 好记性不如烂笔头，在需要的时经常断片忘记基础方法，写这笔记目的一是加深印象，二是实在记不得也不需要去外网寻找找影响效率。 一、列表常用方法 1、索引取值-list[index] 按索引取值（正向取值+反向取值），即可存也可以取 # list之索引取值 name_list</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/python%E5%AD%97%E5%85%B8%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%AD%97%E5%85%B8%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/python%E5%AD%97%E5%85%B8%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%AD%97%E5%85%B8%E8%AF%A6%E8%A7%A3/</guid>
       <description>Python字典详解 2022-07-26 · bobby 一、字典常用方法 字典是Python中重要的数据类型，字典是由&amp;quot;键-值&amp;quot;对组成的集合，“键-值&amp;quot;对之间用逗号隔开，包含在一对花括号中。字典中的&amp;quot;值&amp;quot;通过&amp;quot;键&amp;quot;来引用。 1、定义 #第一种 bobby =</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E8%A7%A3/</guid>
       <description>Python字符串详解 2022-07-25 · bobby 一、字符串常用方法 1、索引-str[0] #从0开始 msg=&amp;#34;bobby&amp;#34; #b print msg[0] 2、切片-str[:::] # 索引切片 msg = &amp;#39;hello nick&amp;#39; # 0123456789 # 索引序号 print(f&amp;#39;切片3-最后: {msg[3:]}&amp;#39;) print(f&amp;#39;切片3-8: {msg[3:8]}&amp;#39;) print(f&amp;#39;切片3-8，步长为2: {msg[3:8:2]}&amp;#39;) print</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/python%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99%E6%96%B9%E6%B3%95/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99%E6%96%B9%E6%B3%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/python%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99%E6%96%B9%E6%B3%95/</guid>
       <description>python文档读写方法 2022-07-14 · bobby 一、文档读写实用方法 1、readline()函数 解释：此函数读取文件默认打印第一行，后面可以接参数打印字符个数 with open(p, &amp;#39;rt&amp;#39;) as f: rows = f.readline() print rows 2、readlines()函数 file.readline()[index] 解释：此函数把文件作列表全部读取出来，可通过for循环获取每一行的值 with open(p, &amp;#39;rt&amp;#39;) as f: rows = f.readlines() for i,</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/</guid>
       <description>Python离线安装包地址 2022-06-15 · bobby 1、py官方库 https://www.lfd.uci.edu/~gohlke/pythonlibs/ 2、pypc网站 https://pypi.org/project/ 3、py各大镜像库 https://pypi.tuna.tsinghua.edu.cn/simple http://mirrors.aliyun.com/pypi/simple/ http://pypi.douban.com/simple/ http://pypi.hustunique.com/ http://pypi.sdutlinux.org/ http://pypi.mirrors.ustc.edu.cn/</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</guid>
       <description>Python集合详解 2022-07-27 · bobby 用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序 一、集合常用方法 1、长度len c={&amp;#34;c&amp;#34;,&amp;#34;1&amp;#34;,&amp;#34;o&amp;#34;,&amp;#34;r&amp;#34;} print len(c) #4 2、成员运算in和not in c={&amp;#34;c&amp;#34;,&amp;#34;1&amp;#34;,&amp;#34;o&amp;#34;,&amp;#34;r&amp;#34;} print &amp;#34;c&amp;#34; in c #True print &amp;#34;b&amp;#34; in c #False 3、|并集、union #两个集合去重复拼接 c={&amp;#34;oen&amp;#34;,&amp;#34;tow&amp;#34;,&amp;#34;nike&amp;#34;,&amp;#34;bobby&amp;#34;} b={&amp;#34;three&amp;#34;,&amp;#34;four&amp;#34;,&amp;#34;nike&amp;#34;,&amp;#34;hello&amp;#34;} print c|b print</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/%E5%8E%8B%E6%B5%8B%E9%9C%80%E6%B1%82%E5%AE%9A%E5%88%B6%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E5%8E%8B%E6%B5%8B%E9%9C%80%E6%B1%82%E5%AE%9A%E5%88%B6%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/%E5%8E%8B%E6%B5%8B%E9%9C%80%E6%B1%82%E5%AE%9A%E5%88%B6%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E5%8E%8B%E6%B5%8B%E9%9C%80%E6%B1%82%E5%AE%9A%E5%88%B6%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</guid>
       <description>压测需求定制计算方法 2022-07-15 · bobby 1、普通计算方法 计算公式：TPS= 总请求数 / 总时间 按照需求所示，在2019年第32周，有4.13万的浏览量，那么总请求数，我们可以认为估算为4.13万（1次浏览都至少对应1个请求） 总请求数 = 4.13 万请求数 = 41300 请求数 总时间：由于不知道每个请求的具体时间，我们按</description>
     </item>
     

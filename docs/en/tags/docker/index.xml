@@ -2,35 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Docker on Bobby Blog</title>
-    <link>http://localhost:1313/BobbySheng/en/tags/docker/</link>
+    <link>https://bobby-sheng.github.io/BobbySheng/en/tags/docker/</link>
     <description>Recent content in Docker on Bobby Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/BobbySheng/en/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bobby-sheng.github.io/BobbySheng/en/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flask_SQLAlchemy数据库 </title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/flask_sqlalchemy%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/flask_sqlalchemy%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>flask-SQLAlchemy对sqlite数据库的连接与增删改查</description>
+    </item>
+    
     <item>
       <title>Docker命令大全</title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/docker%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/docker%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</link>
       <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/docker%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/docker%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</guid>
       <description>docker主要分为镜像、容器。个人理解镜像是一个封装好的仓库，容器就是把这个仓库拿过来，里面的东西原封不动，可以随意操作而不会影响镜像内容，一个镜像可以创建多个容器。比较方便</description>
     </item>
     
     <item>
       <title>docker 部署 piclist</title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/docker-deploy-piclist/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/docker-deploy-piclist/</link>
       <pubDate>Thu, 05 May 2022 00:18:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/docker-deploy-piclist/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/docker-deploy-piclist/</guid>
       <description>介绍如何使用 docker 部署 piclist 实现 obsidian 远程上传图片至阿里云 OSS 图床</description>
     </item>
     
     <item>
       <title>wordpress | 迁移到 docker</title>
-      <link>http://localhost:1313/BobbySheng/en/posts/blog/wordpress-to-docker/</link>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/wordpress-to-docker/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/BobbySheng/en/posts/blog/wordpress-to-docker/</guid>
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/wordpress-to-docker/</guid>
       <description>记录从阿里云轻量应用服务器 (wordpress 应用) 迁移到 docker 部署，并针对博客的一些优化</description>
     </item>
     

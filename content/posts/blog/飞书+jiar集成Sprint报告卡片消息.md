@@ -35,12 +35,10 @@ cover:
 
 飞书卡片搭建地址：https://open.feishu.cn/cardkit
 
-![img](https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=OTM5YmI0MGRhMzlkMmEwZGMxNTNkYjUzY2RhOGMzMTZfUWs0dTR2T2FUcTFiWmhqZnVDMldjYmlkZ3lSUTNGYjRfVG9rZW46SUdZSmJ2dXppb3RwNFl4Q2xMamNENHhKblllXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA)
-
+![img.png](../../../../img/feishujira001.png)
 飞书发送消息API：https://open.feishu.cn/document/ukTMukTMukTM/uYzM3QjL2MzN04iNzcDN/send-message-card/send-messages-using-card-json-data
 
-![img](https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=NTcxNjVjNzE0MmY0YTZlMTZkNDhmOTQyNjhkMDNlYTFfNnJ1NGNkeWNPalF3U3lSY0RYZUVoMWVvTGI1azZpaDVfVG9rZW46SEYzb2JrNlNsbzJpV2V4ZUlmaGNSS0tmbnhoXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA)
-
+![img.png](../../../../img/feishujira002.png)
 ## 流程简介
 
 通过python获取jira中需要的数据，通过python填充到卡片源代码，调用飞书发送消息接口，发送消息
@@ -433,16 +431,12 @@ if __name__ == '__main__':
 
 1. 代码结构
 
-![img](https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=NjQxNDEyMzQwYTYyODgxMzI3YTgyYzMwMDc1NWQxMjNfZ2VnbDM5Z1dRMjdxdmRBZHhBQWgzZDNzOG1nc09nbFVfVG9rZW46UTA1WWJKMm1Gb3VPNGd4aGV0T2NOZ0U1bmtiXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA)
-
+![img.png](../../../../img/feishujira003.png)
 # 效果展示
 
-![img](https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=MzkzOGMwNWUyNWNkZGIxNjExYTMxOTNlNzA0YmE3OGJfOU9laUIydUFWQkFxNEE1TnFHWTBoSkVQUXFCSzEwUm9fVG9rZW46VkNLemJHRTFnb1lGZmV4Vm9ZQ2NvbzVFbllnXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA)
-
-![img](https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=NGE3ZjgyMzhiYWUzMmZlMzRjMTZjYjg1NDJkYThjMTVfb3FzMWp0R3JDdHNxdVRqdzhsM0NyRzM5QjdCTlBJc3hfVG9rZW46QWNUT2JJYWZFbzFoVk14RUtsOGNwRFlrbkJXXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA)
-
-![img](https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=NjM2Y2QyMGZhNWU3ZTBmNDhhYjU2YjAyYTEwYjZjNTNfZ2ZEVWtnTTlVTE1pTG1WcXFZU0Q0RXRLM1Q4QUpWa3BfVG9rZW46RjRqU2JuVERUb3JVMDF4RWxJMmNGOUJ1blJiXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA)
-
+![img.png](../../../../img/feishujira004.png)
+![img.png](../../../../img/feishujira005.png)
+![img.png](../../../../img/feishujira006.png)
 # 总结
 
 空闲时间编写，没太多时间去构思代码设计，主要以实现功能为主，代码写的简单粗暴。更多的是提供一种思路。

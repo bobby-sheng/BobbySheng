@@ -34,13 +34,11 @@
 .toc details summary {
     margin-inline-start: 0;
     padding: 0;
-    width: 110px;
     cursor: pointer;
 }
 
 .toc details[open] summary {
     font-weight: 500;
-    width: 110px;
     cursor: pointer;
 }
 

@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>飞书&#43;jiar集成|Sprint报告卡片消息 | Bobby Blog</title>
+<meta name="keywords" content="Python">
+<meta name="description" content="飞书&#43;jiar集成 Sprint报告卡片消息">
+<meta name="author" content="Author:&nbsp;Bobby">
+<link rel="canonical" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E9%A3%9E%E4%B9%A6&#43;jiar%E9%9B%86%E6%88%90sprint%E6%8A%A5%E5%91%8A%E5%8D%A1%E7%89%87%E6%B6%88%E6%81%AF/">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.6a40292a989606997dd45ccd829e20eee5a112b82f15dc3f77574d4b106f2252.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/BobbySheng/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js"
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="apple-touch-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="mask-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E9%A3%9E%E4%B9%A6&#43;jiar%E9%9B%86%E6%88%90sprint%E6%8A%A5%E5%91%8A%E5%8D%A1%E7%89%87%E6%B6%88%E6%81%AF/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+  
+
+<meta property="og:title" content="飞书&#43;jiar集成|Sprint报告卡片消息" />
+<meta property="og:description" content="飞书&#43;jiar集成 Sprint报告卡片消息" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E9%A3%9E%E4%B9%A6&#43;jiar%E9%9B%86%E6%88%90sprint%E6%8A%A5%E5%91%8A%E5%8D%A1%E7%89%87%E6%B6%88%E6%81%AF/" />
+<meta property="og:image" content="https://bobby-sheng.github.io/BobbySheng/img/jirafeishu001.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-16T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://bobby-sheng.github.io/BobbySheng/img/jirafeishu001.png" />
+<meta name="twitter:title" content="飞书&#43;jiar集成|Sprint报告卡片消息"/>
+<meta name="twitter:description" content="飞书&#43;jiar集成 Sprint报告卡片消息"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "⌛ Thought",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "🏗️ Blog",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "飞书+jiar集成|Sprint报告卡片消息",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E9%A3%9E%E4%B9%A6+jiar%E9%9B%86%E6%88%90sprint%E6%8A%A5%E5%91%8A%E5%8D%A1%E7%89%87%E6%B6%88%E6%81%AF/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "飞书+jiar集成|Sprint报告卡片消息",
+  "name": "飞书\u002bjiar集成|Sprint报告卡片消息",
+  "description": "飞书+jiar集成 Sprint报告卡片消息",
+  "keywords": [
+    "Python"
+  ],
+  "articleBody": "背景 当前公司研发流程均在jira项目管理平台流转，每2周一个Sprint冲刺，Jira中不带具体的数据统计与人员在此Sprint中的完成度，每次Sprint冲刺结束后无法直观的看到人员的投入产出比，于是就想做一个Jira数据收集。由于公司通讯主要使用飞书，就结合了飞书卡片通知发送消息给到研发群组，供大家对上一个Sprint的投入产出与完成的工单量进行一个复盘。\n需求分析 收集当前活跃的Sprint冲刺下的所有工单 统计工单数量，并且统计工单类型 统计人员负责完成与未完成工单数量与百分比 使用飞书机器人发送飞书卡片消息给到群组 需求调研 Jira收集数据方法 在python中可以使用JIRA第三方库对Jira进行操作，通过GPT我们可知道JIRA的可操作情况\n通过回答我们可知道是可以操作Sprint管理，熟悉JIRA这个包的知道，Sprint管理是可以获取到当前Sprint所有工单的key，通过key可以获取到这个工单的详情信息，有负责人、工单类型、优先级等数据。\n如何发送飞书卡片消息 通过飞书应用机器人可调用飞书开发API发送消息接口，此接口可发送消息卡片类型的数据。消息卡片的数据需要在飞书消息卡片搭建中自行搭建，然后复制出卡片源代码给到消息接口发送即可\n飞书卡片搭建地址：https://open.feishu.cn/cardkit\n飞书发送消息API：https://open.feishu.cn/document/ukTMukTMukTM/uYzM3QjL2MzN04iNzcDN/send-message-card/send-messages-using-card-json-data\n流程简介 通过python获取jira中需要的数据，通过python填充到卡片源代码，调用飞书发送消息接口，发送消息\n实现步骤 jira数据收集 jira登录 | jira_clent.py from jira import JIRA from units.get_config_data import get_config_yaml_data import jsonpath def get_jira_client(): json_data = get_config_yaml_data() server = jsonpath.jsonpath(json_data, \"$.jira.url\")[0] username = jsonpath.jsonpath(json_data, \"$.jira.username\")[0] password = jsonpath.jsonpath(json_data, \"$.jira.password\")[0] jira_cline = JIRA(server=server, basic_auth=(username, password)) return jira_cline if __name__ == '__main__': print(get_jira_client().search_issues( 'project = INET AND issuetype = 故障 AND status in (\"To Do\", 开发中) AND assignee in (awen.cheng)', maxResults=-1)) 获取当前项目活跃的Sprint | jira_sprint_msg.py #!/usr/bin/env python3.10.6 # -*- coding: utf-8 -*- # Author: Bobby Sheng import jsonpath import copy from units.get_config_data import get_config_yaml_data from units.jira_clent import get_jira_client from units.log_control import INFO, ERROR PROJECT_KEY = 'INET' EXCLUDED_SPRINT_ID = 61 def get_user_id(name_data): receive_id_data = jsonpath.jsonpath(get_config_yaml_data(), \"$.userInfo\")[0] receive_id = [i.get(\"user_id\") for i in receive_id_data if str(i.get(\"username\")) == str(name_data)][0] return receive_id def get_sprint_issues(project_key: str): \"\"\" 获取项目下活跃的sprint :param project_key: 项目key :return: 活跃sprint的ID，如果没有找到则返回None \"\"\" try: boards = get_jira_client().boards(projectKeyOrID=project_key) except Exception as e: ERROR.logger.error(f\"获取boards时发生错误: {e}\") return None board_id = boards[0].id if boards else None if board_id: try: active_sprints = get_jira_client().sprints(board_id, state='active') except Exception as e: ERROR.logger.error(f\"获取sprints时发生错误: {e}\") return None if not active_sprints: ERROR.logger.error(\"没有找到活跃的sprint。\") return None for sprint in active_sprints: if sprint.state == \"ACTIVE\" and sprint.id != EXCLUDED_SPRINT_ID: return sprint.id, sprint.name else: ERROR.logger.error(\"没有找到符合条件的活跃sprint。\") return None def get_backlog_issues(project_key: str): \"\"\" 获取项目下指定sprint的backlog issues :param project_key: 项目key :return: \"\"\" sprint_info_list = [] try: sprint_id, sprint_name = get_sprint_issues(project_key) if not sprint_id: ERROR.logger.error(\"无法获取sprint ID。\") return # 验证project_key和sprint_id的格式，这里假设它们都是符合一定规则的字符串 # 这个验证可以根据实际情况调整 if not isinstance(project_key, str) or not isinstance(sprint_id, int): ERROR.logger.error(\"项目键或sprint ID格式不正确。\") return jql_str = f'project = {project_key} AND Sprint = {sprint_id} ORDER BY created DESC, 等级 ASC' backlog_issues = get_jira_client().search_issues(jql_str, maxResults=1000) count = 1 for issue in backlog_issues: sprint_info = print_issue_info(issue) sprint_info_list.append(sprint_info) count += 1 INFO.logger.info(f\"共打印了 {count} 个事务。\") return sprint_info_list, sprint_name except Exception as e: ERROR.logger.error(f\"获取backlog issues时发生错误: {e}\") def print_issue_info(issue): \"\"\" 打印issue信息 \"\"\" sprint_info_data = { \"key\": issue.key, \"issue_type\": issue.fields.issuetype, \"summary\": issue.fields.summary, \"assignee\": issue.fields.assignee, \"reporter\": issue.fields.reporter, \"priority\": issue.fields.priority, \"status\": issue.fields.status, \"customfield_10106\": issue.fields.customfield_10106, } return sprint_info_data def job_completion_rate(sprint_info_list: list): if not isinstance(sprint_info_list, list): raise ValueError(\"输入参数必须是一个列表\") story_list, story_list_done, story_list_fail = [], [], [] task_list, task_list_done, task_list_fail = [], [], [] bug_list, bug_list_done, bug_list_fail = [], [], [] completed_statuses = {\"完成\", \"测试中\", \"暂不处理\", \"测试通过\"} INFO.logger.info(f\"正在获取项目的sprint type信息...\") for i in sprint_info_list: if str(i.get(\"issue_type\")) == \"故事\": story_list.append(i) if str(i.get(\"status\")) in completed_statuses: story_list_done.append(i) else: story_list_fail.append(i) elif str(i.get(\"issue_type\")) == \"子任务\": task_list.append(i) if str(i.get(\"status\")) in completed_statuses: task_list_done.append(i) else: task_list_fail.append(i) else: bug_list.append(i) if str(i.get(\"status\")) in completed_statuses: bug_list_done.append(i) else: bug_list_fail.append(i) all_done = len(bug_list_done) + len(task_list_done) + len(story_list_done) completion_rate = { \"len_story\": len(story_list), \"len_task\": len(task_list), \"len_bug\": len(bug_list), \"len_all\": len(sprint_info_list), \"story_handle\": { \"done\": len(story_list_done), \"fail\": len(story_list_fail), \"rate\": round((len(story_list_done) / len(story_list)) * 100, 2) }, \"task_handle\": { \"done\": len(task_list_done), \"fail\": len(task_list_fail), \"rate\": round((len(task_list_done) / len(task_list)) * 100, 2) }, \"bug_handle\": { \"done\": len(bug_list_done), \"fail\": len(bug_list_fail), \"rate\": round((len(bug_list_done) / len(bug_list)) * 100, 2) }, \"all_handle\": { \"done\": all_done, \"fail\": len(bug_list_fail) + len(task_list_fail) + len(story_list_fail), \"rate\": round((all_done / len(sprint_info_list)) * 100, 2) } } return completion_rate def user_msg_data(sprint_info_list: list): \"\"\" 人员的数据统计，返回卡片的json数据 :param sprint_info_list: 包含任务信息的列表，每个元素是字典类型 \"\"\" if not isinstance(sprint_info_list, list): raise ValueError(\"输入参数必须是一个列表\") if not all(isinstance(item, dict) for item in sprint_info_list): raise ValueError(\"列表中的每个元素都必须是一个字典\") data_msg = {卡片中一列的代码，我这里做的是循环填充生成的} #TODO issue_types = ['故事', '故障', '子任务', '任务', '故事点'] issue_status = [\"完成\", \"测试中\", \"暂不处理\", \"测试通过\", \"待办\", \"产品验收中\", \"开发中\"] done_status = {\"完成\", \"测试中\", \"暂不处理\", \"测试通过\", \"产品验收中\"} issue_types_dones = ['故事完成数', '故障完成数', '子任务完成数', '任务完成数'] type_counts = {t: 0 for t in issue_types} # 初始化计数 status_counts = {t: 0 for t in issue_status} # 初始化计数 issue_types_counts = {t: 0 for t in issue_types_dones} # 初始化计数 user_counts = {} data_msg_list = [] for user_data in sprint_info_list: assignee = user_data.get(\"assignee\") if assignee is not None: if assignee not in user_counts: user_counts[assignee] = {'total': 0, **type_counts, **status_counts, **issue_types_counts} user_counts[assignee]['total'] += 1 if user_data.get('customfield_10106'): user_counts[assignee]['故事点'] += float(user_data.get('customfield_10106')) for issue_type in issue_types: if str(user_data.get('issue_type')) == issue_type: user_counts[assignee][issue_type] += 1 for issue_statu in issue_status: if str(user_data.get('status')) == issue_statu: user_counts[assignee][issue_statu] += 1 for issue_types_done in issue_types_dones: issue_type_str = issue_types_done[:-3] if str(user_data.get('issue_type')) == issue_type_str and str(user_data.get('status')) in done_status: user_counts[assignee][issue_types_done] += 1 else: ERROR.logger.error(\"assignee字段为空\") # 输出结果 one {'total': 22, '故事': 6, '故障': 6, '子任务': 10} for data_key, data_value in user_counts.items(): count = 0 for k, v in data_value.items(): if k in done_status: count += v # print(data_key, data_value, count) task_num = int(data_value.get('任务')) + int(data_value.get('子任务')) done_task_num = int(data_value.get('子任务完成数')) + int(data_value.get('任务完成数')) userid = get_user_id(data_key) data_msg_copy = copy.deepcopy(data_msg) data_msg_copy[\"columns\"][0][\"elements\"][0][\"persons\"][0][\"id\"] = userid data_msg_copy[\"columns\"][1][\"elements\"][0][\"columns\"][0][\"elements\"][0][\"text\"][ \"content\"] = f\"{data_value.get('故事完成数')}/{data_value.get('故事')}个\" data_msg_copy[\"columns\"][2][\"elements\"][0][\"columns\"][0][\"elements\"][0][\"text\"][ \"content\"] = f\"{done_task_num}/{task_num}个\" data_msg_copy[\"columns\"][3][\"elements\"][0][\"columns\"][0][\"elements\"][0][\"text\"][ \"content\"] = f\"{data_value.get('故障完成数')}/{data_value.get('故障')}个\" data_msg_copy[\"columns\"][4][\"elements\"][0][\"columns\"][0][\"elements\"][0][\"text\"][ \"content\"] = f\"{data_value.get('故事点')}个\" data_msg_copy[\"columns\"][5][\"elements\"][0][ \"content\"] = f\"({int(count)}/{int(data_value.get('total'))}) {round((int(count) / int(data_value.get('total'))) * 100, 2)}%\" data_msg_list.append(data_msg_copy) return data_msg_list 飞书API发送 飞书API认证 #!/usr/bin/env python3.10.6 # -*- coding: utf-8 -*- # Author: Bobby Sheng from units.get_config_data import get_config_yaml_data import requests import jsonpath Config = get_config_yaml_data() def tenant_access_token(): \"\"\"获取引用tenant_access_token :return: tenant_access_token \"\"\" data = {\"app_id\": jsonpath.jsonpath(Config, \"$.feishu.app_id\")[0], \"app_secret\": jsonpath.jsonpath(Config, \"$.feishu.app_secret\")[0]} res = requests.post(jsonpath.jsonpath(Config, \"$.feishu.webhook_token\")[0], data=data).json() headers = { 'Content-Type': 'application/json', 'Authorization': \"Bearer \" + res[\"app_access_token\"] } return headers 飞书卡片消息发送 #!/usr/bin/env python3.10.6 # -*- coding: utf-8 -*- # Author: Bobby Sheng import requests import json import time import jsonpath from units.get_config_data import get_config_yaml_data from units.log_control import INFO from feushu_api.feishu_login import tenant_access_token from jira_business.jira_sprint_msg import user_msg_data, get_backlog_issues, job_completion_rate data_msg = {卡片源代码} #TODO # ${sprint} ${ALL} ${story_all} ${bug_all} ${task_all} ${story_fail} ${story_done} ${story_rate} ${bug_fail} ${bug_done} ${bug_rate} # ${task_fail} ${task_done} ${task_rate} ${all_fail} ${all_done} ${all_rate} def send_sprint_msg(): sprint_info_list, sprint_name = get_backlog_issues('INET') # # 开发者数据统计 data_msg_list = user_msg_data(sprint_info_list) c.get(\"i18n_elements\").get('zh_cn').extend(data_msg_list) # 工单数据统计 job_data = job_completion_rate(sprint_info_list) c1 = json.dumps(c).replace(\"${sprint}\", sprint_name).replace(\"${ALL}\", str(job_data[\"len_all\"])).replace( \"${story_all}\", str(job_data[ \"len_story\"])) \\ .replace(\"${bug_all}\", str(job_data[\"len_bug\"])).replace(\"${task_all}\", str(job_data[\"len_task\"])). \\ replace(\"${story_fail}\", str(job_data[\"story_handle\"][\"fail\"])).replace(\"${story_done}\", str(job_data[\"story_handle\"][\"done\"])). \\ replace(\"${story_rate}\", str(job_data[\"story_handle\"][\"rate\"])).replace(\"${bug_fail}\", str(job_data[\"bug_handle\"][\"fail\"])). \\ replace(\"${bug_done}\", str(job_data[\"bug_handle\"][\"done\"])).replace(\"${bug_rate}\", str(job_data[\"bug_handle\"][\"rate\"])). \\ replace(\"${task_fail}\", str(job_data[\"task_handle\"][\"fail\"])).replace(\"${task_done}\", str(job_data[\"task_handle\"][\"done\"])). \\ replace(\"${task_rate}\", str(job_data[\"task_handle\"][\"rate\"])).replace(\"${all_fail}\", str(job_data[\"all_handle\"][\"fail\"])). \\ replace(\"${all_done}\", str(job_data[\"all_handle\"][\"done\"])).replace(\"${all_rate}\", str(job_data[\"all_handle\"][\"rate\"])) headers = tenant_access_token() rich_text = { \"receive_id\": \"6b9eab87\", \"msg_type\": \"interactive\", \"content\": c1 } # oc_17703b85be608b568b1fed1c3a2f3110 测试群 # oc_672137dedd6b9104cdf1d99d5bdea47a 研发群 INFO.logger.info(f\"消息接受者：6b9eab87\") post_data = json.dumps(rich_text) response = requests.post( jsonpath.jsonpath(get_config_yaml_data(), \"$.feishu.webhook\")[0], headers=headers, data=post_data, verify=False ) result = response.json() INFO.logger.info(f\"发送消息接返回{result}\") if result.get('code') != 0: time_now = time.strftime(\"%Y-%m-%d %H:%M:%S\", time.localtime(time.time())) result_msg = result['errmsg'] if result.get('errmsg', False) else '未知异常' error_data = { \"msgtype\": \"text\", \"text\": { \"content\": f\"[注意-自动通知]飞书机器人消息发送失败，时间：{time_now}，\" f\"原因：{result_msg}，请及时跟进，谢谢!\" }, \"at\": { \"isAtAll\": False } } INFO.logger.error(\"消息发送失败，自动通知：%s\", error_data) requests.post(jsonpath.jsonpath(get_config_yaml_data(), \"$.feishu.webhook\")[0], headers=headers, data=json.dumps(error_data)) if __name__ == '__main__': send_sprint_msg() 代码结构 效果展示 总结 空闲时间编写，没太多时间去构思代码设计，主要以实现功能为主，代码写的简单粗暴。更多的是提供一种思路。\n",
+  "wordCount" : "3635",
+  "inLanguage": "en",
+  "image":"https://bobby-sheng.github.io/BobbySheng/img/jirafeishu001.png","datePublished": "2024-05-16T00:00:00Z",
+  "dateModified": "2024-05-16T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Bobby"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E9%A3%9E%E4%B9%A6+jiar%E9%9B%86%E6%88%90sprint%E6%8A%A5%E5%91%8A%E5%8D%A1%E7%89%87%E6%B6%88%E6%81%AF/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bobby Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bobby-sheng.github.io/BobbySheng/img/title.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://bobby-sheng.github.io/BobbySheng/en/" accesskey="h" title="Bobby Blog (Alt + H)">
+                <img src="https://bobby-sheng.github.io/BobbySheng/img/title.png" alt="" aria-label="logo"
+                    height="35">Bobby Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/search" title="🔍 Search (Alt &#43; /)" accesskey=/>
+                    <span>🔍 Search</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/posts" title="📜 Blog">
+                    <span>📜 Blog</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/archives" title="💾 History">
+                    <span>💾 History</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/about" title="🙋🏻‍♂️ About">
+                    <span>🙋🏻‍♂️ About</span>
+                    
+                </a>
+            
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://bobby-sheng.github.io/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/">⌛ Thought</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/">🏗️ Blog</a></div>
+            <h1 class="post-title">
+                飞书&#43;jiar集成|Sprint报告卡片消息
+            </h1>
+            <div class="post-description">
+                飞书&#43;jiar集成 Sprint报告卡片消息
+            </div>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2024-05-16
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>3635 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>8 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+            </span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            Visit:<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.6.15/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "https://bobby-sheng.github.io/BobbySheng/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId:  null , 
+                                region:  null , 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Catalogue</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e8%83%8c%e6%99%af" aria-label="背景">背景</a></li>
+                <li>
+                    <a href="#%e9%9c%80%e6%b1%82%e5%88%86%e6%9e%90" aria-label="需求分析">需求分析</a></li>
+                <li>
+                    <a href="#%e9%9c%80%e6%b1%82%e8%b0%83%e7%a0%94" aria-label="需求调研">需求调研</a><ul>
+                        
+                <li>
+                    <a href="#jira%e6%94%b6%e9%9b%86%e6%95%b0%e6%8d%ae%e6%96%b9%e6%b3%95" aria-label="Jira收集数据方法">Jira收集数据方法</a></li>
+                <li>
+                    <a href="#%e5%a6%82%e4%bd%95%e5%8f%91%e9%80%81%e9%a3%9e%e4%b9%a6%e5%8d%a1%e7%89%87%e6%b6%88%e6%81%af" aria-label="如何发送飞书卡片消息">如何发送飞书卡片消息</a></li>
+                <li>
+                    <a href="#%e6%b5%81%e7%a8%8b%e7%ae%80%e4%bb%8b" aria-label="流程简介">流程简介</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%ae%9e%e7%8e%b0%e6%ad%a5%e9%aa%a4" aria-label="实现步骤">实现步骤</a><ul>
+                        
+                <li>
+                    <a href="#jira%e6%95%b0%e6%8d%ae%e6%94%b6%e9%9b%86" aria-label="jira数据收集">jira数据收集</a></li>
+                <li>
+                    <a href="#%e9%a3%9e%e4%b9%a6api%e5%8f%91%e9%80%81" aria-label="飞书API发送">飞书API发送</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%95%88%e6%9e%9c%e5%b1%95%e7%a4%ba" aria-label="效果展示">效果展示</a></li>
+                <li>
+                    <a href="#%e6%80%bb%e7%bb%93" aria-label="总结">总结</a>
+                </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+            const id = encodeURI(element.getAttribute('id')).toLowerCase();
+            if (element === activeElement){
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+            } else {
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+            }
+        })
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h1 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h1>
+<p>当前公司研发流程均在jira项目管理平台流转，每2周一个Sprint冲刺，Jira中不带具体的数据统计与人员在此Sprint中的完成度，每次Sprint冲刺结束后无法直观的看到人员的投入产出比，于是就想做一个Jira数据收集。由于公司通讯主要使用飞书，就结合了飞书卡片通知发送消息给到研发群组，供大家对上一个Sprint的投入产出与完成的工单量进行一个复盘。</p>
+<h1 id="需求分析">需求分析<a hidden class="anchor" aria-hidden="true" href="#需求分析">#</a></h1>
+<ol>
+<li>收集当前活跃的Sprint冲刺下的所有工单</li>
+<li>统计工单数量，并且统计工单类型</li>
+<li>统计人员负责完成与未完成工单数量与百分比</li>
+<li>使用飞书机器人发送飞书卡片消息给到群组</li>
+</ol>
+<h1 id="需求调研">需求调研<a hidden class="anchor" aria-hidden="true" href="#需求调研">#</a></h1>
+<h2 id="jira收集数据方法">Jira收集数据方法<a hidden class="anchor" aria-hidden="true" href="#jira收集数据方法">#</a></h2>
+<p>在python中可以使用JIRA第三方库对Jira进行操作，通过GPT我们可知道JIRA的可操作情况</p>
+<p>通过回答我们可知道是可以操作Sprint管理，熟悉JIRA这个包的知道，Sprint管理是可以获取到当前Sprint所有工单的key，通过key可以获取到这个工单的详情信息，有负责人、工单类型、优先级等数据。</p>
+<h2 id="如何发送飞书卡片消息">如何发送飞书卡片消息<a hidden class="anchor" aria-hidden="true" href="#如何发送飞书卡片消息">#</a></h2>
+<p>通过飞书应用机器人可调用飞书开发API发送消息接口，此接口可发送消息卡片类型的数据。消息卡片的数据需要在飞书消息卡片搭建中自行搭建，然后复制出卡片源代码给到消息接口发送即可</p>
+<p>飞书卡片搭建地址：https://open.feishu.cn/cardkit</p>
+<p><img loading="lazy" src="https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=OTM5YmI0MGRhMzlkMmEwZGMxNTNkYjUzY2RhOGMzMTZfUWs0dTR2T2FUcTFiWmhqZnVDMldjYmlkZ3lSUTNGYjRfVG9rZW46SUdZSmJ2dXppb3RwNFl4Q2xMamNENHhKblllXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA" alt="img"  />
+</p>
+<p>飞书发送消息API：https://open.feishu.cn/document/ukTMukTMukTM/uYzM3QjL2MzN04iNzcDN/send-message-card/send-messages-using-card-json-data</p>
+<p><img loading="lazy" src="https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=NTcxNjVjNzE0MmY0YTZlMTZkNDhmOTQyNjhkMDNlYTFfNnJ1NGNkeWNPalF3U3lSY0RYZUVoMWVvTGI1azZpaDVfVG9rZW46SEYzb2JrNlNsbzJpV2V4ZUlmaGNSS0tmbnhoXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA" alt="img"  />
+</p>
+<h2 id="流程简介">流程简介<a hidden class="anchor" aria-hidden="true" href="#流程简介">#</a></h2>
+<p>通过python获取jira中需要的数据，通过python填充到卡片源代码，调用飞书发送消息接口，发送消息</p>
+<h1 id="实现步骤">实现步骤<a hidden class="anchor" aria-hidden="true" href="#实现步骤">#</a></h1>
+<h2 id="jira数据收集">jira数据收集<a hidden class="anchor" aria-hidden="true" href="#jira数据收集">#</a></h2>
+<ol>
+<li>jira登录 | jira_clent.py</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Bash" data-lang="Bash"><span style="display:flex;"><span>from jira import JIRA
+</span></span><span style="display:flex;"><span>from units.get_config_data import get_config_yaml_data
+</span></span><span style="display:flex;"><span>import jsonpath
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def get_jira_client<span style="color:#5bc4bf">()</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">json_data</span> <span style="color:#5bc4bf">=</span> get_config_yaml_data<span style="color:#5bc4bf">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">server</span> <span style="color:#5bc4bf">=</span> jsonpath.jsonpath<span style="color:#5bc4bf">(</span>json_data, <span style="color:#48b685">&#34;</span>$<span style="color:#48b685">.jira.url&#34;</span><span style="color:#5bc4bf">)[</span>0<span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">username</span> <span style="color:#5bc4bf">=</span> jsonpath.jsonpath<span style="color:#5bc4bf">(</span>json_data, <span style="color:#48b685">&#34;</span>$<span style="color:#48b685">.jira.username&#34;</span><span style="color:#5bc4bf">)[</span>0<span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">password</span> <span style="color:#5bc4bf">=</span> jsonpath.jsonpath<span style="color:#5bc4bf">(</span>json_data, <span style="color:#48b685">&#34;</span>$<span style="color:#48b685">.jira.password&#34;</span><span style="color:#5bc4bf">)[</span>0<span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">jira_cline</span> <span style="color:#5bc4bf">=</span> JIRA<span style="color:#5bc4bf">(</span><span style="color:#ef6155">server</span><span style="color:#5bc4bf">=</span>server, <span style="color:#ef6155">basic_auth</span><span style="color:#5bc4bf">=(</span>username, password<span style="color:#5bc4bf">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">return</span> jira_cline
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">if</span> <span style="color:#ef6155">__name__</span> <span style="color:#5bc4bf">==</span> <span style="color:#48b685">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    print<span style="color:#5bc4bf">(</span>get_jira_client<span style="color:#5bc4bf">()</span>.search_issues<span style="color:#5bc4bf">(</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#39;project = INET AND issuetype = 故障 AND status in (&#34;To Do&#34;, 开发中) AND assignee in (awen.cheng)&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">maxResults</span><span style="color:#5bc4bf">=</span>-1<span style="color:#5bc4bf">))</span>
+</span></span></code></pre></div><ol>
+<li>获取当前项目活跃的Sprint | jira_sprint_msg.py</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Bash" data-lang="Bash"><span style="display:flex;"><span><span style="color:#776e71">#!/usr/bin/env python3.10.6
+</span></span></span><span style="display:flex;"><span><span style="color:#776e71"></span><span style="color:#776e71"># -*- coding: utf-8 -*-</span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># Author: Bobby Sheng &lt;Bobby@sky-cloud.net&gt;</span>
+</span></span><span style="display:flex;"><span>import jsonpath
+</span></span><span style="display:flex;"><span>import copy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>from units.get_config_data import get_config_yaml_data
+</span></span><span style="display:flex;"><span>from units.jira_clent import get_jira_client
+</span></span><span style="display:flex;"><span>from units.log_control import INFO, ERROR
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">PROJECT_KEY</span> <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#39;INET&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">EXCLUDED_SPRINT_ID</span> <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">61</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def get_user_id<span style="color:#5bc4bf">(</span>name_data<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">receive_id_data</span> <span style="color:#5bc4bf">=</span> jsonpath.jsonpath<span style="color:#5bc4bf">(</span>get_config_yaml_data<span style="color:#5bc4bf">()</span>, <span style="color:#48b685">&#34;</span>$<span style="color:#48b685">.userInfo&#34;</span><span style="color:#5bc4bf">)[</span>0<span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">receive_id</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">[</span>i.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;user_id&#34;</span><span style="color:#5bc4bf">)</span> <span style="color:#815ba4">for</span> i in receive_id_data <span style="color:#815ba4">if</span> str<span style="color:#5bc4bf">(</span>i.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;username&#34;</span><span style="color:#5bc4bf">))</span> <span style="color:#5bc4bf">==</span> str<span style="color:#5bc4bf">(</span>name_data<span style="color:#5bc4bf">)][</span>0<span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">return</span> receive_id
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def get_sprint_issues<span style="color:#5bc4bf">(</span>project_key: str<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#48b685">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    获取项目下活跃的sprint
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    :param project_key: 项目key
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    :return: 活跃sprint的ID，如果没有找到则返回None
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    try:
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">boards</span> <span style="color:#5bc4bf">=</span> get_jira_client<span style="color:#5bc4bf">()</span>.boards<span style="color:#5bc4bf">(</span><span style="color:#ef6155">projectKeyOrID</span><span style="color:#5bc4bf">=</span>project_key<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    except Exception as e:
+</span></span><span style="display:flex;"><span>        ERROR.logger.error<span style="color:#5bc4bf">(</span>f<span style="color:#48b685">&#34;获取boards时发生错误: {e}&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">return</span> None
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">board_id</span> <span style="color:#5bc4bf">=</span> boards<span style="color:#5bc4bf">[</span>0<span style="color:#5bc4bf">]</span>.id <span style="color:#815ba4">if</span> boards <span style="color:#815ba4">else</span> None
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">if</span> board_id:
+</span></span><span style="display:flex;"><span>        try:
+</span></span><span style="display:flex;"><span>            <span style="color:#ef6155">active_sprints</span> <span style="color:#5bc4bf">=</span> get_jira_client<span style="color:#5bc4bf">()</span>.sprints<span style="color:#5bc4bf">(</span>board_id, <span style="color:#ef6155">state</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#39;active&#39;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        except Exception as e:
+</span></span><span style="display:flex;"><span>            ERROR.logger.error<span style="color:#5bc4bf">(</span>f<span style="color:#48b685">&#34;获取sprints时发生错误: {e}&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">return</span> None
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> not active_sprints:
+</span></span><span style="display:flex;"><span>            ERROR.logger.error<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;没有找到活跃的sprint。&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">return</span> None
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">for</span> sprint in active_sprints:
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">if</span> sprint.state <span style="color:#5bc4bf">==</span> <span style="color:#48b685">&#34;ACTIVE&#34;</span> and sprint.id !<span style="color:#5bc4bf">=</span> EXCLUDED_SPRINT_ID:
+</span></span><span style="display:flex;"><span>                <span style="color:#815ba4">return</span> sprint.id, sprint.name
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">else</span>:
+</span></span><span style="display:flex;"><span>        ERROR.logger.error<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;没有找到符合条件的活跃sprint。&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">return</span> None
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def get_backlog_issues<span style="color:#5bc4bf">(</span>project_key: str<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#48b685">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    获取项目下指定sprint的backlog issues
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    :param project_key: 项目key
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    :return:
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">sprint_info_list</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">[]</span>
+</span></span><span style="display:flex;"><span>    try:
+</span></span><span style="display:flex;"><span>        sprint_id, <span style="color:#ef6155">sprint_name</span> <span style="color:#5bc4bf">=</span> get_sprint_issues<span style="color:#5bc4bf">(</span>project_key<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> not sprint_id:
+</span></span><span style="display:flex;"><span>            ERROR.logger.error<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;无法获取sprint ID。&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">return</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#776e71"># 验证project_key和sprint_id的格式，这里假设它们都是符合一定规则的字符串</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#776e71"># 这个验证可以根据实际情况调整</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> not isinstance<span style="color:#5bc4bf">(</span>project_key, str<span style="color:#5bc4bf">)</span> or not isinstance<span style="color:#5bc4bf">(</span>sprint_id, int<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>            ERROR.logger.error<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;项目键或sprint ID格式不正确。&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">return</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">jql_str</span> <span style="color:#5bc4bf">=</span> f<span style="color:#48b685">&#39;project = {project_key} AND Sprint = {sprint_id} ORDER BY created DESC, 等级 ASC&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">backlog_issues</span> <span style="color:#5bc4bf">=</span> get_jira_client<span style="color:#5bc4bf">()</span>.search_issues<span style="color:#5bc4bf">(</span>jql_str, <span style="color:#ef6155">maxResults</span><span style="color:#5bc4bf">=</span>1000<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">count</span> <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">for</span> issue in backlog_issues:
+</span></span><span style="display:flex;"><span>            <span style="color:#ef6155">sprint_info</span> <span style="color:#5bc4bf">=</span> print_issue_info<span style="color:#5bc4bf">(</span>issue<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            sprint_info_list.append<span style="color:#5bc4bf">(</span>sprint_info<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ef6155">count</span> <span style="color:#5bc4bf">+=</span> <span style="color:#f99b15">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        INFO.logger.info<span style="color:#5bc4bf">(</span>f<span style="color:#48b685">&#34;共打印了 {count} 个事务。&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">return</span> sprint_info_list, sprint_name
+</span></span><span style="display:flex;"><span>    except Exception as e:
+</span></span><span style="display:flex;"><span>        ERROR.logger.error<span style="color:#5bc4bf">(</span>f<span style="color:#48b685">&#34;获取backlog issues时发生错误: {e}&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def print_issue_info<span style="color:#5bc4bf">(</span>issue<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#48b685">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    打印issue信息
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">sprint_info_data</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;key&#34;</span>: issue.key,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;issue_type&#34;</span>: issue.fields.issuetype,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;summary&#34;</span>: issue.fields.summary,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;assignee&#34;</span>: issue.fields.assignee,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;reporter&#34;</span>: issue.fields.reporter,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;priority&#34;</span>: issue.fields.priority,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;status&#34;</span>: issue.fields.status,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;customfield_10106&#34;</span>: issue.fields.customfield_10106,
+</span></span><span style="display:flex;"><span>    <span style="color:#5bc4bf">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">return</span> sprint_info_data
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def job_completion_rate<span style="color:#5bc4bf">(</span>sprint_info_list: list<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">if</span> not isinstance<span style="color:#5bc4bf">(</span>sprint_info_list, list<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>        raise ValueError<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;输入参数必须是一个列表&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    story_list, story_list_done, <span style="color:#ef6155">story_list_fail</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">[]</span>, <span style="color:#5bc4bf">[]</span>, <span style="color:#5bc4bf">[]</span>
+</span></span><span style="display:flex;"><span>    task_list, task_list_done, <span style="color:#ef6155">task_list_fail</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">[]</span>, <span style="color:#5bc4bf">[]</span>, <span style="color:#5bc4bf">[]</span>
+</span></span><span style="display:flex;"><span>    bug_list, bug_list_done, <span style="color:#ef6155">bug_list_fail</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">[]</span>, <span style="color:#5bc4bf">[]</span>, <span style="color:#5bc4bf">[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">completed_statuses</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span><span style="color:#48b685">&#34;完成&#34;</span>, <span style="color:#48b685">&#34;测试中&#34;</span>, <span style="color:#48b685">&#34;暂不处理&#34;</span>, <span style="color:#48b685">&#34;测试通过&#34;</span><span style="color:#5bc4bf">}</span>
+</span></span><span style="display:flex;"><span>    INFO.logger.info<span style="color:#5bc4bf">(</span>f<span style="color:#48b685">&#34;正在获取项目的sprint type信息...&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">for</span> i in sprint_info_list:
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> str<span style="color:#5bc4bf">(</span>i.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;issue_type&#34;</span><span style="color:#5bc4bf">))</span> <span style="color:#5bc4bf">==</span> <span style="color:#48b685">&#34;故事&#34;</span>:
+</span></span><span style="display:flex;"><span>            story_list.append<span style="color:#5bc4bf">(</span>i<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">if</span> str<span style="color:#5bc4bf">(</span>i.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;status&#34;</span><span style="color:#5bc4bf">))</span> in completed_statuses:
+</span></span><span style="display:flex;"><span>                story_list_done.append<span style="color:#5bc4bf">(</span>i<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">else</span>:
+</span></span><span style="display:flex;"><span>                story_list_fail.append<span style="color:#5bc4bf">(</span>i<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">elif</span> str<span style="color:#5bc4bf">(</span>i.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;issue_type&#34;</span><span style="color:#5bc4bf">))</span> <span style="color:#5bc4bf">==</span> <span style="color:#48b685">&#34;子任务&#34;</span>:
+</span></span><span style="display:flex;"><span>            task_list.append<span style="color:#5bc4bf">(</span>i<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">if</span> str<span style="color:#5bc4bf">(</span>i.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;status&#34;</span><span style="color:#5bc4bf">))</span> in completed_statuses:
+</span></span><span style="display:flex;"><span>                task_list_done.append<span style="color:#5bc4bf">(</span>i<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">else</span>:
+</span></span><span style="display:flex;"><span>                task_list_fail.append<span style="color:#5bc4bf">(</span>i<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">else</span>:
+</span></span><span style="display:flex;"><span>            bug_list.append<span style="color:#5bc4bf">(</span>i<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">if</span> str<span style="color:#5bc4bf">(</span>i.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;status&#34;</span><span style="color:#5bc4bf">))</span> in completed_statuses:
+</span></span><span style="display:flex;"><span>                bug_list_done.append<span style="color:#5bc4bf">(</span>i<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">else</span>:
+</span></span><span style="display:flex;"><span>                bug_list_fail.append<span style="color:#5bc4bf">(</span>i<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">all_done</span> <span style="color:#5bc4bf">=</span> len<span style="color:#5bc4bf">(</span>bug_list_done<span style="color:#5bc4bf">)</span> + len<span style="color:#5bc4bf">(</span>task_list_done<span style="color:#5bc4bf">)</span> + len<span style="color:#5bc4bf">(</span>story_list_done<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">completion_rate</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;len_story&#34;</span>: len<span style="color:#5bc4bf">(</span>story_list<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;len_task&#34;</span>: len<span style="color:#5bc4bf">(</span>task_list<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;len_bug&#34;</span>: len<span style="color:#5bc4bf">(</span>bug_list<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;len_all&#34;</span>: len<span style="color:#5bc4bf">(</span>sprint_info_list<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;story_handle&#34;</span>: <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;done&#34;</span>: len<span style="color:#5bc4bf">(</span>story_list_done<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;fail&#34;</span>: len<span style="color:#5bc4bf">(</span>story_list_fail<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;rate&#34;</span>: round<span style="color:#5bc4bf">((</span>len<span style="color:#5bc4bf">(</span>story_list_done<span style="color:#5bc4bf">)</span> / len<span style="color:#5bc4bf">(</span>story_list<span style="color:#5bc4bf">))</span> * 100, 2<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#5bc4bf">}</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;task_handle&#34;</span>: <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;done&#34;</span>: len<span style="color:#5bc4bf">(</span>task_list_done<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;fail&#34;</span>: len<span style="color:#5bc4bf">(</span>task_list_fail<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;rate&#34;</span>: round<span style="color:#5bc4bf">((</span>len<span style="color:#5bc4bf">(</span>task_list_done<span style="color:#5bc4bf">)</span> / len<span style="color:#5bc4bf">(</span>task_list<span style="color:#5bc4bf">))</span> * 100, 2<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#5bc4bf">}</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;bug_handle&#34;</span>: <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;done&#34;</span>: len<span style="color:#5bc4bf">(</span>bug_list_done<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;fail&#34;</span>: len<span style="color:#5bc4bf">(</span>bug_list_fail<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;rate&#34;</span>: round<span style="color:#5bc4bf">((</span>len<span style="color:#5bc4bf">(</span>bug_list_done<span style="color:#5bc4bf">)</span> / len<span style="color:#5bc4bf">(</span>bug_list<span style="color:#5bc4bf">))</span> * 100, 2<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#5bc4bf">}</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;all_handle&#34;</span>: <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;done&#34;</span>: all_done,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;fail&#34;</span>: len<span style="color:#5bc4bf">(</span>bug_list_fail<span style="color:#5bc4bf">)</span> + len<span style="color:#5bc4bf">(</span>task_list_fail<span style="color:#5bc4bf">)</span> + len<span style="color:#5bc4bf">(</span>story_list_fail<span style="color:#5bc4bf">)</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;rate&#34;</span>: round<span style="color:#5bc4bf">((</span>all_done / len<span style="color:#5bc4bf">(</span>sprint_info_list<span style="color:#5bc4bf">))</span> * 100, 2<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#5bc4bf">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5bc4bf">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">return</span> completion_rate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def user_msg_data<span style="color:#5bc4bf">(</span>sprint_info_list: list<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#48b685">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    人员的数据统计，返回卡片的json数据
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    :param sprint_info_list: 包含任务信息的列表，每个元素是字典类型
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">if</span> not isinstance<span style="color:#5bc4bf">(</span>sprint_info_list, list<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>        raise ValueError<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;输入参数必须是一个列表&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">if</span> not all<span style="color:#5bc4bf">(</span>isinstance<span style="color:#5bc4bf">(</span>item, dict<span style="color:#5bc4bf">)</span> <span style="color:#815ba4">for</span> item in sprint_info_list<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>        raise ValueError<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;列表中的每个元素都必须是一个字典&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">data_msg</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span>卡片中一列的代码，我这里做的是循环填充生成的<span style="color:#5bc4bf">}</span> <span style="color:#776e71">#TODO</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">issue_types</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">[</span><span style="color:#48b685">&#39;故事&#39;</span>, <span style="color:#48b685">&#39;故障&#39;</span>, <span style="color:#48b685">&#39;子任务&#39;</span>, <span style="color:#48b685">&#39;任务&#39;</span>, <span style="color:#48b685">&#39;故事点&#39;</span><span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">issue_status</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;完成&#34;</span>, <span style="color:#48b685">&#34;测试中&#34;</span>, <span style="color:#48b685">&#34;暂不处理&#34;</span>, <span style="color:#48b685">&#34;测试通过&#34;</span>, <span style="color:#48b685">&#34;待办&#34;</span>, <span style="color:#48b685">&#34;产品验收中&#34;</span>, <span style="color:#48b685">&#34;开发中&#34;</span><span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">done_status</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span><span style="color:#48b685">&#34;完成&#34;</span>, <span style="color:#48b685">&#34;测试中&#34;</span>, <span style="color:#48b685">&#34;暂不处理&#34;</span>, <span style="color:#48b685">&#34;测试通过&#34;</span>, <span style="color:#48b685">&#34;产品验收中&#34;</span><span style="color:#5bc4bf">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">issue_types_dones</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">[</span><span style="color:#48b685">&#39;故事完成数&#39;</span>, <span style="color:#48b685">&#39;故障完成数&#39;</span>, <span style="color:#48b685">&#39;子任务完成数&#39;</span>, <span style="color:#48b685">&#39;任务完成数&#39;</span><span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">type_counts</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span>t: <span style="color:#f99b15">0</span> <span style="color:#815ba4">for</span> t in issue_types<span style="color:#5bc4bf">}</span>  <span style="color:#776e71"># 初始化计数</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">status_counts</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span>t: <span style="color:#f99b15">0</span> <span style="color:#815ba4">for</span> t in issue_status<span style="color:#5bc4bf">}</span>  <span style="color:#776e71"># 初始化计数</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">issue_types_counts</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span>t: <span style="color:#f99b15">0</span> <span style="color:#815ba4">for</span> t in issue_types_dones<span style="color:#5bc4bf">}</span>  <span style="color:#776e71"># 初始化计数</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">user_counts</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">data_msg_list</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">for</span> user_data in sprint_info_list:
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">assignee</span> <span style="color:#5bc4bf">=</span> user_data.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;assignee&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> assignee is not None:
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">if</span> assignee not in user_counts:
+</span></span><span style="display:flex;"><span>                user_counts<span style="color:#5bc4bf">[</span>assignee<span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span><span style="color:#48b685">&#39;total&#39;</span>: 0, **type_counts, **status_counts, **issue_types_counts<span style="color:#5bc4bf">}</span>
+</span></span><span style="display:flex;"><span>            user_counts<span style="color:#5bc4bf">[</span>assignee<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#39;total&#39;</span><span style="color:#5bc4bf">]</span> +<span style="color:#5bc4bf">=</span> <span style="color:#f99b15">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">if</span> user_data.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;customfield_10106&#39;</span><span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>                user_counts<span style="color:#5bc4bf">[</span>assignee<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#39;故事点&#39;</span><span style="color:#5bc4bf">]</span> +<span style="color:#5bc4bf">=</span> float<span style="color:#5bc4bf">(</span>user_data.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;customfield_10106&#39;</span><span style="color:#5bc4bf">))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">for</span> issue_type in issue_types:
+</span></span><span style="display:flex;"><span>                <span style="color:#815ba4">if</span> str<span style="color:#5bc4bf">(</span>user_data.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;issue_type&#39;</span><span style="color:#5bc4bf">))</span> <span style="color:#5bc4bf">==</span> issue_type:
+</span></span><span style="display:flex;"><span>                    user_counts<span style="color:#5bc4bf">[</span>assignee<span style="color:#5bc4bf">][</span>issue_type<span style="color:#5bc4bf">]</span> +<span style="color:#5bc4bf">=</span> <span style="color:#f99b15">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">for</span> issue_statu in issue_status:
+</span></span><span style="display:flex;"><span>                <span style="color:#815ba4">if</span> str<span style="color:#5bc4bf">(</span>user_data.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;status&#39;</span><span style="color:#5bc4bf">))</span> <span style="color:#5bc4bf">==</span> issue_statu:
+</span></span><span style="display:flex;"><span>                    user_counts<span style="color:#5bc4bf">[</span>assignee<span style="color:#5bc4bf">][</span>issue_statu<span style="color:#5bc4bf">]</span> +<span style="color:#5bc4bf">=</span> <span style="color:#f99b15">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">for</span> issue_types_done in issue_types_dones:
+</span></span><span style="display:flex;"><span>                <span style="color:#ef6155">issue_type_str</span> <span style="color:#5bc4bf">=</span> issue_types_done<span style="color:#5bc4bf">[</span>:-3<span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#815ba4">if</span> str<span style="color:#5bc4bf">(</span>user_data.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;issue_type&#39;</span><span style="color:#5bc4bf">))</span> <span style="color:#5bc4bf">==</span> issue_type_str and str<span style="color:#5bc4bf">(</span>user_data.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;status&#39;</span><span style="color:#5bc4bf">))</span> in done_status:
+</span></span><span style="display:flex;"><span>                    user_counts<span style="color:#5bc4bf">[</span>assignee<span style="color:#5bc4bf">][</span>issue_types_done<span style="color:#5bc4bf">]</span> +<span style="color:#5bc4bf">=</span> <span style="color:#f99b15">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">else</span>:
+</span></span><span style="display:flex;"><span>            ERROR.logger.error<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;assignee字段为空&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#776e71"># 输出结果 one {&#39;total&#39;: 22, &#39;故事&#39;: 6, &#39;故障&#39;: 6, &#39;子任务&#39;: 10}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">for</span> data_key, data_value in user_counts.items<span style="color:#5bc4bf">()</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">count</span> <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">for</span> k, v in data_value.items<span style="color:#5bc4bf">()</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">if</span> k in done_status:
+</span></span><span style="display:flex;"><span>                <span style="color:#ef6155">count</span> <span style="color:#5bc4bf">+=</span> v
+</span></span><span style="display:flex;"><span>        <span style="color:#776e71"># print(data_key, data_value, count)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">task_num</span> <span style="color:#5bc4bf">=</span> int<span style="color:#5bc4bf">(</span>data_value.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;任务&#39;</span><span style="color:#5bc4bf">))</span> + int<span style="color:#5bc4bf">(</span>data_value.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;子任务&#39;</span><span style="color:#5bc4bf">))</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">done_task_num</span> <span style="color:#5bc4bf">=</span> int<span style="color:#5bc4bf">(</span>data_value.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;子任务完成数&#39;</span><span style="color:#5bc4bf">))</span> + int<span style="color:#5bc4bf">(</span>data_value.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;任务完成数&#39;</span><span style="color:#5bc4bf">))</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">userid</span> <span style="color:#5bc4bf">=</span> get_user_id<span style="color:#5bc4bf">(</span>data_key<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">data_msg_copy</span> <span style="color:#5bc4bf">=</span> copy.deepcopy<span style="color:#5bc4bf">(</span>data_msg<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        data_msg_copy<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;columns&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;elements&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;persons&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;id&#34;</span><span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">=</span> userid
+</span></span><span style="display:flex;"><span>        data_msg_copy<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;columns&#34;</span><span style="color:#5bc4bf">][</span>1<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;elements&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;columns&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;elements&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;text&#34;</span><span style="color:#5bc4bf">][</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;content&#34;</span><span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">=</span> f<span style="color:#48b685">&#34;{data_value.get(&#39;故事完成数&#39;)}/{data_value.get(&#39;故事&#39;)}个&#34;</span>
+</span></span><span style="display:flex;"><span>        data_msg_copy<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;columns&#34;</span><span style="color:#5bc4bf">][</span>2<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;elements&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;columns&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;elements&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;text&#34;</span><span style="color:#5bc4bf">][</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;content&#34;</span><span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">=</span> f<span style="color:#48b685">&#34;{done_task_num}/{task_num}个&#34;</span>
+</span></span><span style="display:flex;"><span>        data_msg_copy<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;columns&#34;</span><span style="color:#5bc4bf">][</span>3<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;elements&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;columns&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;elements&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;text&#34;</span><span style="color:#5bc4bf">][</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;content&#34;</span><span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">=</span> f<span style="color:#48b685">&#34;{data_value.get(&#39;故障完成数&#39;)}/{data_value.get(&#39;故障&#39;)}个&#34;</span>
+</span></span><span style="display:flex;"><span>        data_msg_copy<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;columns&#34;</span><span style="color:#5bc4bf">][</span>4<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;elements&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;columns&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;elements&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;text&#34;</span><span style="color:#5bc4bf">][</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;content&#34;</span><span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">=</span> f<span style="color:#48b685">&#34;{data_value.get(&#39;故事点&#39;)}个&#34;</span>
+</span></span><span style="display:flex;"><span>        data_msg_copy<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;columns&#34;</span><span style="color:#5bc4bf">][</span>5<span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;elements&#34;</span><span style="color:#5bc4bf">][</span>0<span style="color:#5bc4bf">][</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;content&#34;</span><span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">=</span> f<span style="color:#48b685">&#34;({int(count)}/{int(data_value.get(&#39;total&#39;))}) &lt;font color=&#39;red&#39;&gt;{round((int(count) / int(data_value.get(&#39;total&#39;))) * 100, 2)}%&lt;/font&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>        data_msg_list.append<span style="color:#5bc4bf">(</span>data_msg_copy<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">return</span> data_msg_list
+</span></span></code></pre></div><h2 id="飞书api发送">飞书API发送<a hidden class="anchor" aria-hidden="true" href="#飞书api发送">#</a></h2>
+<ol>
+<li>飞书API认证</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Bash" data-lang="Bash"><span style="display:flex;"><span><span style="color:#776e71">#!/usr/bin/env python3.10.6
+</span></span></span><span style="display:flex;"><span><span style="color:#776e71"></span><span style="color:#776e71"># -*- coding: utf-8 -*-</span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># Author: Bobby Sheng &lt;Bobby@sky-cloud.net&gt;</span>
+</span></span><span style="display:flex;"><span>from units.get_config_data import get_config_yaml_data
+</span></span><span style="display:flex;"><span>import requests
+</span></span><span style="display:flex;"><span>import jsonpath
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">Config</span> <span style="color:#5bc4bf">=</span> get_config_yaml_data<span style="color:#5bc4bf">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def tenant_access_token<span style="color:#5bc4bf">()</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#48b685">&#34;&#34;&#34;获取引用tenant_access_token
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    :return: tenant_access_token
+</span></span></span><span style="display:flex;"><span><span style="color:#48b685">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">data</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span><span style="color:#48b685">&#34;app_id&#34;</span>: jsonpath.jsonpath<span style="color:#5bc4bf">(</span>Config, <span style="color:#48b685">&#34;</span>$<span style="color:#48b685">.feishu.app_id&#34;</span><span style="color:#5bc4bf">)[</span>0<span style="color:#5bc4bf">]</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;app_secret&#34;</span>: jsonpath.jsonpath<span style="color:#5bc4bf">(</span>Config, <span style="color:#48b685">&#34;</span>$<span style="color:#48b685">.feishu.app_secret&#34;</span><span style="color:#5bc4bf">)[</span>0<span style="color:#5bc4bf">]}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">res</span> <span style="color:#5bc4bf">=</span> requests.post<span style="color:#5bc4bf">(</span>jsonpath.jsonpath<span style="color:#5bc4bf">(</span>Config, <span style="color:#48b685">&#34;</span>$<span style="color:#48b685">.feishu.webhook_token&#34;</span><span style="color:#5bc4bf">)[</span>0<span style="color:#5bc4bf">]</span>, <span style="color:#ef6155">data</span><span style="color:#5bc4bf">=</span>data<span style="color:#5bc4bf">)</span>.json<span style="color:#5bc4bf">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">headers</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#39;Content-Type&#39;</span>: <span style="color:#48b685">&#39;application/json&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#39;Authorization&#39;</span>: <span style="color:#48b685">&#34;Bearer &#34;</span> + res<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;app_access_token&#34;</span><span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#5bc4bf">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">return</span> headers
+</span></span></code></pre></div><ol>
+<li>飞书卡片消息发送</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Bash" data-lang="Bash"><span style="display:flex;"><span><span style="color:#776e71">#!/usr/bin/env python3.10.6
+</span></span></span><span style="display:flex;"><span><span style="color:#776e71"></span><span style="color:#776e71"># -*- coding: utf-8 -*-</span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># Author: Bobby Sheng &lt;Bobby@sky-cloud.net&gt;</span>
+</span></span><span style="display:flex;"><span>import requests
+</span></span><span style="display:flex;"><span>import json
+</span></span><span style="display:flex;"><span>import time
+</span></span><span style="display:flex;"><span>import jsonpath
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>from units.get_config_data import get_config_yaml_data
+</span></span><span style="display:flex;"><span>from units.log_control import INFO
+</span></span><span style="display:flex;"><span>from feushu_api.feishu_login import tenant_access_token
+</span></span><span style="display:flex;"><span>from jira_business.jira_sprint_msg import user_msg_data, get_backlog_issues, job_completion_rate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">data_msg</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span>卡片源代码<span style="color:#5bc4bf">}</span> <span style="color:#776e71">#TODO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># ${sprint}  ${ALL} ${story_all} ${bug_all} ${task_all} ${story_fail} ${story_done} ${story_rate} ${bug_fail} ${bug_done} ${bug_rate}</span>
+</span></span><span style="display:flex;"><span><span style="color:#776e71"># ${task_fail} ${task_done} ${task_rate} ${all_fail} ${all_done} ${all_rate}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def send_sprint_msg<span style="color:#5bc4bf">()</span>:
+</span></span><span style="display:flex;"><span>    sprint_info_list, <span style="color:#ef6155">sprint_name</span> <span style="color:#5bc4bf">=</span> get_backlog_issues<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;INET&#39;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#776e71"># # 开发者数据统计</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">data_msg_list</span> <span style="color:#5bc4bf">=</span> user_msg_data<span style="color:#5bc4bf">(</span>sprint_info_list<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    c.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;i18n_elements&#34;</span><span style="color:#5bc4bf">)</span>.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;zh_cn&#39;</span><span style="color:#5bc4bf">)</span>.extend<span style="color:#5bc4bf">(</span>data_msg_list<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#776e71"># 工单数据统计</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">job_data</span> <span style="color:#5bc4bf">=</span> job_completion_rate<span style="color:#5bc4bf">(</span>sprint_info_list<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">c1</span> <span style="color:#5bc4bf">=</span> json.dumps<span style="color:#5bc4bf">(</span>c<span style="color:#5bc4bf">)</span>.replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">sprint</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>, sprint_name<span style="color:#5bc4bf">)</span>.replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">ALL</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>, str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;len_all&#34;</span><span style="color:#5bc4bf">]))</span>.replace<span style="color:#5bc4bf">(</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">story_all</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>,
+</span></span><span style="display:flex;"><span>        str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#48b685">&#34;len_story&#34;</span><span style="color:#5bc4bf">]))</span> <span style="color:#f99b15">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f99b15"></span>        .replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">bug_all</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>, str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;len_bug&#34;</span><span style="color:#5bc4bf">]))</span>.replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">task_all</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>, str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;len_task&#34;</span><span style="color:#5bc4bf">]))</span>. <span style="color:#f99b15">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f99b15"></span>        replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">story_fail</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>, str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;story_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;fail&#34;</span><span style="color:#5bc4bf">]))</span>.replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">story_done</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>,
+</span></span><span style="display:flex;"><span>                                                                                str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;story_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;done&#34;</span><span style="color:#5bc4bf">]))</span>. <span style="color:#f99b15">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f99b15"></span>        replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">story_rate</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>, str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;story_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;rate&#34;</span><span style="color:#5bc4bf">]))</span>.replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">bug_fail</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>,
+</span></span><span style="display:flex;"><span>                                                                                str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;bug_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;fail&#34;</span><span style="color:#5bc4bf">]))</span>. <span style="color:#f99b15">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f99b15"></span>        replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">bug_done</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>, str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;bug_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;done&#34;</span><span style="color:#5bc4bf">]))</span>.replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">bug_rate</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>,
+</span></span><span style="display:flex;"><span>                                                                            str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;bug_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;rate&#34;</span><span style="color:#5bc4bf">]))</span>. <span style="color:#f99b15">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f99b15"></span>        replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">task_fail</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>, str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;task_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;fail&#34;</span><span style="color:#5bc4bf">]))</span>.replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">task_done</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>,
+</span></span><span style="display:flex;"><span>                                                                              str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;task_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;done&#34;</span><span style="color:#5bc4bf">]))</span>. <span style="color:#f99b15">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f99b15"></span>        replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">task_rate</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>, str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;task_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;rate&#34;</span><span style="color:#5bc4bf">]))</span>.replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">all_fail</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>,
+</span></span><span style="display:flex;"><span>                                                                              str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;all_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;fail&#34;</span><span style="color:#5bc4bf">]))</span>. <span style="color:#f99b15">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f99b15"></span>        replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">all_done</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>, str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;all_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;done&#34;</span><span style="color:#5bc4bf">]))</span>.replace<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;</span><span style="color:#f99b15">${</span><span style="color:#ef6155">all_rate</span><span style="color:#f99b15">}</span><span style="color:#48b685">&#34;</span>,
+</span></span><span style="display:flex;"><span>                                                                            str<span style="color:#5bc4bf">(</span>job_data<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;all_handle&#34;</span><span style="color:#5bc4bf">][</span><span style="color:#48b685">&#34;rate&#34;</span><span style="color:#5bc4bf">]))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">headers</span> <span style="color:#5bc4bf">=</span> tenant_access_token<span style="color:#5bc4bf">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">rich_text</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;receive_id&#34;</span>: <span style="color:#48b685">&#34;6b9eab87&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;msg_type&#34;</span>: <span style="color:#48b685">&#34;interactive&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#48b685">&#34;content&#34;</span>: c1
+</span></span><span style="display:flex;"><span>    <span style="color:#5bc4bf">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#776e71"># oc_17703b85be608b568b1fed1c3a2f3110 测试群</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#776e71"># oc_672137dedd6b9104cdf1d99d5bdea47a 研发群</span>
+</span></span><span style="display:flex;"><span>    INFO.logger.info<span style="color:#5bc4bf">(</span>f<span style="color:#48b685">&#34;消息接受者：6b9eab87&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">post_data</span> <span style="color:#5bc4bf">=</span> json.dumps<span style="color:#5bc4bf">(</span>rich_text<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">response</span> <span style="color:#5bc4bf">=</span> requests.post<span style="color:#5bc4bf">(</span>
+</span></span><span style="display:flex;"><span>        jsonpath.jsonpath<span style="color:#5bc4bf">(</span>get_config_yaml_data<span style="color:#5bc4bf">()</span>, <span style="color:#48b685">&#34;</span>$<span style="color:#48b685">.feishu.webhook&#34;</span><span style="color:#5bc4bf">)[</span>0<span style="color:#5bc4bf">]</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">headers</span><span style="color:#5bc4bf">=</span>headers,
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">data</span><span style="color:#5bc4bf">=</span>post_data,
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">verify</span><span style="color:#5bc4bf">=</span>False
+</span></span><span style="display:flex;"><span>    <span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">result</span> <span style="color:#5bc4bf">=</span> response.json<span style="color:#5bc4bf">()</span>
+</span></span><span style="display:flex;"><span>    INFO.logger.info<span style="color:#5bc4bf">(</span>f<span style="color:#48b685">&#34;发送消息接返回{result}&#34;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">if</span> result.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;code&#39;</span><span style="color:#5bc4bf">)</span> !<span style="color:#5bc4bf">=</span> 0:
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">time_now</span> <span style="color:#5bc4bf">=</span> time.strftime<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;%Y-%m-%d %H:%M:%S&#34;</span>, time.localtime<span style="color:#5bc4bf">(</span>time.time<span style="color:#5bc4bf">()))</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">result_msg</span> <span style="color:#5bc4bf">=</span> result<span style="color:#5bc4bf">[</span><span style="color:#48b685">&#39;errmsg&#39;</span><span style="color:#5bc4bf">]</span> <span style="color:#815ba4">if</span> result.get<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;errmsg&#39;</span>, False<span style="color:#5bc4bf">)</span> <span style="color:#815ba4">else</span> <span style="color:#48b685">&#39;未知异常&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ef6155">error_data</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;msgtype&#34;</span>: <span style="color:#48b685">&#34;text&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;text&#34;</span>: <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#48b685">&#34;content&#34;</span>: f<span style="color:#48b685">&#34;[注意-自动通知]飞书机器人消息发送失败，时间：{time_now}，&#34;</span>
+</span></span><span style="display:flex;"><span>                           f<span style="color:#48b685">&#34;原因：{result_msg}，请及时跟进，谢谢!&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#5bc4bf">}</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#48b685">&#34;at&#34;</span>: <span style="color:#5bc4bf">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#48b685">&#34;isAtAll&#34;</span>: False
+</span></span><span style="display:flex;"><span>            <span style="color:#5bc4bf">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#5bc4bf">}</span>
+</span></span><span style="display:flex;"><span>        INFO.logger.error<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;消息发送失败，自动通知：%s&#34;</span>, error_data<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>        requests.post<span style="color:#5bc4bf">(</span>jsonpath.jsonpath<span style="color:#5bc4bf">(</span>get_config_yaml_data<span style="color:#5bc4bf">()</span>, <span style="color:#48b685">&#34;</span>$<span style="color:#48b685">.feishu.webhook&#34;</span><span style="color:#5bc4bf">)[</span>0<span style="color:#5bc4bf">]</span>, <span style="color:#ef6155">headers</span><span style="color:#5bc4bf">=</span>headers,
+</span></span><span style="display:flex;"><span>                      <span style="color:#ef6155">data</span><span style="color:#5bc4bf">=</span>json.dumps<span style="color:#5bc4bf">(</span>error_data<span style="color:#5bc4bf">))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">if</span> <span style="color:#ef6155">__name__</span> <span style="color:#5bc4bf">==</span> <span style="color:#48b685">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    send_sprint_msg<span style="color:#5bc4bf">()</span>
+</span></span></code></pre></div><ol>
+<li>代码结构</li>
+</ol>
+<p><img loading="lazy" src="https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=NjQxNDEyMzQwYTYyODgxMzI3YTgyYzMwMDc1NWQxMjNfZ2VnbDM5Z1dRMjdxdmRBZHhBQWgzZDNzOG1nc09nbFVfVG9rZW46UTA1WWJKMm1Gb3VPNGd4aGV0T2NOZ0U1bmtiXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA" alt="img"  />
+</p>
+<h1 id="效果展示">效果展示<a hidden class="anchor" aria-hidden="true" href="#效果展示">#</a></h1>
+<p><img loading="lazy" src="https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=MzkzOGMwNWUyNWNkZGIxNjExYTMxOTNlNzA0YmE3OGJfOU9laUIydUFWQkFxNEE1TnFHWTBoSkVQUXFCSzEwUm9fVG9rZW46VkNLemJHRTFnb1lGZmV4Vm9ZQ2NvbzVFbllnXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA" alt="img"  />
+</p>
+<p><img loading="lazy" src="https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=NGE3ZjgyMzhiYWUzMmZlMzRjMTZjYjg1NDJkYThjMTVfb3FzMWp0R3JDdHNxdVRqdzhsM0NyRzM5QjdCTlBJc3hfVG9rZW46QWNUT2JJYWZFbzFoVk14RUtsOGNwRFlrbkJXXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA" alt="img"  />
+</p>
+<p><img loading="lazy" src="https://rxyuiaelodq.feishu.cn/space/api/box/stream/download/asynccode/?code=NjM2Y2QyMGZhNWU3ZTBmNDhhYjU2YjAyYTEwYjZjNTNfZ2ZEVWtnTTlVTE1pTG1WcXFZU0Q0RXRLM1Q4QUpWa3BfVG9rZW46RjRqU2JuVERUb3JVMDF4RWxJMmNGOUJ1blJiXzE3MTU5MzI0NDY6MTcxNTkzNjA0Nl9WNA" alt="img"  />
+</p>
+<h1 id="总结">总结<a hidden class="anchor" aria-hidden="true" href="#总结">#</a></h1>
+<p>空闲时间编写，没太多时间去构思代码设计，主要以实现功能为主，代码写的简单粗暴。更多的是提供一种思路。</p>
+
+
+        </div>
+        <div class="post-reward">
+            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
+                <div id="QR" style="opacity: 0;">
+                    <div id="wechat" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="wechat_qr" src="https://bobby-sheng.github.io/BobbySheng/img/wechat_pay.png" alt="wechat_pay"></a>
+                        <p>微信</p>
+                    </div>
+                    <div id="alipay" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="alipay_qr" src="https://bobby-sheng.github.io/BobbySheng/img/alipay.png" alt="alipay"></a>
+                        <p>支付宝</p>
+                    </div>
+                </div>
+                <button id="rewardButton"
+                        onclick="
+                    var qr = document.getElementById('QR');
+                    if (qr.style.opacity === '0') {
+                        qr.style.opacity='1';
+                    } else {
+                        qr.style.opacity='0'
+                    }"
+                >
+                    <span>🧧 鼓励</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="next" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8C%85%E8%A7%A3%E7%A0%81/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>小程序包解码</span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+
+
+<div>
+    <div class="pagination__title">
+        <span class="pagination__title-h" style="font-size: 20px;">💬评论</span>
+        <hr />
+    </div>
+
+    <div id="tcomment"></div>
+
+    <script src="https://cdn.staticfile.org/twikoo/1.6.15/twikoo.all.min.js">
+    </script>
+    
+
+    
+
+    <script>
+        twikoo.init({
+            envId: "https://twikoo.Bobby.cn/", 
+            el: "#tcomment",
+            lang: 'zh-CN',
+            
+            path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+            
+            
+            
+            
+            
+            
+            
+        });
+    </script>
+
+</div>
+</article>
+</main>
+
+
+<footer class="footer">
+
+    <a href="https://gohugo.io/" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/frame-hugo-blue?style=flat&logo=hugo">
+    </a>
+    <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/theme-papermod-lightgrey?style=flat&logo=BookStack">
+    </a>
+
+    <br>
+
+    <span id="runtime_span"></span>
+    <script
+        type="text/javascript">function show_runtime() { window.setTimeout("show_runtime()", 1000); X = new Date("7/13/2021 1:00:00"); Y = new Date(); T = (Y.getTime() - X.getTime()); M = 24 * 60 * 60 * 1000; a = T / M; A = Math.floor(a); b = (a - A) * 24; B = Math.floor(b); c = (b - B) * 60; C = Math.floor((b - B) * 60); D = Math.floor((c - C) * 60); runtime_span.innerHTML = "网站已运行" + A + "天" + B + "小时" + C + "分" + D + "秒" } show_runtime();</script>
+    |
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container">
+        
+        总访客数:  <span id="busuanzi_value_site_uv"></span>
+        |
+        总访问量:  <span id="busuanzi_value_site_pv"></span>
+    </span>
+
+    <br>
+
+    <a href="https://beian.miit.gov.cn/" target="_blank" style="border-bottom:1px solid">Bobby</a>&nbsp;
+    |
+    <span>
+        Copyright
+        &copy;
+        2018-2024
+        <a href="https://bobby-sheng.github.io/BobbySheng/en/" style="border-bottom:1px solid">Bobby Blog</a>
+    </span>
+
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '📄copy';
+
+        function copyingDone() {
+            copybutton.innerText = '👌🏻Code_copied!';
+            setTimeout(() => {
+                copybutton.innerText = '📄copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {
+            }
+            ;
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild === container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName === "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+
+</body>
+
+</html>

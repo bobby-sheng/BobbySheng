@@ -10,7 +10,6 @@ description: "飞书+jiar集成 Sprint报告卡片消息"
 cover:
     image: "img/jirafeishu001.png"
 ---
-
 # 背景
 
 当前公司研发流程均在jira项目管理平台流转，每2周一个Sprint冲刺，Jira中不带具体的数据统计与人员在此Sprint中的完成度，每次Sprint冲刺结束后无法直观的看到人员的投入产出比，于是就想做一个Jira数据收集。由于公司通讯主要使用飞书，就结合了飞书卡片通知发送消息给到研发群组，供大家对上一个Sprint的投入产出与完成的工单量进行一个复盘。

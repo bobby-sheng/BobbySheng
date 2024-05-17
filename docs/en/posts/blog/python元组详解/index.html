@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Bobby Blog</title>
-<meta name="keywords" content="">
-<meta name="description" content="Python元组详解 2022-07-27 · bobby 一、元组和列表的区别 1、元组无法增删改查，只能通过重新赋值修改元素，可以把元组理解为只可读的列表 2、元组占用内存比列表小，python程序缓存机制对于静态资源占用内存较小的会留缓存，新建相同内存大小的元组时可以从缓存中获取，列表就需要从操作系统寻找内存，">
+<title>Python元组详解 | Bobby Blog</title>
+<meta name="keywords" content="Python">
+<meta name="description" content="Python元组详解">
 <meta name="author" content="Author:&nbsp;Bobby">
 <link rel="canonical" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/">
-<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.3bba8067f566d5c824cfc17615be338d920e2eef443932521594ab36a4a235f1.css" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.6a40292a989606997dd45ccd829e20eee5a112b82f15dc3f77574d4b106f2252.css" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/BobbySheng/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js"
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
@@ -73,16 +73,18 @@ var _hmt = _hmt || [];
 
   
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="Python元组详解 2022-07-27 · bobby 一、元组和列表的区别 1、元组无法增删改查，只能通过重新赋值修改元素，可以把元组理解为只可读的列表 2、元组占用内存比列表小，python程序缓存机制对于静态资源占用内存较小的会留缓存，新建相同内存大小的元组时可以从缓存中获取，列表就需要从操作系统寻找内存，" />
+<meta property="og:title" content="Python元组详解" />
+<meta property="og:description" content="Python元组详解" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/" />
+<meta property="og:image" content="https://bobby-sheng.github.io/BobbySheng/img/python001.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-27T00:00:00+00:00" />
 
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Python元组详解 2022-07-27 · bobby 一、元组和列表的区别 1、元组无法增删改查，只能通过重新赋值修改元素，可以把元组理解为只可读的列表 2、元组占用内存比列表小，python程序缓存机制对于静态资源占用内存较小的会留缓存，新建相同内存大小的元组时可以从缓存中获取，列表就需要从操作系统寻找内存，"/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://bobby-sheng.github.io/BobbySheng/img/python001.png" />
+<meta name="twitter:title" content="Python元组详解"/>
+<meta name="twitter:description" content="Python元组详解"/>
 
 
 <script type="application/ld+json">
@@ -105,7 +107,7 @@ var _hmt = _hmt || [];
     {
       "@type": "ListItem",
       "position":  3 ,
-      "name": "",
+      "name": "Python元组详解",
       "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/"
     }
   ]
@@ -115,17 +117,17 @@ var _hmt = _hmt || [];
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "",
-  "name": "",
-  "description": "Python元组详解 2022-07-27 · bobby 一、元组和列表的区别 1、元组无法增删改查，只能通过重新赋值修改元素，可以把元组理解为只可读的列表 2、元组占用内存比列表小，python程序缓存机制对于静态资源占用内存较小的会留缓存，新建相同内存大小的元组时可以从缓存中获取，列表就需要从操作系统寻找内存，",
+  "headline": "Python元组详解",
+  "name": "Python元组详解",
+  "description": "Python元组详解",
   "keywords": [
-    
+    "Python"
   ],
-  "articleBody": "Python元组详解 2022-07-27 · bobby\n一、元组和列表的区别 1、元组无法增删改查，只能通过重新赋值修改元素，可以把元组理解为只可读的列表\n2、元组占用内存比列表小，python程序缓存机制对于静态资源占用内存较小的会留缓存，新建相同内存大小的元组时可以从缓存中获取，列表就需要从操作系统寻找内存，速度会快很多\n3、元组可以在映射（和集合的成员）中当做“键”使用，而列表不行\n二、元组的基本使用 1、tuple函数的使用 # tuple函数的功能与list函数基本上是一样的：以一个序列作为参数并把它转化为元组。如果参数就是元组，那么该函数就会被原样返回： \u003e\u003e\u003e tuple([1,2,3]) (1, 2, 3) \u003e\u003e\u003e tuple('abc') ('a', 'b', 'c') \u003e\u003e\u003e tuple((1,2,3)) (1, 2, 3) #可以通过转为元组，再转为列表，做一些字符串的处理 3、索引 # tuple之索引取值 name_tuple = ('nick', 'jason', 'tank', 'sean') # name_tuple[0] = 'nick handsom' # 报错 print(name_tuple[0]) #nick 4、切片 # tuple之切片 name_tuple = ('nick', 'jason', 'tank', 'sean') print(name_tuple[1:3:2])#jason 5、长度 # tuple之切片 name_tuple = ('nick', 'jason', 'tank', 'sean') print len(name_tuple)#4 6、成员运算 # tuple之成员运算 name_tuple = ('nick', 'jason', 'tank', 'sean') print('nick' in name_tuple) #True 7、循环 # tuple之循环 name_tuple = ('nick', 'jason', 'tank', 'sean') for name in name_tuple: print(name) 8、统计值个数count() # tuple之count() name_tuple = ('nick', 'jason', 'tank', 'sean') print(name_tuple.count('nick'): )#1 7、返回值的索引位置-index(值) # tuple之index() name_tuple = ('nick', 'jason', 'tank', 'sean') print(name_tuple.index('nick'): )#0 ",
-  "wordCount" : "504",
+  "articleBody": "一、元组和列表的区别 1、元组无法增删改查，只能通过重新赋值修改元素，可以把元组理解为只可读的列表\n2、元组占用内存比列表小，python程序缓存机制对于静态资源占用内存较小的会留缓存，新建相同内存大小的元组时可以从缓存中获取，列表就需要从操作系统寻找内存，速度会快很多\n3、元组可以在映射（和集合的成员）中当做“键”使用，而列表不行\n二、元组的基本使用 1、tuple函数的使用 # tuple函数的功能与list函数基本上是一样的：以一个序列作为参数并把它转化为元组。如果参数就是元组，那么该函数就会被原样返回： \u003e\u003e\u003e tuple([1,2,3]) (1, 2, 3) \u003e\u003e\u003e tuple('abc') ('a', 'b', 'c') \u003e\u003e\u003e tuple((1,2,3)) (1, 2, 3) #可以通过转为元组，再转为列表，做一些字符串的处理 3、索引 # tuple之索引取值 name_tuple = ('nick', 'jason', 'tank', 'sean') # name_tuple[0] = 'nick handsom' # 报错 print(name_tuple[0]) #nick 4、切片 # tuple之切片 name_tuple = ('nick', 'jason', 'tank', 'sean') print(name_tuple[1:3:2])#jason 5、长度 # tuple之切片 name_tuple = ('nick', 'jason', 'tank', 'sean') print len(name_tuple)#4 6、成员运算 # tuple之成员运算 name_tuple = ('nick', 'jason', 'tank', 'sean') print('nick' in name_tuple) #True 7、循环 # tuple之循环 name_tuple = ('nick', 'jason', 'tank', 'sean') for name in name_tuple: print(name) 8、统计值个数count() # tuple之count() name_tuple = ('nick', 'jason', 'tank', 'sean') print(name_tuple.count('nick'): )#1 7、返回值的索引位置-index(值) # tuple之index() name_tuple = ('nick', 'jason', 'tank', 'sean') print(name_tuple.index('nick'): )#0 ",
+  "wordCount" : "491",
   "inLanguage": "en",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
+  "image":"https://bobby-sheng.github.io/BobbySheng/img/python001.png","datePublished": "2022-07-27T00:00:00Z",
+  "dateModified": "2022-07-27T00:00:00Z",
   "author":{
     "@type": "Person",
     "name": "Bobby"
@@ -227,8 +229,11 @@ var _hmt = _hmt || [];
         <header class="post-header">
             <div class="breadcrumbs"><a href="https://bobby-sheng.github.io/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/">⌛ Thought</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/">🏗️ Blog</a></div>
             <h1 class="post-title">
-                
+                Python元组详解
             </h1>
+            <div class="post-description">
+                Python元组详解
+            </div>
             <div class="post-meta">
 
 <style>
@@ -248,7 +253,7 @@ var _hmt = _hmt || [];
 <span class="parent-post-meta">
     <span id="post_meta_style_1">
         <span class="fa fa-calendar-check-o"></span>
-        <span>0001-01-01
+        <span>2022-07-27
             &nbsp;&nbsp;
         </span>
     </span>
@@ -261,13 +266,13 @@ var _hmt = _hmt || [];
     
     <span id="post_meta_style_3">
         <span class="fa fa-file-word-o"></span>
-        <span>504字
+        <span>491 Char
             &nbsp;&nbsp;
         </span>
     </span>
     <span id="post_meta_style_4">
         <span class="fa fa-clock-o"></span>
-        <span>2分钟
+        <span>1 min
             &nbsp;&nbsp;
         </span>
     </span>
@@ -280,6 +285,10 @@ var _hmt = _hmt || [];
     <span id="post_meta_style_6">
         <span class="fa fa-tags" style="opacity: 0.8"></span>
         <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+            </span>
         </span>
     </span>
 </span>
@@ -288,7 +297,7 @@ var _hmt = _hmt || [];
                         &nbsp;&nbsp;
                         <span class="fa fa-eye" ></span>
                         <span>
-                            <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            Visit:<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
                             &nbsp;&nbsp;
                         </span>
                     </span>
@@ -340,9 +349,6 @@ var _hmt = _hmt || [];
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#python%e5%85%83%e7%bb%84%e8%af%a6%e8%a7%a3" aria-label="Python元组详解">Python元组详解</a><ul>
-                        
-                <li>
                     <a href="#%e4%b8%80%e5%85%83%e7%bb%84%e5%92%8c%e5%88%97%e8%a1%a8%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="一、元组和列表的区别">一、元组和列表的区别</a></li>
                 <li>
                     <a href="#%e4%ba%8c%e5%85%83%e7%bb%84%e7%9a%84%e5%9f%ba%e6%9c%ac%e4%bd%bf%e7%94%a8" aria-label="二、元组的基本使用">二、元组的基本使用</a><ul>
@@ -364,8 +370,6 @@ var _hmt = _hmt || [];
                 <li>
                     <a href="#7%e8%bf%94%e5%9b%9e%e5%80%bc%e7%9a%84%e7%b4%a2%e5%bc%95%e4%bd%8d%e7%bd%ae-index%e5%80%bc" aria-label="7、返回值的索引位置-index(值)">7、返回值的索引位置-index(值)</a>
                 </li>
-            </ul>
-            </li>
             </ul>
             </li>
             </ul>
@@ -431,59 +435,57 @@ var _hmt = _hmt || [];
         return rect.top + win.pageYOffset;
     }
 </script>
-        <div class="post-content"><h1 id="python元组详解">Python元组详解<a hidden class="anchor" aria-hidden="true" href="#python元组详解">#</a></h1>
-<p>2022-07-27 · bobby</p>
-<h2 id="一元组和列表的区别">一、元组和列表的区别<a hidden class="anchor" aria-hidden="true" href="#一元组和列表的区别">#</a></h2>
+        <div class="post-content"><h2 id="一元组和列表的区别">一、元组和列表的区别<a hidden class="anchor" aria-hidden="true" href="#一元组和列表的区别">#</a></h2>
 <p>1、元组无法增删改查，只能通过重新赋值修改元素，可以把元组理解为只可读的列表</p>
 <p>2、元组占用内存比列表小，python程序缓存机制对于静态资源占用内存较小的会留缓存，新建相同内存大小的元组时可以从缓存中获取，列表就需要从操作系统寻找内存，速度会快很多</p>
 <p>3、元组可以在映射（和集合的成员）中当做“键”使用，而列表不行</p>
 <h2 id="二元组的基本使用">二、元组的基本使用<a hidden class="anchor" aria-hidden="true" href="#二元组的基本使用">#</a></h2>
 <h3 id="1tuple函数的使用">1、tuple函数的使用<a hidden class="anchor" aria-hidden="true" href="#1tuple函数的使用">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># tuple函数的功能与list函数基本上是一样的：以一个序列作为参数并把它转化为元组。如果参数就是元组，那么该函数就会被原样返回：</span>
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> tuple([<span style="color:#f99b15">1</span>,<span style="color:#f99b15">2</span>,<span style="color:#f99b15">3</span>])
-</span></span><span style="display:flex;"><span>(<span style="color:#f99b15">1</span>, <span style="color:#f99b15">2</span>, <span style="color:#f99b15">3</span>)
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> tuple(<span style="color:#48b685">&#39;abc&#39;</span>)
-</span></span><span style="display:flex;"><span>(<span style="color:#48b685">&#39;a&#39;</span>, <span style="color:#48b685">&#39;b&#39;</span>, <span style="color:#48b685">&#39;c&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> tuple((<span style="color:#f99b15">1</span>,<span style="color:#f99b15">2</span>,<span style="color:#f99b15">3</span>))
-</span></span><span style="display:flex;"><span>(<span style="color:#f99b15">1</span>, <span style="color:#f99b15">2</span>, <span style="color:#f99b15">3</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71"># tuple函数的功能与list函数基本上是一样的：以一个序列作为参数并把它转化为元组。如果参数就是元组，那么该函数就会被原样返回：</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; tuple<span style="color:#5bc4bf">([</span>1,2,3<span style="color:#5bc4bf">])</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">(</span>1, 2, 3<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; tuple<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;abc&#39;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;a&#39;</span>, <span style="color:#48b685">&#39;b&#39;</span>, <span style="color:#48b685">&#39;c&#39;</span><span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; tuple<span style="color:#5bc4bf">((</span>1,2,3<span style="color:#5bc4bf">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">(</span>1, 2, 3<span style="color:#5bc4bf">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#可以通过转为元组，再转为列表，做一些字符串的处理</span>
 </span></span></code></pre></div><h3 id="3索引">3、索引<a hidden class="anchor" aria-hidden="true" href="#3索引">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># tuple之索引取值</span>
-</span></span><span style="display:flex;"><span>name_tuple <span style="color:#5bc4bf">=</span> (<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71"># tuple之索引取值</span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">name_tuple</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span><span style="color:#5bc4bf">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#776e71"># name_tuple[0] = &#39;nick handsom&#39;  # 报错</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(name_tuple[<span style="color:#f99b15">0</span>]) <span style="color:#776e71">#nick</span>
+</span></span><span style="display:flex;"><span>print<span style="color:#5bc4bf">(</span>name_tuple<span style="color:#5bc4bf">[</span>0<span style="color:#5bc4bf">])</span> <span style="color:#776e71">#nick</span>
 </span></span></code></pre></div><h3 id="4切片">4、切片<a hidden class="anchor" aria-hidden="true" href="#4切片">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># tuple之切片</span>
-</span></span><span style="display:flex;"><span>name_tuple <span style="color:#5bc4bf">=</span> (<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71"># tuple之切片</span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">name_tuple</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span><span style="color:#5bc4bf">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(name_tuple[<span style="color:#f99b15">1</span>:<span style="color:#f99b15">3</span>:<span style="color:#f99b15">2</span>])<span style="color:#776e71">#jason</span>
+</span></span><span style="display:flex;"><span>print<span style="color:#5bc4bf">(</span>name_tuple<span style="color:#5bc4bf">[</span>1:3:2<span style="color:#5bc4bf">])</span><span style="color:#776e71">#jason</span>
 </span></span></code></pre></div><h3 id="5长度">5、长度<a hidden class="anchor" aria-hidden="true" href="#5长度">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># tuple之切片</span>
-</span></span><span style="display:flex;"><span>name_tuple <span style="color:#5bc4bf">=</span> (<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71"># tuple之切片</span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">name_tuple</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span><span style="color:#5bc4bf">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print len(name_tuple)<span style="color:#776e71">#4</span>
+</span></span><span style="display:flex;"><span>print len<span style="color:#5bc4bf">(</span>name_tuple<span style="color:#5bc4bf">)</span><span style="color:#776e71">#4</span>
 </span></span></code></pre></div><h3 id="6成员运算">6、成员运算<a hidden class="anchor" aria-hidden="true" href="#6成员运算">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># tuple之成员运算</span>
-</span></span><span style="display:flex;"><span>name_tuple <span style="color:#5bc4bf">=</span> (<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71"># tuple之成员运算</span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">name_tuple</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span><span style="color:#5bc4bf">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#48b685">&#39;nick&#39;</span> <span style="color:#5bc4bf">in</span> name_tuple) <span style="color:#776e71">#True</span>
+</span></span><span style="display:flex;"><span>print<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;nick&#39;</span> in name_tuple<span style="color:#5bc4bf">)</span> <span style="color:#776e71">#True</span>
 </span></span></code></pre></div><h3 id="7循环">7、循环<a hidden class="anchor" aria-hidden="true" href="#7循环">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># tuple之循环</span>
-</span></span><span style="display:flex;"><span>name_tuple <span style="color:#5bc4bf">=</span> (<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71"># tuple之循环</span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">name_tuple</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span><span style="color:#5bc4bf">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#815ba4">for</span> name <span style="color:#5bc4bf">in</span> name_tuple:
-</span></span><span style="display:flex;"><span>    print(name)
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">for</span> name in name_tuple:
+</span></span><span style="display:flex;"><span>    print<span style="color:#5bc4bf">(</span>name<span style="color:#5bc4bf">)</span>
 </span></span></code></pre></div><h3 id="8统计值个数count">8、统计值个数count()<a hidden class="anchor" aria-hidden="true" href="#8统计值个数count">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># tuple之count()</span>
-</span></span><span style="display:flex;"><span>name_tuple <span style="color:#5bc4bf">=</span> (<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71"># tuple之count()</span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">name_tuple</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span><span style="color:#5bc4bf">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(name_tuple<span style="color:#5bc4bf">.</span>count(<span style="color:#48b685">&#39;nick&#39;</span>): )<span style="color:#776e71">#1</span>
+</span></span><span style="display:flex;"><span>print<span style="color:#5bc4bf">(</span>name_tuple.count<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;nick&#39;</span><span style="color:#5bc4bf">)</span>: <span style="color:#5bc4bf">)</span><span style="color:#776e71">#1</span>
 </span></span></code></pre></div><h3 id="7返回值的索引位置-index值">7、返回值的索引位置-index(值)<a hidden class="anchor" aria-hidden="true" href="#7返回值的索引位置-index值">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71"># tuple之index()</span>
-</span></span><span style="display:flex;"><span>name_tuple <span style="color:#5bc4bf">=</span> (<span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71"># tuple之index()</span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">name_tuple</span> <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;nick&#39;</span>, <span style="color:#48b685">&#39;jason&#39;</span>, <span style="color:#48b685">&#39;tank&#39;</span>, <span style="color:#48b685">&#39;sean&#39;</span><span style="color:#5bc4bf">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(name_tuple<span style="color:#5bc4bf">.</span>index(<span style="color:#48b685">&#39;nick&#39;</span>): )<span style="color:#776e71">#0</span>
+</span></span><span style="display:flex;"><span>print<span style="color:#5bc4bf">(</span>name_tuple.index<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;nick&#39;</span><span style="color:#5bc4bf">)</span>: <span style="color:#5bc4bf">)</span><span style="color:#776e71">#0</span>
 </span></span></code></pre></div>
 
         </div>
@@ -521,12 +523,12 @@ var _hmt = _hmt || [];
   <a class="prev" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/">
     <span class="title">« Prev Page</span>
     <br>
-    <span></span>
+    <span>Pytest详解</span>
   </a>
-  <a class="next" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/">
+  <a class="next" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/">
     <span class="title">Next Page »</span>
     <br>
-    <span></span>
+    <span>Python集合详解</span>
   </a>
 </nav>
 

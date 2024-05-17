@@ -1,6 +1,15 @@
-# Github连接超时处理
-
-2022-06-16 · bobby
+---
+title: "Github连接超时处理"
+date: 2022-06-16
+lastmod: 2022-06-16
+tags:
+  - Git
+keywords:
+  - Git
+description: "flask-SQLAlchemy对sqlite数据库的连接与增删改查"
+cover:
+    image: "img/github001.png"
+---
 
 ### 1、通过以下地址获取速度较快的ip作为映射地址(需要在本地可以ping通的)
 

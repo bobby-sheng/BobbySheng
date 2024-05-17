@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Python | Bobby Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Bobby的个人博客, hugo, papermod, shell, python, linux, mysql, redis, k8s, docker, devops">
+<meta name="author" content="Author:&nbsp;Bobby">
+<link rel="canonical" href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.6a40292a989606997dd45ccd829e20eee5a112b82f15dc3f77574d4b106f2252.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="apple-touch-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="mask-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/index.xml">
+<link rel="alternate" hreflang="en" href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+  
+
+<meta property="og:title" content="Python" />
+<meta property="og:description" content="Bobby的个人博客, hugo, papermod, shell, python, linux, mysql, redis, k8s, docker, devops" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python"/>
+<meta name="twitter:description" content="Bobby的个人博客, hugo, papermod, shell, python, linux, mysql, redis, k8s, docker, devops"/>
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://bobby-sheng.github.io/BobbySheng/en/" accesskey="h" title="Bobby Blog (Alt + H)">
+                <img src="https://bobby-sheng.github.io/BobbySheng/img/title.png" alt="" aria-label="logo"
+                    height="35">Bobby Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/search" title="🔍 Search (Alt &#43; /)" accesskey=/>
+                    <span>🔍 Search</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/posts" title="📜 Blog">
+                    <span>📜 Blog</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/archives" title="💾 History">
+                    <span>💾 History</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/about" title="🙋🏻‍♂️ About">
+                    <span>🙋🏻‍♂️ About</span>
+                    
+                </a>
+            
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://bobby-sheng.github.io/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/tags/">🏷️ 标签</a></div>
+    <h1>Python</h1>
+</header>
+
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        
+        <header class="entry-header">
+            <h2>Flask_SQLAlchemy数据库 
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                flask-SQLAlchemy对sqlite数据库的连接与增删改查
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2022-10-31
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2016 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>5 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+                &nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/tags/flask/" style="color: var(--secondary)!important;">Flask</a>
+            </span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div> 
+<figure class="entry-cover"><img loading="lazy" src="https://bobby-sheng.github.io/BobbySheng/img/flasksqlalchemy.png" alt="">
+</figure>
+    <a class="entry-link" aria-label="post link to Flask_SQLAlchemy数据库 " href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/flask_sqlalchemy%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+</article>
+
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        
+        <header class="entry-header">
+            <h2>Pytest详解
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                Pytest详解
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2022-08-25
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2811 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>6 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+                &nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/tags/pytest/" style="color: var(--secondary)!important;">Pytest</a>
+            </span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div> 
+<figure class="entry-cover"><img loading="lazy" src="https://bobby-sheng.github.io/BobbySheng/img/python001.png" alt="">
+</figure>
+    <a class="entry-link" aria-label="post link to Pytest详解" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/"></a>
+</article>
+
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        
+        <header class="entry-header">
+            <h2>Python元组详解
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                Python元组详解
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2022-07-27
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>491 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>1 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+            </span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div> 
+<figure class="entry-cover"><img loading="lazy" src="https://bobby-sheng.github.io/BobbySheng/img/python001.png" alt="">
+</figure>
+    <a class="entry-link" aria-label="post link to Python元组详解" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/"></a>
+</article>
+
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        
+        <header class="entry-header">
+            <h2>Python集合详解
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2022-07-27
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>674 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>2 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+            </span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div> 
+<figure class="entry-cover"><img loading="lazy" src="https://bobby-sheng.github.io/BobbySheng/img/python001.png" alt="">
+</figure>
+    <a class="entry-link" aria-label="post link to Python集合详解" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/"></a>
+</article>
+
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        
+        <header class="entry-header">
+            <h2>Python字典详解
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                Python字典详解
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2022-07-26
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>1918 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>4 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+            </span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div> 
+<figure class="entry-cover"><img loading="lazy" src="https://bobby-sheng.github.io/BobbySheng/img/python001.png" alt="">
+</figure>
+    <a class="entry-link" aria-label="post link to Python字典详解" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%AD%97%E5%85%B8%E8%AF%A6%E8%A7%A3/"></a>
+</article>
+
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        
+        <header class="entry-header">
+            <h2>Python字符串详解
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                Python字符串详解
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2022-07-25
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2517 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>6 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+            </span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div> 
+<figure class="entry-cover"><img loading="lazy" src="https://bobby-sheng.github.io/BobbySheng/img/python001.png" alt="">
+</figure>
+    <a class="entry-link" aria-label="post link to Python字符串详解" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E8%A7%A3/"></a>
+</article>
+
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        
+        <header class="entry-header">
+            <h2>Python列表方法详解
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                Python列表方法详解
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2022-07-21
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2002 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>4 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+            </span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div> 
+<figure class="entry-cover"><img loading="lazy" src="https://bobby-sheng.github.io/BobbySheng/img/python001.png" alt="">
+</figure>
+    <a class="entry-link" aria-label="post link to Python列表方法详解" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/"></a>
+</article>
+
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        
+        <header class="entry-header">
+            <h2>python文档读写方法
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                python文档读写方法
+                ...
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2022-07-14
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>871 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>2 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+            </span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div> 
+<figure class="entry-cover"><img loading="lazy" src="https://bobby-sheng.github.io/BobbySheng/img/python001.png" alt="">
+</figure>
+    <a class="entry-link" aria-label="post link to python文档读写方法" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99%E6%96%B9%E6%B3%95/"></a>
+</article>
+
+
+<article class="post-entry">
+
+
+    <div class="post-info">
+        
+        <header class="entry-header">
+            <h2>Python离线安装包地址
+            </h2>
+        </header>
+        <section class="entry-content">
+            <p>
+                Python离线安装包地址
+                
+            </p>
+        </section>
+        <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2022-06-15
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>32 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>1 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+            </span>
+        </span>
+    </span>
+</span>
+</footer>
+    </div> 
+<figure class="entry-cover"><img loading="lazy" src="https://bobby-sheng.github.io/BobbySheng/img/python001.png" alt="">
+</figure>
+    <a class="entry-link" aria-label="post link to Python离线安装包地址" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/"></a>
+</article>
+</main>
+
+
+<footer class="footer">
+
+    <a href="https://gohugo.io/" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/frame-hugo-blue?style=flat&logo=hugo">
+    </a>
+    <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/theme-papermod-lightgrey?style=flat&logo=BookStack">
+    </a>
+
+    <br>
+
+    <span id="runtime_span"></span>
+    <script
+        type="text/javascript">function show_runtime() { window.setTimeout("show_runtime()", 1000); X = new Date("7/13/2021 1:00:00"); Y = new Date(); T = (Y.getTime() - X.getTime()); M = 24 * 60 * 60 * 1000; a = T / M; A = Math.floor(a); b = (a - A) * 24; B = Math.floor(b); c = (b - B) * 60; C = Math.floor((b - B) * 60); D = Math.floor((c - C) * 60); runtime_span.innerHTML = "网站已运行" + A + "天" + B + "小时" + C + "分" + D + "秒" } show_runtime();</script>
+    |
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container">
+        
+        总访客数:  <span id="busuanzi_value_site_uv"></span>
+        |
+        总访问量:  <span id="busuanzi_value_site_pv"></span>
+    </span>
+
+    <br>
+
+    <a href="https://beian.miit.gov.cn/" target="_blank" style="border-bottom:1px solid">Bobby</a>&nbsp;
+    |
+    <span>
+        Copyright
+        &copy;
+        2018-2024
+        <a href="https://bobby-sheng.github.io/BobbySheng/en/" style="border-bottom:1px solid">Bobby Blog</a>
+    </span>
+
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+
+
+</body>
+
+</html>

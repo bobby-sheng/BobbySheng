@@ -1,10 +1,22 @@
+---
+title: "Hugo搭建手抄"
+date: 2022-06-16
+lastmod: 2022-06-16
+tags:
+  - Hogo
+keywords:
+  - Hogo
+description: "Hugo搭建手抄"
+cover:
+    image: "img/hugo001.png"
+---
 # Hugo搭建手抄
 
 2022-06-07 · bobby
 
 ### md文件开端
 
-```fallback
+```bash
 #title: "{{ replace .Name "-" " " | title }}" 
 #date: {{ .Date }} 
 #lastmod: {{ .Date }} 
@@ -35,7 +47,7 @@ cover:
 
 ### hugo操作命令
 
-```fallback
+```bash
 hugo -F --cleanDestinationDir 清除后生成public文件，可能会出现漏上传
 hugo --buildDrafts   全部生成public
 

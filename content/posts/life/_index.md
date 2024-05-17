@@ -4,7 +4,7 @@ date: 2023-12-29
 lastmod: 2024-01-10
 tags:
 keywords:
-description: "人不像动物，人能领略出生活的唯一目的就是享受生活"
+description: "Record life"
 cover:
     image: ""
 hidemeta: true 

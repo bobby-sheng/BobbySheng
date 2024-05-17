@@ -3,15 +3,14 @@ title: "Flask_SQLAlchemy数据库 "
 date: 2022-10-31
 lastmod: 2022-10-31
 tags:
-  - docker
-  - obsidian
+  - Python
+  - Flask
 keywords:
-  - docker
-  - obsidian
-  - centos
-  - piclist
+  - Python
+  - Flask
 description: "flask-SQLAlchemy对sqlite数据库的连接与增删改查"
 cover:
+    image: "img/flasksqlalchemy.png"
 ---
 
 ## 简介

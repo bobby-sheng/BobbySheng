@@ -1,6 +1,15 @@
-# Python列表方法详解
-
-2022-07-21 · bobby
+---
+title: "Python列表方法详解"
+date: 2022-07-21
+lastmod: 2022-07-21
+tags:
+  - Python
+keywords:
+  - Python
+description: "Python列表方法详解"
+cover:
+    image: "img/python001.png"
+---
 
 ## 笔记背景
 
@@ -12,7 +21,7 @@
 
 按索引取值（正向取值+反向取值），即可存也可以取
 
-```python
+```bash
 # list之索引取值
 name_list = ['nick', 'jason', 'tank', 'sean']
 name_list[0] = 'nick handsom' 存入到第一个索引位置中
@@ -28,7 +37,7 @@ pring name_list[0]
 
 #### 2.1、获取单个元素
 
-```python
+```bash
 list =["red","green","blue","yellow","white","black"]
 
 #red
@@ -40,7 +49,7 @@ print(list[-1])
 
 #### 2.2、获取列表对象
 
-```python
+```bash
 list = ["red","green","blue","yellow","white","black"]
 '''
 从左往右获取索引,['red', 'green', 'blue', 'yellow', 'white', 'black']
@@ -58,7 +67,7 @@ print(list[::-1])
 
 （1）正向索引
 
-```python
+```bash
 list = ["red","green","blue","yellow","white","black"]
 '''
 反向索引：step为负数
@@ -81,7 +90,7 @@ print(list[1:5:2])  # ['green', 'yellow']
 
 （2）反向索引
 
-```python
+```bash
 list = ["red","green","blue","yellow","white","black"]
 '''
 反向索引：step为负数
@@ -110,7 +119,7 @@ print(list[-5:-3:-1])  # []
 
 #### 2.4、列表多层切片
 
-```python
+```bash
 '''多层切片'''
 list = ["red","green","blue","yellow","white","black"]
 # 链式列表切片
@@ -133,7 +142,7 @@ print(list4)
 
 ### 3、长度-len(list)
 
-```python
+```bash
 # list之长度
 name_list = ['nick', 'jason', 'tank', 'sean']
 
@@ -149,7 +158,7 @@ print(len(name_list[4]))
 
 ### 4、成员运算in和not in
 
-```python
+```bash
 # list之成员运算in和not in
 name_list = ['nick', 'jason', 'tank', 'sean']
 
@@ -162,7 +171,7 @@ print('nick handsome' not in name_list)
 
 ### 5、追加值-append（值）
 
-```python
+```bash
 # list之追加值
 name_list = ['nick', 'jason', 'tank', 'sean']
 name_list.append('tank sb')
@@ -173,7 +182,7 @@ print name_list
 
 ### 6、删除值-del list[index]
 
-```python
+```bash
 # list之删除值
 name_list = ['nick', 'jason', 'tank', 'sean']
 del name_list[2]
@@ -184,7 +193,7 @@ print name_list
 
 ### 7、列表循环取值
 
-```python
+```bash
 # list之列表循环取值
 name_list = ['nick', 'jason', 'tank', 'sean']
 
@@ -198,7 +207,7 @@ name_list = ['nick', 'jason', 'tank', 'sean']
 
 ### 1、列表插入-insert(index)
 
-```python
+```bash
 #使用方法insert(index,list)
 
 #注意：如果索引超出范围,则如果索引为正,则该项目将追加到末尾；如果索引为负,则将其追加到开头，没有例外.
@@ -215,7 +224,7 @@ name_list = ['nick', 'jason', 'tank', 'sean']
 
 ### 2、列表删除-pop(index)
 
-```python
+```bash
 #使用方法 list.pop(),index为空默认删除最后一个值[-1]
 
 #注意：此方法会返回删除数据的值
@@ -228,7 +237,7 @@ print(name_list)
 
 ### 3、列表删除-remove(值)
 
-```python
+```bash
 # 使用方法list.remove(值),会删除匹配到的第一个值
 
 name_list = ['nick', 'jason', 'jason','tank', 'sean']
@@ -240,7 +249,7 @@ print name_list
 
 ### 4、列表重复值统计-count(值)
 
-```python
+```bash
 # 使用方法list.count(值),会统计列表中值的个数
 
 name_list = ['nick', 'jason', 'jason','tank', 'sean']
@@ -251,7 +260,7 @@ print name_list.count('jason')
 
 ### 5、列表值的索引位置-index(值)
 
-```python
+```bash
 # 使用方法list.index(值),会查找出列表中匹配到的第一个值的位置
 
 name_list = ['nick', 'jason', 'jason','tank', 'sean']
@@ -262,7 +271,7 @@ print name_list.index('jason')
 
 ### 6、列表清除内容-clear()
 
-```python
+```bash
 # 使用方法list.clear(),清除列表内容
 
 name_list = ['nick', 'jason', 'jason','tank', 'sean']
@@ -274,7 +283,7 @@ print name_list
 
 ### 7、列表复制-copy()
 
-```python
+```bash
 # 使用方法list.copy(),清除列表内容
 
 name_list = ['nick', 'jason', 'jason','tank', 'sean']
@@ -286,7 +295,7 @@ print name_list_copy
 
 ### 8、列表合并-extend(list2)
 
-```python
+```bash
 # 使用方法list1.extend(list2),合并两个值列表为一个
 
 name_list = ['nick', 'jason', 'jason','tank', 'sean']
@@ -299,7 +308,7 @@ print name_list
 
 ### 9、列表反转-reverse()
 
-```python
+```bash
 # 使用方法list.reverse(),列表反转
 
 name_list = ['nick', 'jason', 'jason','tank', 'sean']
@@ -311,7 +320,7 @@ print name_list
 
 ### 10、列表**排序**-sort()
 
-```python
+```bash
 # 使用方法list.sort(),使用sort列表的元素必须是同类型的
 
 #列表内的元素，按照由小到大顺序进行排序。

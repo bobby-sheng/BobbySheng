@@ -1,6 +1,15 @@
-# Python字典详解
-
-2022-07-26 · bobby
+---
+title: "Python字典详解"
+date: 2022-07-26
+lastmod: 2022-07-26
+tags:
+  - Python
+keywords:
+  - Python
+description: "Python字典详解"
+cover:
+    image: "img/python001.png"
+---
 
 ## 一、字典常用方法
 
@@ -8,7 +17,7 @@
 
 ### 1、定义
 
-```python
+```bash
 #第一种
 bobby = {1: 'a', 0: 'b'}
 print bobby
@@ -25,7 +34,7 @@ print bobby
 
 通过key值获取相应的value值
 
-```python
+```bash
 bobby = {1: 'a', 0: 'b'}
 
 print bobby[1] #a
@@ -35,7 +44,7 @@ print bobby[1] #a
 
 参数key表示字典的键值，参数`default_value`可以作为get()的返回值，默认值为None。如果指定`default_value`参数值，表示如果参数key键值在字典key列表中，则返回对应的value值，如果不在，则返回预先设定的`default_value`的值
 
-```python
+```bash
 # default_value参数可以作为未找到value的返回值，默认返回空
 bobby = {1: 'a', 0: 'b'}
 #有值情况返回值
@@ -54,7 +63,7 @@ print bobby.get(4) #None
 
 如果键值key不在字典dict的key列表中，字典dict添加（key：value）的记录。如果已经在key列表中，则修改键值key对应的value值
 
-```python
+```bash
 bobby = {1: 'a', 0: 'b'}
 bobby[3] = "c"
 print bobby
@@ -71,7 +80,7 @@ print bobby
 
 如果索引key在字典key列表中，则返回对应的value值，如果不在key列表中，则添加新索引key和value在字典中，并反馈`default_valu`e值，默认值 为None
 
-```python
+```bash
 #当key存在时，会返回存在的value，并且不修改
 bobby = {1: 'a', 0: 'b'}
 print bobby.setdefault(1) #a
@@ -90,7 +99,7 @@ print bobby #{1: 'a', 0: 'b',4:'null'}
 
 ### 4、获取字典所有keys、Values或者key-valu键值对
 
-```python
+```bash
 #获取字典的所有"键"-"值"元素。通过调用字典的items()方法实现，返回的是(key,value)元组组成的列表
 #python2中取出的是列表（鸡蛋）；python3中取出的是元组（鸡）
 bobby = {1: 'a', 0: 'b'}
@@ -107,7 +116,7 @@ print bobby.Values() #['b', 'a']
 
 ### 5、循环
 
-```python
+```bash
 # dic之循环
 # dic是无序的，但是python3采用了底层优化算法，所以看起来是有序的，但是python2中的字典是无序
 bobby = {1: 'a', 0: 'b'}
@@ -121,7 +130,7 @@ for k, v in bobby.items():
 
 #### 6.1 del dict[key]
 
-```python
+```bash
 #调用py内置方法del
 bobby = {1: 'a', 0: 'b'}
 del bobby[1]
@@ -132,7 +141,7 @@ print bobby #{0: 'b'}
 
 pop()函数必须指定参数索引key才能删除对应的值。如果索引key在字典key列表中，则返回索引key对应的value值。如果不存在，则返回预先设置的`default_value`值，如果未设置，会爬出KeyError异常信息
 
-```python
+```bash
 #索引key在字典key列表中，则返回索引key对应的value值
 bobby = {1: 'a', 0: 'b'}
 
@@ -154,7 +163,7 @@ print bobby {0: 'b', 1: 'a'}
 
 #### 6.3 dict.clear()
 
-```python
+```bash
 #调用py内置方法del
 bobby = {1: 'a', 0: 'b'}
 bobby.clear()
@@ -163,7 +172,7 @@ print bobby #{}
 
 ### 7、多个key设值-fromkeys([key,],values)
 
-```python
+```bash
 # dic之fromkeys()
 dic = dict.fromkeys(['name', 'age', 'sex'], None)
 print dic
@@ -172,7 +181,7 @@ print dic
 
 ### 8、两字典合并-1.update(2)
 
-```python
+```bash
 # dic之update()
 dic1 = {'a': 1, 'b': 2}
 dic2 = {'c': 3}
@@ -184,7 +193,7 @@ print(dic1)
 
 ### 9、字典排序-sorted()
 
-```python
+```bash
 dict = {'2':"Python",'1':"Java",'3':"C++"}
 
 sorted(dict.items(),key=lambda d:d[0])
@@ -206,7 +215,7 @@ sorted(zip(prices.values(),prices.keys()))
 
 ### 10、成员运算in和not in
 
-```python
+```bash
 # dic之成员运算in和not in,只会判断key是否存在
 dic = {'a': 1, 'b': 2}
 
@@ -216,7 +225,7 @@ print(1 in dic) #False
 
 ### 11、获取字典相同元素
 
-```python
+```bash
 #获取两个字典相同的键、值或者items。可以通过集合运算的方式获取。
 dic_a = {'x':1,'y':2,'z':3}
 dic_b = {'w':10,'x':11,'y':2}

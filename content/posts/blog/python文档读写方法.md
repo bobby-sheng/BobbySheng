@@ -1,6 +1,15 @@
-# python文档读写方法
-
-2022-07-14 · bobby
+---
+title: "python文档读写方法"
+date: 2022-07-14
+lastmod: 2022-07-14
+tags:
+  - Python
+keywords:
+  - Python
+description: "python文档读写方法"
+cover:
+    image: "img/python001.png"
+---
 
 ### 一、文档读写实用方法
 
@@ -8,7 +17,7 @@
 
 解释：此函数读取文件默认打印第一行，后面可以接参数打印字符个数
 
-```python
+```bash
 with open(p, 'rt') as f:
     rows = f.readline()
     print rows
@@ -20,7 +29,7 @@ file.readline()[index]
 
 解释：此函数把文件作列表全部读取出来，可通过for循环获取每一行的值
 
-```python
+```bash
 with open(p, 'rt') as f:
     rows = f.readlines()
     for i, line in enumerate(rows):
@@ -31,7 +40,7 @@ with open(p, 'rt') as f:
 
 解释：此函数把文件样式原封不动的打印出来
 
-```python
+```bash
 with open(p, 'rt') as f:
     rows = f.read()
     print rows
@@ -39,7 +48,7 @@ with open(p, 'rt') as f:
 
 ### 二、打开文件模式解释
 
-```python
+```bash
 ### 常用模式打开文件
 # 1.r模式
 # 2.w模式:写入的文件不存在会自动创建，每一次写入都会覆盖前面的内容
@@ -62,7 +71,7 @@ with open(p, 'rt') as f:
 
 解释：打开文件，获取文件所在行之后，赋值。在打开文件写入变量中的值
 
-```python
+```bash
 with open(p, 'rt') as f:
     rows = f.readlines()
     for i, line in enumerate(rows):
@@ -82,7 +91,7 @@ with open(p, 'w+') as w:
 
 解释：一次性打开多个文件，实现文件的快速拷贝。
 
-```python
+```bash
 with open('32.txt', 'rb') as fr, \
         open('35r.txt', 'wb') as fw:
     f.write(f.read())
@@ -90,7 +99,7 @@ with open('32.txt', 'rb') as fr, \
 
 **案例三**
 
-```python
+```bash
 import os
 
 with open('37r.txt') as fr, \
@@ -109,7 +118,7 @@ print('done...')
 
 **案例四**
 
-```python
+```bash
 import os
 
 with open('37r.txt') as fr,\

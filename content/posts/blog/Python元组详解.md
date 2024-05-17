@@ -1,6 +1,15 @@
-# Python元组详解
-
-2022-07-27 · bobby
+---
+title: "Python元组详解"
+date: 2022-07-27
+lastmod: 2022-07-27
+tags:
+  - Python
+keywords:
+  - Python
+description: "Python元组详解"
+cover:
+    image: "img/python001.png"
+---
 
 ## 一、元组和列表的区别
 
@@ -14,7 +23,7 @@
 
 ### 1、tuple函数的使用
 
-```python
+```bash
 # tuple函数的功能与list函数基本上是一样的：以一个序列作为参数并把它转化为元组。如果参数就是元组，那么该函数就会被原样返回：
 >>> tuple([1,2,3])
 (1, 2, 3)
@@ -27,7 +36,7 @@
 
 ### 3、索引
 
-```python
+```bash
 # tuple之索引取值
 name_tuple = ('nick', 'jason', 'tank', 'sean')
 # name_tuple[0] = 'nick handsom'  # 报错
@@ -37,7 +46,7 @@ print(name_tuple[0]) #nick
 
 ### 4、切片
 
-```python
+```bash
 # tuple之切片
 name_tuple = ('nick', 'jason', 'tank', 'sean')
 
@@ -46,7 +55,7 @@ print(name_tuple[1:3:2])#jason
 
 ### 5、长度
 
-```python
+```bash
 # tuple之切片
 name_tuple = ('nick', 'jason', 'tank', 'sean')
 
@@ -55,7 +64,7 @@ print len(name_tuple)#4
 
 ### 6、成员运算
 
-```python
+```bash
 # tuple之成员运算
 name_tuple = ('nick', 'jason', 'tank', 'sean')
 
@@ -64,7 +73,7 @@ print('nick' in name_tuple) #True
 
 ### 7、循环
 
-```python
+```bash
 # tuple之循环
 name_tuple = ('nick', 'jason', 'tank', 'sean')
 
@@ -74,7 +83,7 @@ for name in name_tuple:
 
 ### 8、统计值个数count()
 
-```python
+```bash
 # tuple之count()
 name_tuple = ('nick', 'jason', 'tank', 'sean')
 
@@ -83,7 +92,7 @@ print(name_tuple.count('nick'): )#1
 
 ### 7、返回值的索引位置-index(值)
 
-```python
+```bash
 # tuple之index()
 name_tuple = ('nick', 'jason', 'tank', 'sean')
 

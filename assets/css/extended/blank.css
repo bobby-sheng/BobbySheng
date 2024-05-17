@@ -212,10 +212,12 @@ body {
 .entry-cover {
     border-radius: 10px;
     overflow: hidden;
-    width: 100%;
+    /*width: 100%;*/
+    width: 40%;
     margin-bottom: unset;
 
-    max-height: 200px;
+    /*max-height: 200px;*/
+    max-height: 150px;
     display: grid;
     align-content: center;
 }

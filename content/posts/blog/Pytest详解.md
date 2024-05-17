@@ -1,10 +1,20 @@
-# Pytest详解
-
-2022-08-25 · bobby
-
+---
+title: "Pytest详解"
+date: 2022-08-25
+lastmod: 2022-08-25
+tags:
+  - Python
+  - Pytest
+keywords:
+  - Python    
+  - Pytest
+description: "Pytest详解"
+cover:
+    image: "img/python001.png"
+---
 ## 一、pytest概念
 
-pytest是python的第三方测试框架，与python自带的unittest框架类似，但是比unittest框架要简洁，方便。
+pytest是bash的第三方测试框架，与bash自带的unittest框架类似，但是比unittest框架要简洁，方便。
 
 ## 二、pytest特点
 
@@ -26,14 +36,14 @@ pytest是非常成熟的测试框架，主要有一下几个特点
 
 ## 三、pytest安装
 
-```python
-#python直接使用pip导入即可
+```bash
+#bash直接使用pip导入即可
 pip install pytest
 ```
 
 ## 四、pytest 执行
 
-```python
+```bash
 #1、pytest可以通过指定文件目录，只执行该目录下的testcase
 #	通过空格间隔多个文件。后面还可以在加一层make筛选
 pytest test1   pytest test1 test2.py
@@ -41,7 +51,7 @@ pytest test1   pytest test1 test2.py
 
 ### pytest 执行参数
 
-```python
+```bash
 -v 输出更详细的信息；
 -s 输入调试信息；
 -n 多线程 需要安装xdist库
@@ -56,7 +66,7 @@ pytest -vs --reuns 2
 
 ### pytest make执行（-m）
 
-```python
+```bash
 #2、pytest make执行（-m）
 @pytest.mark.smoke
 	def aa():
@@ -66,7 +76,7 @@ pytest -vs --reuns 2
 
 ### pytest 执行顺序
 
-```python
+```bash
 #pytest顺序执行，需要给用例写上make装饰器方法
 @pytest.make.run(order=1)
 	def aa():
@@ -75,7 +85,7 @@ pytest -vs --reuns 2
 
 ## 五、pytest setup初始
 
-```python
+```bash
 #pytest框架在执行用例时的初始化分为了4个层面
 1、模块级：setup_module/teardown_module  #每个.py文件中存在就会执行一次
 2、函数级：setup_function/teardown_function #函数可以理解为不在calss类种的def方法，使用每个函数都会执行
@@ -85,7 +95,7 @@ pytest -vs --reuns 2
 
 ## 六、@pytest.fixture初始
 
-```python
+```bash
 #@pytest.fixture()和setup类似，都是初始方法，不过是以装饰器的形式去使用
 #@pytest.fixture(scope="作用域", params="数据驱动",autouse="自动执行",ids="参数别名",name="fixture别名")
 1、模块级：@pytest.fixture(scope="session",autouse="ture")  #多个py文件可以调用一次，存放在conftest.pyw文件中，作用域不同
@@ -99,13 +109,13 @@ pytest -vs --reuns 2
 
 pytest .mark.parametrize()
 
-```python
+```bash
 #pytest 内置装饰器 @pytest.mark.parametrize 可以让测试数据参数化，把测试数据单独管理，类似 ddt 数据驱动的作用，方便代码和测试数据分离。
 @pytest.mark.parametrize('x,y',[(1,2),(3,4)])
 def test_sum(x,y):
     sum = x + y
     print(sum)
-if __name__ =="__main__":python
+if __name__ =="__main__":bash
     pytest.main(['test_sample.py','-s'])
   3
   7
@@ -113,8 +123,8 @@ if __name__ =="__main__":python
 
 ## 八、pytest断言
 
-```python
-#常用断言，用的是python自带的断言。这块应该没有unittest好用
+```bash
+#常用断言，用的是bash自带的断言。这块应该没有unittest好用
 assert xx 判断xx为真
 assert not xx 判断xx不为真
 assert a in b 判断b包含b
@@ -137,13 +147,13 @@ def test_zero_division_long():
 
 ## 九、pytest.ini
 
-```python
+```bash
 #ini文件需要放在项目根目录中。可以把一些命令参数填写进去，也可以忽略告警、设置固定时间、以及写入make不提示告警
 [pytest]
 addopts = -rsxX -l -strict --tb=short   addopts后面可以接pytest运行时的参数，执行时就不需要填写参数了
 addopts = -p no:warnings  忽略告警
 env =
-    PYTHONHASHSEED=0  并发执行用例时程序线程之间的数量不相等导致报错，可以使用这个命令
+    bashHASHSEED=0  并发执行用例时程序线程之间的数量不相等导致报错，可以使用这个命令
 timeout = 2400  需要导入pytest_timeout插件，每条用例不包含前置执行时间超过2400s直接停止报错。控制执行时间
 markers = skipcase
     mistake
@@ -154,7 +164,7 @@ markers = skipcase
 
 ## 十、pytest_allure
 
-```python
+```bash
 安装命令：pip install allure-pytest
 使用方法	参数值	参数说明
 @allure.epic()	epic描述	敏捷里面的概念，定义史诗，往下是feature
@@ -179,7 +189,7 @@ pytest还有很多自带的装饰器以及第三方插件，我这里写的只�
 
 相比较于unittest框架还是好用的，下面例举一点优缺点
 
-```python
+```bash
 1、测试报告不同
 unittest支持 HTMLTestRunner   BeautifulRepor
 pytest 支持 allure
@@ -188,7 +198,7 @@ unittest前置只有两种，setup与setupclass
 pytest有两种方法，5中作用域
 3、断言不同
 unittest使用断言是self.assertinto()
-pytest是python自带的断言，直接使用 assert
+pytest是bash自带的断言，直接使用 assert
 4、用例收集不同
 unittest需要自己手动写代码收集测试套件
 pytest自动收集

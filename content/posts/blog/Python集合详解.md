@@ -1,21 +1,28 @@
-# Python集合详解
-
-2022-07-27 · bobby
-
-用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序
+---
+title: "Python集合详解"
+date: 2022-07-27
+lastmod: 2022-07-27
+tags:
+  - Python
+keywords:
+  - Python
+description: "用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序"
+cover:
+    image: "img/python001.png"
+---
 
 ## 一、集合常用方法
 
 ### 1、长度len
 
-```python
+```bash
 c={"c","1","o","r"}
 print len(c) #4
 ```
 
 ### 2、成员运算in和not in
 
-```python
+```bash
 c={"c","1","o","r"}
 print "c" in c  #True
 print "b" in c  #False
@@ -23,7 +30,7 @@ print "b" in c  #False
 
 ### 3、|并集、union
 
-```python
+```bash
 #两个集合去重复拼接
 c={"oen","tow","nike","bobby"}
 b={"three","four","nike","hello"}
@@ -36,7 +43,7 @@ print c.union(b)
 
 ### 4、&交集、intersection
 
-```python
+```bash
 #两个集合之间存在相同的值
 c={"oen","tow","nike","bobby"}
 b={"three","four","nike","hello"}
@@ -49,7 +56,7 @@ print c.intersection(b)
 
 ### 5、-差集、difference
 
-```python
+```bash
 #打印出集合1对比集合2不同的值
 c={"oen","tow","nike","bobby"}
 b={"three","four","nike","hello"}
@@ -62,7 +69,7 @@ print b.difference(c)
 
 ### 6、^对称差集、symmetric_difference
 
-```python
+```bash
 #去除两个集合之间相同的值，然后拼接为一个集合
 c={"oen","tow","nike","bobby"}
 b={"three","four","nike","hello"}
@@ -75,7 +82,7 @@ print b.symmetric_difference(c)
 
 ### 7、两集合是否相同-==
 
-```python
+```bash
 #判断两个集合是否一样-
 c={"oen","tow","nike","bobby"}
 a={"oen","tow","nike","bobby"}
@@ -87,7 +94,7 @@ print c==a #True
 
 ### 8、父集：>、>= 、issuperset
 
-```python
+```bash
 #判断集合1是否为集合2的父集，返回布尔值
 c={"oen","tow","nike","bobby"}
 a={"oen","tow"}
@@ -100,7 +107,7 @@ print b>=a #False
 
 ### 9、子集：<、<= 、issubset
 
-```python
+```bash
 #判断集合1是否为集合2的子集，返回布尔值
 c={"oen","tow","nike","bobby"}
 a={"oen","tow"}
@@ -114,7 +121,7 @@ print a<=b #False
 
 ### 1、增加元素-set.add()
 
-```python
+```bash
 c={"oen","tow","nike","bobby"}
 c.add("uu")
 print c
@@ -123,7 +130,7 @@ print c
 
 ### 2、增加元组-set.update(set)
 
-```python
+```bash
 #填入字符串默认转化为set格式，所以重复的字符串只能加入1次
 c={"oen","tow","nike","bobby"}
 b={"three","four","nike","hello"}
@@ -133,7 +140,7 @@ print c #set(['bobby', 'nike', 'oen', 'f', 'tow'])
 
 ### 3、删除元素
 
-```python
+```bash
 #第一种-set.remove(值)
 c={"oen","tow","nike","bobby"}
 c.remove("oen")
@@ -155,7 +162,7 @@ print c
 
 ### 4、移除元素-discard()
 
-```python
+```bash
 #如果x在集合S中，移除该元素；如果x不在集合S中，不报错
 c={"oen","tow","nike","bobby","aa"}
 b={"three","four","nike","hello","aa"}
@@ -165,7 +172,7 @@ print c #set(['aa', 'bobby', 'nike', 'tow'])
 
 ### 5、并集判断-isdisjoint()
 
-```python
+```bash
 #如果集合S与T没有相同元素，返回True
 c={"oen","tow","nike","bobby","aa"}
 b={"three","four","nike","hello","aa"}

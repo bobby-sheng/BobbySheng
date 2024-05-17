@@ -1,12 +1,21 @@
-# Python字符串详解
-
-2022-07-25 · bobby
+---
+title: "Python字符串详解"
+date: 2022-07-25
+lastmod: 2022-07-25
+tags:
+  - Python
+keywords:
+  - Python
+description: "Python字符串详解"
+cover:
+    image: "img/python001.png"
+---
 
 ## 一、字符串常用方法
 
 ### 1、索引-str[0]
 
-```python
+```bash
 #从0开始
 
 msg="bobby"
@@ -17,7 +26,7 @@ print msg[0]
 
 ### 2、切片-str[:::]
 
-```python
+```bash
 # 索引切片
 msg = 'hello nick'
 #      0123456789  # 索引序号
@@ -37,7 +46,7 @@ print(f'切片-2--5: {msg[-2:-5:-1]}')
 
 ### 3、长度-len(str)
 
-```python
+```bash
 msg="bobby"
 
 #5
@@ -46,7 +55,7 @@ print len(msg)
 
 ### 4、成员运算in和not in
 
-```python
+```bash
 msg="bobby"
 
 #True
@@ -57,7 +66,7 @@ print "k" in msg
 
 ### 5、移除前后空白或字符-str.strip(“值”)
 
-```python
+```bash
 #去除字符串开头和结尾处指定的字符(默认为空格或换行符)或字符序列，不会去除字符串中间对应的字符。
 msg=" bobby "
 
@@ -71,7 +80,7 @@ print msg.strip("*#$+")
 
 ### 6、切割左到右，与右到左切割-str.split(“值”)和str.rsplit(“值”)
 
-```python
+```bash
 #方法通过指定分隔符对字符串进行分割并返回一个列表，默认分隔符为空字符，包括空格，换行（\n）,制表符（\t）等
 msg = " bobby jkkjjkkj\nllll\t222"
 
@@ -95,7 +104,7 @@ print msg.rsplit(":",1)
 
 ### 7、循环-for
 
-```python
+```bash
 #for 循环取值
 msg = " bobby jkkjjkkj\nllll\t222"
 for i in msg:
@@ -106,7 +115,7 @@ for i in msg:
 
 ### 1、去除字符串左右两边空格或指定字符-str.lstrip(“值”)和str.rstrip(“值”)
 
-```python
+```bash
 #lstrip()用于去除字符串左边的空格或指定字符
 #rstrip()用于去除字符串右边的空格或指定字符。
 #lstrip和rstrip去除字符串原理与strip相同，只不过lstrip只从左侧进行匹配去除，rstrip只从右侧进行匹配去除
@@ -120,7 +129,7 @@ print msg.rstrip("&&")
 
 ### 2、字符串转换大小写–str.upper()和str.lower()
 
-```python
+```bash
 #lower()小写，upper()大写
 
 msg = "***bobby&&&"
@@ -132,7 +141,7 @@ print msg.upper()
 
 ### 3、对比字符串开头结尾值-startswith(“值”)和endswith(“值”)
 
-```python
+```bash
 msg = "bobbysheng"
 #True
 #True
@@ -142,7 +151,7 @@ print msg.endswith("sheng")
 
 ### 4、连接列表中的字符串-" “.join(list)
 
-```python
+```bash
 #把列表值全部拆出来，填充上指定的值。与split切割方方法完全相反
 
 #join将 容器对象 拆分并以指定的字符将列表内的元素(element)连接起来，返回字符串（注：容器对象内的元素须为字符类型）
@@ -161,7 +170,7 @@ print li_join.split("_")
 
 ### 5、替换字符串-str.replace(old, new[, max])
 
-```python
+```bash
 #把字符串中的 old（旧字符串） 替换成 new(新字符串)，如果指定第三个参数max，则替换不超过 max 次。
 str = "this is string example....wow!!! this is really string"
 
@@ -174,7 +183,7 @@ print str.replace("is", "was", 3)
 
 ### 6、检测字符串是否只由数字组成-str.isdigit()
 
-```python
+```bash
 #如果字符串包含的是数字类型则返回 True 否则返回 False。
 str = "111"
 str_false = "111.2"
@@ -186,7 +195,7 @@ print str_false.isdigit()
 
 ### 7、字符串find()、rfind()、index()、rindex()、count()
 
-```python
+```bash
 # find()、rfind()、index()、rindex()、count()
 msg = 'my name is tank, tank shi sb, hha'
 
@@ -208,7 +217,7 @@ print msg.count('tank')
 
 ### 8、字符串添加内容center()、ljust()、rjust()、zfill()
 
-```python
+```bash
 center,ljust,rjust,zfillcenter：在center内容中间添加内容
 
 print('egon'.center(50,'*'))
@@ -233,7 +242,7 @@ print('egon'.zfill(10))
 
 ### 9、字符串设置制表符代表的空格数str.expandtabs()
 
-```python
+```bash
 #expandtabs()方法返回一个字符串的副本，其中tab字符。使用空格扩展’\t‘，可选地使用给定的制表符大小 - tabize(默认值为8)。
 expandtabs
 
@@ -247,7 +256,7 @@ hello world
 
 ### 10、字符串captalize()、swapcase()、title()
 
-```python
+```bash
 captalize：一段字符串的首个字母大写，其余小写
 
 print("hello world egon".capitalize())
@@ -267,7 +276,7 @@ Hello World Egon
 
 ### 11、字符串captalize()、swapcase()、title()
 
-```python
+```bash
 captalize：一段字符串的首个字母大写，其余小写
 
 print("hello world egon".capitalize())
@@ -287,7 +296,7 @@ Hello World Egon
 
 ### 12、is系列，判断字符串是否属于此格式
 
-```python
+```bash
 1、.isdigit()：判断是否全部都是纯数字类型
 
 print('123'.isdigit())
@@ -335,7 +344,7 @@ False   # 变量名不能以数字开头
 
 ### 13、数字系列的识别
 
-```python
+```bash
 先定义表示同一个数字的4个不同方法：
 
 num1=b'4' #bytes

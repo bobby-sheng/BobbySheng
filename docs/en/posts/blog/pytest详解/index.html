@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Bobby Blog</title>
-<meta name="keywords" content="">
-<meta name="description" content="Pytest详解 2022-08-25 · bobby 一、pytest概念 pytest是python的第三方测试框架，与python自带的unittest框架类似，但是比unittest框架要简洁，方便。 二、pytest特点 pytest是非常成熟的测试框架，主要有一下几个特点 1、非常容易上手，有丰富的文档 2、可">
+<title>Pytest详解 | Bobby Blog</title>
+<meta name="keywords" content="Python, Pytest">
+<meta name="description" content="Pytest详解">
 <meta name="author" content="Author:&nbsp;Bobby">
 <link rel="canonical" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/">
-<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.3bba8067f566d5c824cfc17615be338d920e2eef443932521594ab36a4a235f1.css" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.6a40292a989606997dd45ccd829e20eee5a112b82f15dc3f77574d4b106f2252.css" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/BobbySheng/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js"
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
@@ -73,16 +73,18 @@ var _hmt = _hmt || [];
 
   
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="Pytest详解 2022-08-25 · bobby 一、pytest概念 pytest是python的第三方测试框架，与python自带的unittest框架类似，但是比unittest框架要简洁，方便。 二、pytest特点 pytest是非常成熟的测试框架，主要有一下几个特点 1、非常容易上手，有丰富的文档 2、可" />
+<meta property="og:title" content="Pytest详解" />
+<meta property="og:description" content="Pytest详解" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/" />
+<meta property="og:image" content="https://bobby-sheng.github.io/BobbySheng/img/python001.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-25T00:00:00+00:00" />
 
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Pytest详解 2022-08-25 · bobby 一、pytest概念 pytest是python的第三方测试框架，与python自带的unittest框架类似，但是比unittest框架要简洁，方便。 二、pytest特点 pytest是非常成熟的测试框架，主要有一下几个特点 1、非常容易上手，有丰富的文档 2、可"/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://bobby-sheng.github.io/BobbySheng/img/python001.png" />
+<meta name="twitter:title" content="Pytest详解"/>
+<meta name="twitter:description" content="Pytest详解"/>
 
 
 <script type="application/ld+json">
@@ -105,7 +107,7 @@ var _hmt = _hmt || [];
     {
       "@type": "ListItem",
       "position":  3 ,
-      "name": "",
+      "name": "Pytest详解",
       "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/"
     }
   ]
@@ -115,17 +117,17 @@ var _hmt = _hmt || [];
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "",
-  "name": "",
-  "description": "Pytest详解 2022-08-25 · bobby 一、pytest概念 pytest是python的第三方测试框架，与python自带的unittest框架类似，但是比unittest框架要简洁，方便。 二、pytest特点 pytest是非常成熟的测试框架，主要有一下几个特点 1、非常容易上手，有丰富的文档 2、可",
+  "headline": "Pytest详解",
+  "name": "Pytest详解",
+  "description": "Pytest详解",
   "keywords": [
-    
+    "Python", "Pytest"
   ],
-  "articleBody": "Pytest详解 2022-08-25 · bobby\n一、pytest概念 pytest是python的第三方测试框架，与python自带的unittest框架类似，但是比unittest框架要简洁，方便。\n二、pytest特点 pytest是非常成熟的测试框架，主要有一下几个特点\n1、非常容易上手，有丰富的文档\n2、可以通过skip跳过用例\n3、可以通过make标签区分用例并且可以通过make执行\n4、可以控制setup初始方法执行的对象是模块还是方法\n5、兼容unittest或者note框架\n6、支持执行部分用例\n7、支持通过pytest-cache缓存执行失败用例\n三、pytest安装 #python直接使用pip导入即可 pip install pytest 四、pytest 执行 #1、pytest可以通过指定文件目录，只执行该目录下的testcase #\t通过空格间隔多个文件。后面还可以在加一层make筛选 pytest test1 pytest test1 test2.py pytest 执行参数 -v 输出更详细的信息； -s 输入调试信息； -n 多线程 需要安装xdist库 -m 执行标签 --reruns 失败用例重跑 --html 生成简易报告 --last-failed --last-failed-no-failures all 基于失败缓存重跑，无缓存就执行全部 --alluredir ../allure-results allure报告存储地址 pytest -vs --reuns 2 #模板 pytest -v -s -l tempest -m make --last-failed --last-failed-no-failures all -n 14 --reruns 0 --show-capture=stderr --dist=loadfile --durations=30 --alluredir ../allure-results pytest make执行（-m） #2、pytest make执行（-m） @pytest.mark.smoke def aa(): pass 执行：pytest test1 -m smoke pytest 执行顺序 #pytest顺序执行，需要给用例写上make装饰器方法 @pytest.make.run(order=1) def aa(): pass 五、pytest setup初始 #pytest框架在执行用例时的初始化分为了4个层面 1、模块级：setup_module/teardown_module #每个.py文件中存在就会执行一次 2、函数级：setup_function/teardown_function #函数可以理解为不在calss类种的def方法，使用每个函数都会执行 3、类级:setup_class/teardown_class #class类只执行一次 4、方法级：setup_method/teardown_method #class类中的def方法每个def都会执行 六、@pytest.fixture初始 #@pytest.fixture()和setup类似，都是初始方法，不过是以装饰器的形式去使用 #@pytest.fixture(scope=\"作用域\", params=\"数据驱动\",autouse=\"自动执行\",ids=\"参数别名\",name=\"fixture别名\") 1、模块级：@pytest.fixture(scope=\"session\",autouse=\"ture\") #多个py文件可以调用一次，存放在conftest.pyw文件中，作用域不同 2、模块级：@pytest.fixture(scope=\"module\",autouse=\"ture\") #每个.py文件中存在就会执行一次 3、函数级：@pytest.fixture(scope=\"function\",autouse=\"ture\") #函数可以理解为不在calss类种的def方法，使用每个函数都会执行，如果scope参数为空默认为此 4、类级:@pytest.fixture(scope=\"class\",autouse=\"ture\") #class类只执行一次 #fixture中存在下级可以调用上级，上级无法向下兼容，可以做到流程管理，举例：module可以调用session,需要配conftest.py文件中，每个子级文件都可以创建conftest.py文件，作用域不同。可以存放登录、清理资源等方法。 七、@pytest ddt参数传递 pytest .mark.parametrize()\n#pytest 内置装饰器 @pytest.mark.parametrize 可以让测试数据参数化，把测试数据单独管理，类似 ddt 数据驱动的作用，方便代码和测试数据分离。 @pytest.mark.parametrize('x,y',[(1,2),(3,4)]) def test_sum(x,y): sum = x + y print(sum) if __name__ ==\"__main__\":python pytest.main(['test_sample.py','-s']) 3 7 八、pytest断言 #常用断言，用的是python自带的断言。这块应该没有unittest好用 assert xx 判断xx为真 assert not xx 判断xx不为真 assert a in b 判断b包含b assert a==b 判断等于b assert a!=b 判断a不等于b #异常断言 pytest.rauses。详细断言异常 def test_zero_division_long(): with pytest.raises(ZeroDivisionError) as excinfo: 1 / 0 # 断言异常类型 type assert excinfo.type == ZeroDivisionError # 断言异常 value 值 assert \"division by zero\" in str(excinfo.value) #封装的unittest异常断言 self.assertRaises( lib_exc.NotFound, self.aaa, **kwagr) 九、pytest.ini #ini文件需要放在项目根目录中。可以把一些命令参数填写进去，也可以忽略告警、设置固定时间、以及写入make不提示告警 [pytest] addopts = -rsxX -l -strict --tb=short addopts后面可以接pytest运行时的参数，执行时就不需要填写参数了 addopts = -p no:warnings 忽略告警 env = PYTHONHASHSEED=0 并发执行用例时程序线程之间的数量不相等导致报错，可以使用这个命令 timeout = 2400 需要导入pytest_timeout插件，每条用例不包含前置执行时间超过2400s直接停止报错。控制执行时间 markers = skipcase mistake secret 写入make，不会告警 #pytest.ini还有很多参数，我只用到这些部分，记录一下 十、pytest_allure 安装命令：pip install allure-pytest 使用方法\t参数值\t参数说明 @allure.epic()\tepic描述\t敏捷里面的概念，定义史诗，往下是feature @allure.feature()\t模块名称\t功能点的描述，往下是story @allure.story()\t用户故事\t用户故事，往下是title @allure.title(用例的标题)\t用例的标题\t重命名html报告名称 @allure.testcase()\t测试用例的链接地址\t对应功能测试用例系统里面的case @allure.issue()\t缺陷\t对应缺陷管理系统里面的链接 @allure.description()\t用例描述\t测试用例的描述 @allure.step()\t操作步骤\t测试用例的步骤 @allure.severity()\t用例等级\tblocker，critical，normal，minor，trivial @allure.link()\t链接\t定义一个链接，在测试报告展现 @allure.attachment()\t附件\t报告添加附件 #1、生成报告本地是获取本地文件，使用命令生成。allure generate allure(生成的allure报告文件名) allure open allure-report（打开html报告） #2、jenkins是在宿主机安装pip3 install allure-pytest或者在docker中安装pip3 install allure-pytest。安装完成后在jenkins安装插件，配置好，使用shell命令 pytest --alluredir ./report生成。详细可以看： #https://www.icode9.com/content-4-828260.html 总结 pytest还有很多自带的装饰器以及第三方插件，我这里写的只是冰山一角，这些足够平时的工作。下次遇见再补充上来。\n相比较于unittest框架还是好用的，下面例举一点优缺点\n1、测试报告不同 unittest支持 HTMLTestRunner BeautifulRepor pytest 支持 allure 2、前置不同 unittest前置只有两种，setup与setupclass pytest有两种方法，5中作用域 3、断言不同 unittest使用断言是self.assertinto() pytest是python自带的断言，直接使用 assert 4、用例收集不同 unittest需要自己手动写代码收集测试套件 pytest自动收集 5、并发不同 unittest无并发插件，需要手动写并发多线程 pytest有并发插件 ",
-  "wordCount" : "2832",
+  "articleBody": "一、pytest概念 pytest是bash的第三方测试框架，与bash自带的unittest框架类似，但是比unittest框架要简洁，方便。\n二、pytest特点 pytest是非常成熟的测试框架，主要有一下几个特点\n1、非常容易上手，有丰富的文档\n2、可以通过skip跳过用例\n3、可以通过make标签区分用例并且可以通过make执行\n4、可以控制setup初始方法执行的对象是模块还是方法\n5、兼容unittest或者note框架\n6、支持执行部分用例\n7、支持通过pytest-cache缓存执行失败用例\n三、pytest安装 #bash直接使用pip导入即可 pip install pytest 四、pytest 执行 #1、pytest可以通过指定文件目录，只执行该目录下的testcase #\t通过空格间隔多个文件。后面还可以在加一层make筛选 pytest test1 pytest test1 test2.py pytest 执行参数 -v 输出更详细的信息； -s 输入调试信息； -n 多线程 需要安装xdist库 -m 执行标签 --reruns 失败用例重跑 --html 生成简易报告 --last-failed --last-failed-no-failures all 基于失败缓存重跑，无缓存就执行全部 --alluredir ../allure-results allure报告存储地址 pytest -vs --reuns 2 #模板 pytest -v -s -l tempest -m make --last-failed --last-failed-no-failures all -n 14 --reruns 0 --show-capture=stderr --dist=loadfile --durations=30 --alluredir ../allure-results pytest make执行（-m） #2、pytest make执行（-m） @pytest.mark.smoke def aa(): pass 执行：pytest test1 -m smoke pytest 执行顺序 #pytest顺序执行，需要给用例写上make装饰器方法 @pytest.make.run(order=1) def aa(): pass 五、pytest setup初始 #pytest框架在执行用例时的初始化分为了4个层面 1、模块级：setup_module/teardown_module #每个.py文件中存在就会执行一次 2、函数级：setup_function/teardown_function #函数可以理解为不在calss类种的def方法，使用每个函数都会执行 3、类级:setup_class/teardown_class #class类只执行一次 4、方法级：setup_method/teardown_method #class类中的def方法每个def都会执行 六、@pytest.fixture初始 #@pytest.fixture()和setup类似，都是初始方法，不过是以装饰器的形式去使用 #@pytest.fixture(scope=\"作用域\", params=\"数据驱动\",autouse=\"自动执行\",ids=\"参数别名\",name=\"fixture别名\") 1、模块级：@pytest.fixture(scope=\"session\",autouse=\"ture\") #多个py文件可以调用一次，存放在conftest.pyw文件中，作用域不同 2、模块级：@pytest.fixture(scope=\"module\",autouse=\"ture\") #每个.py文件中存在就会执行一次 3、函数级：@pytest.fixture(scope=\"function\",autouse=\"ture\") #函数可以理解为不在calss类种的def方法，使用每个函数都会执行，如果scope参数为空默认为此 4、类级:@pytest.fixture(scope=\"class\",autouse=\"ture\") #class类只执行一次 #fixture中存在下级可以调用上级，上级无法向下兼容，可以做到流程管理，举例：module可以调用session,需要配conftest.py文件中，每个子级文件都可以创建conftest.py文件，作用域不同。可以存放登录、清理资源等方法。 七、@pytest ddt参数传递 pytest .mark.parametrize()\n#pytest 内置装饰器 @pytest.mark.parametrize 可以让测试数据参数化，把测试数据单独管理，类似 ddt 数据驱动的作用，方便代码和测试数据分离。 @pytest.mark.parametrize('x,y',[(1,2),(3,4)]) def test_sum(x,y): sum = x + y print(sum) if __name__ ==\"__main__\":bash pytest.main(['test_sample.py','-s']) 3 7 八、pytest断言 #常用断言，用的是bash自带的断言。这块应该没有unittest好用 assert xx 判断xx为真 assert not xx 判断xx不为真 assert a in b 判断b包含b assert a==b 判断等于b assert a!=b 判断a不等于b #异常断言 pytest.rauses。详细断言异常 def test_zero_division_long(): with pytest.raises(ZeroDivisionError) as excinfo: 1 / 0 # 断言异常类型 type assert excinfo.type == ZeroDivisionError # 断言异常 value 值 assert \"division by zero\" in str(excinfo.value) #封装的unittest异常断言 self.assertRaises( lib_exc.NotFound, self.aaa, **kwagr) 九、pytest.ini #ini文件需要放在项目根目录中。可以把一些命令参数填写进去，也可以忽略告警、设置固定时间、以及写入make不提示告警 [pytest] addopts = -rsxX -l -strict --tb=short addopts后面可以接pytest运行时的参数，执行时就不需要填写参数了 addopts = -p no:warnings 忽略告警 env = bashHASHSEED=0 并发执行用例时程序线程之间的数量不相等导致报错，可以使用这个命令 timeout = 2400 需要导入pytest_timeout插件，每条用例不包含前置执行时间超过2400s直接停止报错。控制执行时间 markers = skipcase mistake secret 写入make，不会告警 #pytest.ini还有很多参数，我只用到这些部分，记录一下 十、pytest_allure 安装命令：pip install allure-pytest 使用方法\t参数值\t参数说明 @allure.epic()\tepic描述\t敏捷里面的概念，定义史诗，往下是feature @allure.feature()\t模块名称\t功能点的描述，往下是story @allure.story()\t用户故事\t用户故事，往下是title @allure.title(用例的标题)\t用例的标题\t重命名html报告名称 @allure.testcase()\t测试用例的链接地址\t对应功能测试用例系统里面的case @allure.issue()\t缺陷\t对应缺陷管理系统里面的链接 @allure.description()\t用例描述\t测试用例的描述 @allure.step()\t操作步骤\t测试用例的步骤 @allure.severity()\t用例等级\tblocker，critical，normal，minor，trivial @allure.link()\t链接\t定义一个链接，在测试报告展现 @allure.attachment()\t附件\t报告添加附件 #1、生成报告本地是获取本地文件，使用命令生成。allure generate allure(生成的allure报告文件名) allure open allure-report（打开html报告） #2、jenkins是在宿主机安装pip3 install allure-pytest或者在docker中安装pip3 install allure-pytest。安装完成后在jenkins安装插件，配置好，使用shell命令 pytest --alluredir ./report生成。详细可以看： #https://www.icode9.com/content-4-828260.html 总结 pytest还有很多自带的装饰器以及第三方插件，我这里写的只是冰山一角，这些足够平时的工作。下次遇见再补充上来。\n相比较于unittest框架还是好用的，下面例举一点优缺点\n1、测试报告不同 unittest支持 HTMLTestRunner BeautifulRepor pytest 支持 allure 2、前置不同 unittest前置只有两种，setup与setupclass pytest有两种方法，5中作用域 3、断言不同 unittest使用断言是self.assertinto() pytest是bash自带的断言，直接使用 assert 4、用例收集不同 unittest需要自己手动写代码收集测试套件 pytest自动收集 5、并发不同 unittest无并发插件，需要手动写并发多线程 pytest有并发插件 ",
+  "wordCount" : "2811",
   "inLanguage": "en",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
+  "image":"https://bobby-sheng.github.io/BobbySheng/img/python001.png","datePublished": "2022-08-25T00:00:00Z",
+  "dateModified": "2022-08-25T00:00:00Z",
   "author":{
     "@type": "Person",
     "name": "Bobby"
@@ -227,8 +229,11 @@ var _hmt = _hmt || [];
         <header class="post-header">
             <div class="breadcrumbs"><a href="https://bobby-sheng.github.io/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/">⌛ Thought</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/">🏗️ Blog</a></div>
             <h1 class="post-title">
-                
+                Pytest详解
             </h1>
+            <div class="post-description">
+                Pytest详解
+            </div>
             <div class="post-meta">
 
 <style>
@@ -248,7 +253,7 @@ var _hmt = _hmt || [];
 <span class="parent-post-meta">
     <span id="post_meta_style_1">
         <span class="fa fa-calendar-check-o"></span>
-        <span>0001-01-01
+        <span>2022-08-25
             &nbsp;&nbsp;
         </span>
     </span>
@@ -261,13 +266,13 @@ var _hmt = _hmt || [];
     
     <span id="post_meta_style_3">
         <span class="fa fa-file-word-o"></span>
-        <span>2832字
+        <span>2811 Char
             &nbsp;&nbsp;
         </span>
     </span>
     <span id="post_meta_style_4">
         <span class="fa fa-clock-o"></span>
-        <span>6分钟
+        <span>6 min
             &nbsp;&nbsp;
         </span>
     </span>
@@ -280,6 +285,11 @@ var _hmt = _hmt || [];
     <span id="post_meta_style_6">
         <span class="fa fa-tags" style="opacity: 0.8"></span>
         <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+                &nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/tags/pytest/" style="color: var(--secondary)!important;">Pytest</a>
+            </span>
         </span>
     </span>
 </span>
@@ -288,7 +298,7 @@ var _hmt = _hmt || [];
                         &nbsp;&nbsp;
                         <span class="fa fa-eye" ></span>
                         <span>
-                            <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            Visit:<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
                             &nbsp;&nbsp;
                         </span>
                     </span>
@@ -340,9 +350,6 @@ var _hmt = _hmt || [];
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#pytest%e8%af%a6%e8%a7%a3" aria-label="Pytest详解">Pytest详解</a><ul>
-                        
-                <li>
                     <a href="#%e4%b8%80pytest%e6%a6%82%e5%bf%b5" aria-label="一、pytest概念">一、pytest概念</a></li>
                 <li>
                     <a href="#%e4%ba%8cpytest%e7%89%b9%e7%82%b9" aria-label="二、pytest特点">二、pytest特点</a></li>
@@ -374,8 +381,6 @@ var _hmt = _hmt || [];
                 <li>
                     <a href="#%e6%80%bb%e7%bb%93" aria-label="总结">总结</a>
                 </li>
-            </ul>
-            </li>
             </ul>
             </li>
             </ul>
@@ -441,10 +446,8 @@ var _hmt = _hmt || [];
         return rect.top + win.pageYOffset;
     }
 </script>
-        <div class="post-content"><h1 id="pytest详解">Pytest详解<a hidden class="anchor" aria-hidden="true" href="#pytest详解">#</a></h1>
-<p>2022-08-25 · bobby</p>
-<h2 id="一pytest概念">一、pytest概念<a hidden class="anchor" aria-hidden="true" href="#一pytest概念">#</a></h2>
-<p>pytest是python的第三方测试框架，与python自带的unittest框架类似，但是比unittest框架要简洁，方便。</p>
+        <div class="post-content"><h2 id="一pytest概念">一、pytest概念<a hidden class="anchor" aria-hidden="true" href="#一pytest概念">#</a></h2>
+<p>pytest是bash的第三方测试框架，与bash自带的unittest框架类似，但是比unittest框架要简洁，方便。</p>
 <h2 id="二pytest特点">二、pytest特点<a hidden class="anchor" aria-hidden="true" href="#二pytest特点">#</a></h2>
 <p>pytest是非常成熟的测试框架，主要有一下几个特点</p>
 <p>1、非常容易上手，有丰富的文档</p>
@@ -455,126 +458,126 @@ var _hmt = _hmt || [];
 <p>6、支持执行部分用例</p>
 <p>7、支持通过pytest-cache缓存执行失败用例</p>
 <h2 id="三pytest安装">三、pytest安装<a hidden class="anchor" aria-hidden="true" href="#三pytest安装">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#python直接使用pip导入即可</span>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71">#bash直接使用pip导入即可</span>
 </span></span><span style="display:flex;"><span>pip install pytest
 </span></span></code></pre></div><h2 id="四pytest-执行">四、pytest 执行<a hidden class="anchor" aria-hidden="true" href="#四pytest-执行">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#1、pytest可以通过指定文件目录，只执行该目录下的testcase</span>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71">#1、pytest可以通过指定文件目录，只执行该目录下的testcase</span>
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#	通过空格间隔多个文件。后面还可以在加一层make筛选</span>
-</span></span><span style="display:flex;"><span>pytest test1   pytest test1 test2<span style="color:#5bc4bf">.</span>py
+</span></span><span style="display:flex;"><span>pytest test1   pytest test1 test2.py
 </span></span></code></pre></div><h3 id="pytest-执行参数">pytest 执行参数<a hidden class="anchor" aria-hidden="true" href="#pytest-执行参数">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#5bc4bf">-</span>v 输出更详细的信息<span style="color:#ef6155">；</span>
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">-</span>s 输入调试信息<span style="color:#ef6155">；</span>
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">-</span>n 多线程 需要安装xdist库
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">-</span>m 执行标签
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">--</span>reruns 失败用例重跑
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">--</span>html 生成简易报告
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">--</span>last<span style="color:#5bc4bf">-</span>failed <span style="color:#5bc4bf">--</span>last<span style="color:#5bc4bf">-</span>failed<span style="color:#5bc4bf">-</span>no<span style="color:#5bc4bf">-</span>failures all 基于失败缓存重跑<span style="color:#ef6155">，</span>无缓存就执行全部
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">--</span>alluredir <span style="color:#5bc4bf">../</span>allure<span style="color:#5bc4bf">-</span>results  allure报告存储地址
-</span></span><span style="display:flex;"><span>pytest <span style="color:#5bc4bf">-</span>vs <span style="color:#5bc4bf">--</span>reuns <span style="color:#f99b15">2</span>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>-v 输出更详细的信息；
+</span></span><span style="display:flex;"><span>-s 输入调试信息；
+</span></span><span style="display:flex;"><span>-n 多线程 需要安装xdist库
+</span></span><span style="display:flex;"><span>-m 执行标签
+</span></span><span style="display:flex;"><span>--reruns 失败用例重跑
+</span></span><span style="display:flex;"><span>--html 生成简易报告
+</span></span><span style="display:flex;"><span>--last-failed --last-failed-no-failures all 基于失败缓存重跑，无缓存就执行全部
+</span></span><span style="display:flex;"><span>--alluredir ../allure-results  allure报告存储地址
+</span></span><span style="display:flex;"><span>pytest -vs --reuns <span style="color:#f99b15">2</span>
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#模板 pytest -v -s -l tempest -m make --last-failed --last-failed-no-failures all -n 14 --reruns 0 --show-capture=stderr --dist=loadfile --durations=30 --alluredir ../allure-results</span>
 </span></span></code></pre></div><h3 id="pytest-make执行-m">pytest make执行（-m）<a hidden class="anchor" aria-hidden="true" href="#pytest-make执行-m">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#2、pytest make执行（-m）</span>
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@pytest.mark.smoke</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#815ba4">def</span> <span style="color:#06b6ef">aa</span>():
-</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">pass</span>
-</span></span><span style="display:flex;"><span>执行<span style="color:#ef6155">：</span>pytest test1 <span style="color:#5bc4bf">-</span>m smoke
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71">#2、pytest make执行（-m）</span>
+</span></span><span style="display:flex;"><span>@pytest.mark.smoke
+</span></span><span style="display:flex;"><span>	def aa<span style="color:#5bc4bf">()</span>:
+</span></span><span style="display:flex;"><span>        pass
+</span></span><span style="display:flex;"><span>执行：pytest test1 -m smoke
 </span></span></code></pre></div><h3 id="pytest-执行顺序">pytest 执行顺序<a hidden class="anchor" aria-hidden="true" href="#pytest-执行顺序">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#pytest顺序执行，需要给用例写上make装饰器方法</span>
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@pytest.make.run</span>(order<span style="color:#5bc4bf">=</span><span style="color:#f99b15">1</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#815ba4">def</span> <span style="color:#06b6ef">aa</span>():
-</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">pass</span>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71">#pytest顺序执行，需要给用例写上make装饰器方法</span>
+</span></span><span style="display:flex;"><span>@pytest.make.run<span style="color:#5bc4bf">(</span><span style="color:#ef6155">order</span><span style="color:#5bc4bf">=</span>1<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span>	def aa<span style="color:#5bc4bf">()</span>:
+</span></span><span style="display:flex;"><span>        pass
 </span></span></code></pre></div><h2 id="五pytest-setup初始">五、pytest setup初始<a hidden class="anchor" aria-hidden="true" href="#五pytest-setup初始">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#pytest框架在执行用例时的初始化分为了4个层面</span>
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">1</span><span style="color:#ef6155">、</span>模块级<span style="color:#ef6155">：</span>setup_module<span style="color:#5bc4bf">/</span>teardown_module  <span style="color:#776e71">#每个.py文件中存在就会执行一次</span>
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">2</span><span style="color:#ef6155">、</span>函数级<span style="color:#ef6155">：</span>setup_function<span style="color:#5bc4bf">/</span>teardown_function <span style="color:#776e71">#函数可以理解为不在calss类种的def方法，使用每个函数都会执行</span>
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">3</span><span style="color:#ef6155">、</span>类级:setup_class<span style="color:#5bc4bf">/</span>teardown_class <span style="color:#776e71">#class类只执行一次</span>
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">4</span><span style="color:#ef6155">、</span>方法级<span style="color:#ef6155">：</span>setup_method<span style="color:#5bc4bf">/</span>teardown_method <span style="color:#776e71">#class类中的def方法每个def都会执行</span>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71">#pytest框架在执行用例时的初始化分为了4个层面</span>
+</span></span><span style="display:flex;"><span>1、模块级：setup_module/teardown_module  <span style="color:#776e71">#每个.py文件中存在就会执行一次</span>
+</span></span><span style="display:flex;"><span>2、函数级：setup_function/teardown_function <span style="color:#776e71">#函数可以理解为不在calss类种的def方法，使用每个函数都会执行</span>
+</span></span><span style="display:flex;"><span>3、类级:setup_class/teardown_class <span style="color:#776e71">#class类只执行一次</span>
+</span></span><span style="display:flex;"><span>4、方法级：setup_method/teardown_method <span style="color:#776e71">#class类中的def方法每个def都会执行</span>
 </span></span></code></pre></div><h2 id="六pytestfixture初始">六、@pytest.fixture初始<a hidden class="anchor" aria-hidden="true" href="#六pytestfixture初始">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#@pytest.fixture()和setup类似，都是初始方法，不过是以装饰器的形式去使用</span>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71">#@pytest.fixture()和setup类似，都是初始方法，不过是以装饰器的形式去使用</span>
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#@pytest.fixture(scope=&#34;作用域&#34;, params=&#34;数据驱动&#34;,autouse=&#34;自动执行&#34;,ids=&#34;参数别名&#34;,name=&#34;fixture别名&#34;)</span>
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">1</span><span style="color:#ef6155">、</span>模块级<span style="color:#ef6155">：</span><span style="color:#5bc4bf">@pytest.fixture</span>(scope<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;session&#34;</span>,autouse<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;ture&#34;</span>)  <span style="color:#776e71">#多个py文件可以调用一次，存放在conftest.pyw文件中，作用域不同</span>
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">2</span><span style="color:#ef6155">、</span>模块级<span style="color:#ef6155">：</span><span style="color:#5bc4bf">@pytest.fixture</span>(scope<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;module&#34;</span>,autouse<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;ture&#34;</span>)  <span style="color:#776e71">#每个.py文件中存在就会执行一次</span>
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">3</span><span style="color:#ef6155">、</span>函数级<span style="color:#ef6155">：</span><span style="color:#5bc4bf">@pytest.fixture</span>(scope<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;function&#34;</span>,autouse<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;ture&#34;</span>)  <span style="color:#776e71">#函数可以理解为不在calss类种的def方法，使用每个函数都会执行，如果scope参数为空默认为此</span>
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">4</span><span style="color:#ef6155">、</span>类级:<span style="color:#5bc4bf">@pytest.fixture</span>(scope<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;class&#34;</span>,autouse<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;ture&#34;</span>) <span style="color:#776e71">#class类只执行一次</span>
+</span></span><span style="display:flex;"><span>1、模块级：@pytest.fixture<span style="color:#5bc4bf">(</span><span style="color:#ef6155">scope</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;session&#34;</span>,autouse<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;ture&#34;</span><span style="color:#5bc4bf">)</span>  <span style="color:#776e71">#多个py文件可以调用一次，存放在conftest.pyw文件中，作用域不同</span>
+</span></span><span style="display:flex;"><span>2、模块级：@pytest.fixture<span style="color:#5bc4bf">(</span><span style="color:#ef6155">scope</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;module&#34;</span>,autouse<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;ture&#34;</span><span style="color:#5bc4bf">)</span>  <span style="color:#776e71">#每个.py文件中存在就会执行一次</span>
+</span></span><span style="display:flex;"><span>3、函数级：@pytest.fixture<span style="color:#5bc4bf">(</span><span style="color:#ef6155">scope</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;function&#34;</span>,autouse<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;ture&#34;</span><span style="color:#5bc4bf">)</span>  <span style="color:#776e71">#函数可以理解为不在calss类种的def方法，使用每个函数都会执行，如果scope参数为空默认为此</span>
+</span></span><span style="display:flex;"><span>4、类级:@pytest.fixture<span style="color:#5bc4bf">(</span><span style="color:#ef6155">scope</span><span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;class&#34;</span>,autouse<span style="color:#5bc4bf">=</span><span style="color:#48b685">&#34;ture&#34;</span><span style="color:#5bc4bf">)</span> <span style="color:#776e71">#class类只执行一次</span>
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#fixture中存在下级可以调用上级，上级无法向下兼容，可以做到流程管理，举例：module可以调用session,需要配conftest.py文件中，每个子级文件都可以创建conftest.py文件，作用域不同。可以存放登录、清理资源等方法。</span>
 </span></span></code></pre></div><h2 id="七pytest-ddt参数传递">七、@pytest ddt参数传递<a hidden class="anchor" aria-hidden="true" href="#七pytest-ddt参数传递">#</a></h2>
 <p>pytest .mark.parametrize()</p>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#pytest 内置装饰器 @pytest.mark.parametrize 可以让测试数据参数化，把测试数据单独管理，类似 ddt 数据驱动的作用，方便代码和测试数据分离。</span>
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@pytest.mark.parametrize</span>(<span style="color:#48b685">&#39;x,y&#39;</span>,[(<span style="color:#f99b15">1</span>,<span style="color:#f99b15">2</span>),(<span style="color:#f99b15">3</span>,<span style="color:#f99b15">4</span>)])
-</span></span><span style="display:flex;"><span><span style="color:#815ba4">def</span> <span style="color:#06b6ef">test_sum</span>(x,y):
-</span></span><span style="display:flex;"><span>    sum <span style="color:#5bc4bf">=</span> x <span style="color:#5bc4bf">+</span> y
-</span></span><span style="display:flex;"><span>    print(sum)
-</span></span><span style="display:flex;"><span><span style="color:#815ba4">if</span> __name__ <span style="color:#5bc4bf">==</span><span style="color:#48b685">&#34;__main__&#34;</span>:python
-</span></span><span style="display:flex;"><span>    pytest<span style="color:#5bc4bf">.</span>main([<span style="color:#48b685">&#39;test_sample.py&#39;</span>,<span style="color:#48b685">&#39;-s&#39;</span>])
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71">#pytest 内置装饰器 @pytest.mark.parametrize 可以让测试数据参数化，把测试数据单独管理，类似 ddt 数据驱动的作用，方便代码和测试数据分离。</span>
+</span></span><span style="display:flex;"><span>@pytest.mark.parametrize<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#39;x,y&#39;</span>,<span style="color:#5bc4bf">[(</span>1,2<span style="color:#5bc4bf">)</span>,<span style="color:#5bc4bf">(</span>3,4<span style="color:#5bc4bf">)])</span>
+</span></span><span style="display:flex;"><span>def test_sum<span style="color:#5bc4bf">(</span>x,y<span style="color:#5bc4bf">)</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">sum</span> <span style="color:#5bc4bf">=</span> x + y
+</span></span><span style="display:flex;"><span>    print<span style="color:#5bc4bf">(</span>sum<span style="color:#5bc4bf">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">if</span> <span style="color:#ef6155">__name__</span> <span style="color:#5bc4bf">==</span><span style="color:#48b685">&#34;__main__&#34;</span>:bash
+</span></span><span style="display:flex;"><span>    pytest.main<span style="color:#5bc4bf">([</span><span style="color:#48b685">&#39;test_sample.py&#39;</span>,<span style="color:#48b685">&#39;-s&#39;</span><span style="color:#5bc4bf">])</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f99b15">3</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f99b15">7</span>
 </span></span></code></pre></div><h2 id="八pytest断言">八、pytest断言<a hidden class="anchor" aria-hidden="true" href="#八pytest断言">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#常用断言，用的是python自带的断言。这块应该没有unittest好用</span>
-</span></span><span style="display:flex;"><span><span style="color:#815ba4">assert</span> xx 判断xx为真
-</span></span><span style="display:flex;"><span><span style="color:#815ba4">assert</span> <span style="color:#5bc4bf">not</span> xx 判断xx不为真
-</span></span><span style="display:flex;"><span><span style="color:#815ba4">assert</span> a <span style="color:#5bc4bf">in</span> b 判断b包含b
-</span></span><span style="display:flex;"><span><span style="color:#815ba4">assert</span> a<span style="color:#5bc4bf">==</span>b 判断等于b
-</span></span><span style="display:flex;"><span><span style="color:#815ba4">assert</span> a<span style="color:#5bc4bf">!=</span>b 判断a不等于b
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71">#常用断言，用的是bash自带的断言。这块应该没有unittest好用</span>
+</span></span><span style="display:flex;"><span>assert xx 判断xx为真
+</span></span><span style="display:flex;"><span>assert not xx 判断xx不为真
+</span></span><span style="display:flex;"><span>assert a in b 判断b包含b
+</span></span><span style="display:flex;"><span>assert <span style="color:#ef6155">a</span><span style="color:#5bc4bf">==</span>b 判断等于b
+</span></span><span style="display:flex;"><span>assert a!<span style="color:#5bc4bf">=</span>b 判断a不等于b
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#异常断言 pytest.rauses。详细断言异常</span>
-</span></span><span style="display:flex;"><span><span style="color:#815ba4">def</span> <span style="color:#06b6ef">test_zero_division_long</span>():
-</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">with</span> pytest<span style="color:#5bc4bf">.</span>raises(<span style="color:#ef6155">ZeroDivisionError</span>) <span style="color:#815ba4">as</span> excinfo:
-</span></span><span style="display:flex;"><span>        <span style="color:#f99b15">1</span> <span style="color:#5bc4bf">/</span> <span style="color:#f99b15">0</span>
+</span></span><span style="display:flex;"><span>def test_zero_division_long<span style="color:#5bc4bf">()</span>:
+</span></span><span style="display:flex;"><span>    with pytest.raises<span style="color:#5bc4bf">(</span>ZeroDivisionError<span style="color:#5bc4bf">)</span> as excinfo:
+</span></span><span style="display:flex;"><span>        <span style="color:#f99b15">1</span> / <span style="color:#f99b15">0</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#776e71"># 断言异常类型 type</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">assert</span> excinfo<span style="color:#5bc4bf">.</span>type <span style="color:#5bc4bf">==</span> <span style="color:#ef6155">ZeroDivisionError</span>
+</span></span><span style="display:flex;"><span>    assert excinfo.type <span style="color:#5bc4bf">==</span> ZeroDivisionError
 </span></span><span style="display:flex;"><span>    <span style="color:#776e71"># 断言异常 value 值</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">assert</span> <span style="color:#48b685">&#34;division by zero&#34;</span> <span style="color:#5bc4bf">in</span> str(excinfo<span style="color:#5bc4bf">.</span>value)
+</span></span><span style="display:flex;"><span>    assert <span style="color:#48b685">&#34;division by zero&#34;</span> in str<span style="color:#5bc4bf">(</span>excinfo.value<span style="color:#5bc4bf">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#封装的unittest异常断言</span>
-</span></span><span style="display:flex;"><span>  self<span style="color:#5bc4bf">.</span>assertRaises(
-</span></span><span style="display:flex;"><span>            lib_exc<span style="color:#5bc4bf">.</span>NotFound,
-</span></span><span style="display:flex;"><span>            self<span style="color:#5bc4bf">.</span>aaa,
-</span></span><span style="display:flex;"><span>            <span style="color:#5bc4bf">**</span>kwagr)
+</span></span><span style="display:flex;"><span>  self.assertRaises<span style="color:#5bc4bf">(</span>
+</span></span><span style="display:flex;"><span>            lib_exc.NotFound,
+</span></span><span style="display:flex;"><span>            self.aaa,
+</span></span><span style="display:flex;"><span>            **kwagr<span style="color:#5bc4bf">)</span>
 </span></span></code></pre></div><h2 id="九pytestini">九、pytest.ini<a hidden class="anchor" aria-hidden="true" href="#九pytestini">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#776e71">#ini文件需要放在项目根目录中。可以把一些命令参数填写进去，也可以忽略告警、设置固定时间、以及写入make不提示告警</span>
-</span></span><span style="display:flex;"><span>[pytest]
-</span></span><span style="display:flex;"><span>addopts <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">-</span>rsxX <span style="color:#5bc4bf">-</span>l <span style="color:#5bc4bf">-</span>strict <span style="color:#5bc4bf">--</span>tb<span style="color:#5bc4bf">=</span>short   addopts后面可以接pytest运行时的参数<span style="color:#ef6155">，</span>执行时就不需要填写参数了
-</span></span><span style="display:flex;"><span>addopts <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">-</span>p no:warnings  忽略告警
-</span></span><span style="display:flex;"><span>env <span style="color:#5bc4bf">=</span>
-</span></span><span style="display:flex;"><span>    PYTHONHASHSEED<span style="color:#5bc4bf">=</span><span style="color:#f99b15">0</span>  并发执行用例时程序线程之间的数量不相等导致报错<span style="color:#ef6155">，</span>可以使用这个命令
-</span></span><span style="display:flex;"><span>timeout <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">2400</span>  需要导入pytest_timeout插件<span style="color:#ef6155">，</span>每条用例不包含前置执行时间超过2400s直接停止报错<span style="color:#ef6155">。</span>控制执行时间
-</span></span><span style="display:flex;"><span>markers <span style="color:#5bc4bf">=</span> skipcase
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#776e71">#ini文件需要放在项目根目录中。可以把一些命令参数填写进去，也可以忽略告警、设置固定时间、以及写入make不提示告警</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">[</span>pytest<span style="color:#5bc4bf">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">addopts</span> <span style="color:#5bc4bf">=</span> -rsxX -l -strict --tb<span style="color:#5bc4bf">=</span>short   addopts后面可以接pytest运行时的参数，执行时就不需要填写参数了
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">addopts</span> <span style="color:#5bc4bf">=</span> -p no:warnings  忽略告警
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">env</span> <span style="color:#5bc4bf">=</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ef6155">bashHASHSEED</span><span style="color:#5bc4bf">=</span><span style="color:#f99b15">0</span>  并发执行用例时程序线程之间的数量不相等导致报错，可以使用这个命令
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">timeout</span> <span style="color:#5bc4bf">=</span> <span style="color:#f99b15">2400</span>  需要导入pytest_timeout插件，每条用例不包含前置执行时间超过2400s直接停止报错。控制执行时间
+</span></span><span style="display:flex;"><span><span style="color:#ef6155">markers</span> <span style="color:#5bc4bf">=</span> skipcase
 </span></span><span style="display:flex;"><span>    mistake
-</span></span><span style="display:flex;"><span>    secret  写入make<span style="color:#ef6155">，</span>不会告警
+</span></span><span style="display:flex;"><span>    secret  写入make，不会告警
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#pytest.ini还有很多参数，我只用到这些部分，记录一下</span>
 </span></span></code></pre></div><h2 id="十pytest_allure">十、pytest_allure<a hidden class="anchor" aria-hidden="true" href="#十pytest_allure">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>安装命令<span style="color:#ef6155">：</span>pip install allure<span style="color:#5bc4bf">-</span>pytest
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>安装命令：pip install allure-pytest
 </span></span><span style="display:flex;"><span>使用方法	参数值	参数说明
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.epic</span>()	epic描述	敏捷里面的概念<span style="color:#ef6155">，</span>定义史诗<span style="color:#ef6155">，</span>往下是feature
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.feature</span>()	模块名称	功能点的描述<span style="color:#ef6155">，</span>往下是story
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.story</span>()	用户故事	用户故事<span style="color:#ef6155">，</span>往下是title
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.title</span>(用例的标题)	用例的标题	重命名html报告名称
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.testcase</span>()	测试用例的链接地址	对应功能测试用例系统里面的case
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.issue</span>()	缺陷	对应缺陷管理系统里面的链接
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.description</span>()	用例描述	测试用例的描述
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.step</span>()	操作步骤	测试用例的步骤
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.severity</span>()	用例等级	blocker<span style="color:#ef6155">，</span>critical<span style="color:#ef6155">，</span>normal<span style="color:#ef6155">，</span>minor<span style="color:#ef6155">，</span>trivial
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.link</span>()	链接	定义一个链接<span style="color:#ef6155">，</span>在测试报告展现
-</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@allure.attachment</span>()	附件	报告添加附件
+</span></span><span style="display:flex;"><span>@allure.epic<span style="color:#5bc4bf">()</span>	epic描述	敏捷里面的概念，定义史诗，往下是feature
+</span></span><span style="display:flex;"><span>@allure.feature<span style="color:#5bc4bf">()</span>	模块名称	功能点的描述，往下是story
+</span></span><span style="display:flex;"><span>@allure.story<span style="color:#5bc4bf">()</span>	用户故事	用户故事，往下是title
+</span></span><span style="display:flex;"><span>@allure.title<span style="color:#5bc4bf">(</span>用例的标题<span style="color:#5bc4bf">)</span>	用例的标题	重命名html报告名称
+</span></span><span style="display:flex;"><span>@allure.testcase<span style="color:#5bc4bf">()</span>	测试用例的链接地址	对应功能测试用例系统里面的case
+</span></span><span style="display:flex;"><span>@allure.issue<span style="color:#5bc4bf">()</span>	缺陷	对应缺陷管理系统里面的链接
+</span></span><span style="display:flex;"><span>@allure.description<span style="color:#5bc4bf">()</span>	用例描述	测试用例的描述
+</span></span><span style="display:flex;"><span>@allure.step<span style="color:#5bc4bf">()</span>	操作步骤	测试用例的步骤
+</span></span><span style="display:flex;"><span>@allure.severity<span style="color:#5bc4bf">()</span>	用例等级	blocker，critical，normal，minor，trivial
+</span></span><span style="display:flex;"><span>@allure.link<span style="color:#5bc4bf">()</span>	链接	定义一个链接，在测试报告展现
+</span></span><span style="display:flex;"><span>@allure.attachment<span style="color:#5bc4bf">()</span>	附件	报告添加附件
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#1、生成报告本地是获取本地文件，使用命令生成。allure generate allure(生成的allure报告文件名) allure open allure-report（打开html报告）</span>
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#2、jenkins是在宿主机安装pip3 install allure-pytest或者在docker中安装pip3 install allure-pytest。安装完成后在jenkins安装插件，配置好，使用shell命令 pytest --alluredir ./report生成。详细可以看：</span>
 </span></span><span style="display:flex;"><span><span style="color:#776e71">#https://www.icode9.com/content-4-828260.html</span>
 </span></span></code></pre></div><h3 id="总结">总结<a hidden class="anchor" aria-hidden="true" href="#总结">#</a></h3>
 <p>pytest还有很多自带的装饰器以及第三方插件，我这里写的只是冰山一角，这些足够平时的工作。下次遇见再补充上来。</p>
 <p>相比较于unittest框架还是好用的，下面例举一点优缺点</p>
-<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f99b15">1</span><span style="color:#ef6155">、</span>测试报告不同
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>1、测试报告不同
 </span></span><span style="display:flex;"><span>unittest支持 HTMLTestRunner   BeautifulRepor
 </span></span><span style="display:flex;"><span>pytest 支持 allure
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">2</span><span style="color:#ef6155">、</span>前置不同
-</span></span><span style="display:flex;"><span>unittest前置只有两种<span style="color:#ef6155">，</span>setup与setupclass
-</span></span><span style="display:flex;"><span>pytest有两种方法<span style="color:#ef6155">，</span><span style="color:#f99b15">5</span>中作用域
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">3</span><span style="color:#ef6155">、</span>断言不同
-</span></span><span style="display:flex;"><span>unittest使用断言是self<span style="color:#5bc4bf">.</span>assertinto()
-</span></span><span style="display:flex;"><span>pytest是python自带的断言<span style="color:#ef6155">，</span>直接使用 <span style="color:#815ba4">assert</span>
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">4</span><span style="color:#ef6155">、</span>用例收集不同
+</span></span><span style="display:flex;"><span>2、前置不同
+</span></span><span style="display:flex;"><span>unittest前置只有两种，setup与setupclass
+</span></span><span style="display:flex;"><span>pytest有两种方法，5中作用域
+</span></span><span style="display:flex;"><span>3、断言不同
+</span></span><span style="display:flex;"><span>unittest使用断言是self.assertinto<span style="color:#5bc4bf">()</span>
+</span></span><span style="display:flex;"><span>pytest是bash自带的断言，直接使用 assert
+</span></span><span style="display:flex;"><span>4、用例收集不同
 </span></span><span style="display:flex;"><span>unittest需要自己手动写代码收集测试套件
 </span></span><span style="display:flex;"><span>pytest自动收集
-</span></span><span style="display:flex;"><span><span style="color:#f99b15">5</span><span style="color:#ef6155">、</span>并发不同
-</span></span><span style="display:flex;"><span>unittest无并发插件<span style="color:#ef6155">，</span>需要手动写并发多线程
+</span></span><span style="display:flex;"><span>5、并发不同
+</span></span><span style="display:flex;"><span>unittest无并发插件，需要手动写并发多线程
 </span></span><span style="display:flex;"><span>pytest有并发插件
 </span></span></code></pre></div>
 
@@ -610,15 +613,15 @@ var _hmt = _hmt || [];
         <footer class="post-footer">
             
 <nav class="paginav">
-  <a class="prev" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/hugo%E6%90%AD%E5%BB%BA%E6%89%8B%E6%8A%84/">
+  <a class="prev" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/flask_sqlalchemy%E6%95%B0%E6%8D%AE%E5%BA%93/">
     <span class="title">« Prev Page</span>
     <br>
-    <span></span>
+    <span>Flask_SQLAlchemy数据库 </span>
   </a>
   <a class="next" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/">
     <span class="title">Next Page »</span>
     <br>
-    <span></span>
+    <span>Python元组详解</span>
   </a>
 </nav>
 

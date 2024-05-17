@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on Bobby Blog</title>
+    <link>https://bobby-sheng.github.io/BobbySheng/en/tags/python/</link>
+    <description>Recent content in Python on Bobby Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 31 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flask_SQLAlchemy数据库 </title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/flask_sqlalchemy%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/flask_sqlalchemy%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>flask-SQLAlchemy对sqlite数据库的连接与增删改查</description>
+    </item>
+    
+    <item>
+      <title>Pytest详解</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/pytest%E8%AF%A6%E8%A7%A3/</guid>
+      <description>Pytest详解</description>
+    </item>
+    
+    <item>
+      <title>Python元组详解</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%85%83%E7%BB%84%E8%AF%A6%E8%A7%A3/</guid>
+      <description>Python元组详解</description>
+    </item>
+    
+    <item>
+      <title>Python集合详解</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</guid>
+      <description>用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序</description>
+    </item>
+    
+    <item>
+      <title>Python字典详解</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%AD%97%E5%85%B8%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%AD%97%E5%85%B8%E8%AF%A6%E8%A7%A3/</guid>
+      <description>Python字典详解</description>
+    </item>
+    
+    <item>
+      <title>Python字符串详解</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 25 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E8%A7%A3/</guid>
+      <description>Python字符串详解</description>
+    </item>
+    
+    <item>
+      <title>Python列表方法详解</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Thu, 21 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/</guid>
+      <description>Python列表方法详解</description>
+    </item>
+    
+    <item>
+      <title>python文档读写方法</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99%E6%96%B9%E6%B3%95/</guid>
+      <description>python文档读写方法</description>
+    </item>
+    
+    <item>
+      <title>Python离线安装包地址</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/</guid>
+      <description>Python离线安装包地址</description>
+    </item>
+    
+  </channel>
+</rss>

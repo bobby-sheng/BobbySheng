@@ -12,12 +12,12 @@ cover:
     image: ""
 ---
 # <span style="color: Teal;">About my Life</span>
-![img.png](../../img/0011.png)
-![img.png](../../img/0012.png)
+![img.png](https://telegraph-image-f19.pages.dev/file/b8f22560639899cb95da7.jpg)
+![img.png](https://telegraph-image-f19.pages.dev/file/340043dd69e07224f85b8.jpg)
 
 # <span style="color: Teal;">About my Work</span>
-![img.png](../../img/0013.png)
-![img.png](../../img/0014.png)
+![img.png](https://telegraph-image-f19.pages.dev/file/36abd099ac725911ba9ad.jpg)
+![img.png](https://telegraph-image-f19.pages.dev/file/58e0f23c71aeb7ac08f6e.jpg)
 
 # <span style="color: Teal;">About My Skills</span>
 | 技能                | 掌握情况          |

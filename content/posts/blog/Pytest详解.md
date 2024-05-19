@@ -10,7 +10,7 @@ keywords:
   - Pytest
 description: "Pytest详解"
 cover:
-    image: "img/python001.png"
+    image: "https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg"
 ---
 ## 一、pytest概念
 

@@ -74,12 +74,12 @@ var _hmt = _hmt || [];
 <meta property="og:description" content="python文档读写方法" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99%E6%96%B9%E6%B3%95/" />
-<meta property="og:image" content="https://bobby-sheng.github.io/BobbySheng/img/python001.png" /><meta property="article:section" content="posts" />
+<meta property="og:image" content="https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-14T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-07-14T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://bobby-sheng.github.io/BobbySheng/img/python001.png" />
+<meta name="twitter:image" content="https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg" />
 <meta name="twitter:title" content="python文档读写方法"/>
 <meta name="twitter:description" content="python文档读写方法"/>
 
@@ -123,7 +123,7 @@ var _hmt = _hmt || [];
   "articleBody": "一、文档读写实用方法 1、readline()函数\n解释：此函数读取文件默认打印第一行，后面可以接参数打印字符个数\nwith open(p, 'rt') as f: rows = f.readline() print rows 2、readlines()函数\nfile.readline()[index]\n解释：此函数把文件作列表全部读取出来，可通过for循环获取每一行的值\nwith open(p, 'rt') as f: rows = f.readlines() for i, line in enumerate(rows): print i 2、read()函数\n解释：此函数把文件样式原封不动的打印出来\nwith open(p, 'rt') as f: rows = f.read() print rows 二、打开文件模式解释 ### 常用模式打开文件 # 1.r模式 # 2.w模式:写入的文件不存在会自动创建，每一次写入都会覆盖前面的内容 # 3.a模式：与w模式一样，但是内容会追加 # 4.b模式：字节读取+字节写入 ### 其他模式模式 # 1.r+--打开文件用于读写，文件指针会放在文件开头 # 2.rb+--二进制打开文件用于读写，文件指针会放在文件开头 # 3.w+--打开文件用于读写，并且从头开始编辑，会覆盖原内容 # 4.wb+--二进制打开文件用于读写，并且从头开始编辑，会覆盖原内容 # 5.ab--二进制打开用于追加，指针放末尾，只能写 # 6.ab+--二进制打开文件用于追加，指针放末尾 # 7.a+--打开文件读写，指针放末尾，文件存在追加模式，不存在新建 三、文件读写案例 案例一\n解释：打开文件，获取文件所在行之后，赋值。在打开文件写入变量中的值\nwith open(p, 'rt') as f: rows = f.readlines() for i, line in enumerate(rows): if content[3] in line: a = i for k in range(a, a+60): if \"expect_return = \" in rows[k]: rows[k] = \" expect_return =\" + content[2] break log.info(\"写入\") with open(p, 'w+') as w: w.writelines(rows) 案例二\n解释：一次性打开多个文件，实现文件的快速拷贝。\nwith open('32.txt', 'rb') as fr, \\ open('35r.txt', 'wb') as fw: f.write(f.read()) 案例三\nimport os with open('37r.txt') as fr, \\ open('37r_swap.txt', 'w') as fw: data = fr.read() # 全部读入内存,如果文件很大,会很卡 data = data.replace('tank', 'tankSB') # 在内存中完成修改 fw.write(data) # 新文件一次性写入原文件内容 # 删除原文件 os.remove('37r.txt') # 重命名新文件名为原文件名 os.rename('37r_swap.txt', '37r.txt') print('done...') 案例四\nimport os with open('37r.txt') as fr,\\ open('37r_swap.txt', 'w') as fw: # 循环读取文件内容，逐行修改 for line in fr: line = line.replace('jason', 'jasonSB') # 新文件写入原文件修改后内容 fw.write(line) os.remove('37r.txt') os.rename('37r_swap.txt', '37r.txt') print('done...') 四、总结 修改文件内容的思路为：以读的方式打开原文件，以写的方式打开一个新的文件，把原文件的内容进行修改，然后写入新文件，之后利用os模块的方法，把原文件删除，重命名新文件为原文件名，达到以假乱真的目的\n",
   "wordCount" : "871",
   "inLanguage": "en",
-  "image":"https://bobby-sheng.github.io/BobbySheng/img/python001.png","datePublished": "2022-07-14T00:00:00Z",
+  "image":"https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg","datePublished": "2022-07-14T00:00:00Z",
   "dateModified": "2022-07-14T00:00:00Z",
   "author":{
     "@type": "Person",
@@ -570,6 +570,9 @@ var _hmt = _hmt || [];
     </a>
     <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">
         <img style="display: unset;" src="https://img.shields.io/badge/theme-papermod-lightgrey?style=flat&logo=BookStack">
+    </a>
+        <a href="https://dash.cloudflare.com/" target="_blank">
+        <img style="display: unset;" src="https://telegraph-image-f19.pages.dev/file/6b25043a544164be8f9d8.png">
     </a>
 
     <br>

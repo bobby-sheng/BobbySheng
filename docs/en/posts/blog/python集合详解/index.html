@@ -74,12 +74,12 @@ var _hmt = _hmt || [];
 <meta property="og:description" content="用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/" />
-<meta property="og:image" content="https://bobby-sheng.github.io/BobbySheng/img/python001.png" /><meta property="article:section" content="posts" />
+<meta property="og:image" content="https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-27T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-07-27T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://bobby-sheng.github.io/BobbySheng/img/python001.png" />
+<meta name="twitter:image" content="https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg" />
 <meta name="twitter:title" content="Python集合详解"/>
 <meta name="twitter:description" content="用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序"/>
 
@@ -123,7 +123,7 @@ var _hmt = _hmt || [];
   "articleBody": "一、集合常用方法 1、长度len c={\"c\",\"1\",\"o\",\"r\"} print len(c) #4 2、成员运算in和not in c={\"c\",\"1\",\"o\",\"r\"} print \"c\" in c #True print \"b\" in c #False 3、|并集、union #两个集合去重复拼接 c={\"oen\",\"tow\",\"nike\",\"bobby\"} b={\"three\",\"four\",\"nike\",\"hello\"} print c|b print c.union(b) #set(['nike', 'bobby', 'tow', 'three', 'four', 'oen', 'hello']) #set(['nike', 'bobby', 'tow', 'three', 'four', 'oen', 'hello']) 4、\u0026交集、intersection #两个集合之间存在相同的值 c={\"oen\",\"tow\",\"nike\",\"bobby\"} b={\"three\",\"four\",\"nike\",\"hello\"} print c\u0026b print c.intersection(b) #set(['nike']) #set(['nike']) 5、-差集、difference #打印出集合1对比集合2不同的值 c={\"oen\",\"tow\",\"nike\",\"bobby\"} b={\"three\",\"four\",\"nike\",\"hello\"} print c-b print b.difference(c) #set(['tow', 'oen', 'bobby']) #set(['four', 'hello', 'three']) 6、^对称差集、symmetric_difference #去除两个集合之间相同的值，然后拼接为一个集合 c={\"oen\",\"tow\",\"nike\",\"bobby\"} b={\"three\",\"four\",\"nike\",\"hello\"} print c^b print b.symmetric_difference(c) #set(['bobby', 'three', 'tow', 'four', 'oen', 'hello']) #set(['bobby', 'tow', 'three', 'four', 'oen', 'hello']) 7、两集合是否相同-== #判断两个集合是否一样- c={\"oen\",\"tow\",\"nike\",\"bobby\"} a={\"oen\",\"tow\",\"nike\",\"bobby\"} b={\"three\",\"four\",\"nike\",\"hello\"} print c==b #False print c==a #True 8、父集：\u003e、\u003e= 、issuperset #判断集合1是否为集合2的父集，返回布尔值 c={\"oen\",\"tow\",\"nike\",\"bobby\"} a={\"oen\",\"tow\"} b={\"three\",\"four\",\"nike\",\"hello\"} print c\u003e=a #True print c\u003ea #True print b\u003e=a #False 9、子集：\u003c、\u003c= 、issubset #判断集合1是否为集合2的子集，返回布尔值 c={\"oen\",\"tow\",\"nike\",\"bobby\"} a={\"oen\",\"tow\"} b={\"three\",\"four\",\"nike\",\"hello\"} print a\u003c=c #True print a",
   "wordCount" : "674",
   "inLanguage": "en",
-  "image":"https://bobby-sheng.github.io/BobbySheng/img/python001.png","datePublished": "2022-07-27T00:00:00Z",
+  "image":"https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg","datePublished": "2022-07-27T00:00:00Z",
   "dateModified": "2022-07-27T00:00:00Z",
   "author":{
     "@type": "Person",
@@ -627,6 +627,9 @@ var _hmt = _hmt || [];
     </a>
     <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">
         <img style="display: unset;" src="https://img.shields.io/badge/theme-papermod-lightgrey?style=flat&logo=BookStack">
+    </a>
+        <a href="https://dash.cloudflare.com/" target="_blank">
+        <img style="display: unset;" src="https://telegraph-image-f19.pages.dev/file/6b25043a544164be8f9d8.png">
     </a>
 
     <br>

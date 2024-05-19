@@ -8,7 +8,7 @@ keywords:
   - Python
 description: "飞书+jiar集成 Sprint报告卡片消息"
 cover:
-    image: "img/jirafeishu001.png"
+    image: "https://telegraph-image-f19.pages.dev/file/cf7de6d9cd14daa933b2b.jpg"
 ---
 # 背景
 
@@ -26,7 +26,7 @@ cover:
 ## Jira收集数据方法
 
 在python中可以使用JIRA第三方库对Jira进行操作，通过GPT我们可知道JIRA的可操作情况
-![img.png](../../../../img/feishujira007.png)
+![img.png](https://telegraph-image-f19.pages.dev/file/472eecc6bddf8d73c5e2d.jpg)
 通过回答我们可知道是可以操作Sprint管理，熟悉JIRA这个包的知道，Sprint管理是可以获取到当前Sprint所有工单的key，通过key可以获取到这个工单的详情信息，有负责人、工单类型、优先级等数据。
 
 ## 如何发送飞书卡片消息
@@ -35,10 +35,10 @@ cover:
 
 飞书卡片搭建地址：https://open.feishu.cn/cardkit
 
-![img.png](../../../../img/feishujira001.png)
+![img.png](https://telegraph-image-f19.pages.dev/file/603769e1621bcd6844ab2.jpg)
 飞书发送消息API：https://open.feishu.cn/document/ukTMukTMukTM/uYzM3QjL2MzN04iNzcDN/send-message-card/send-messages-using-card-json-data
 
-![img.png](../../../../img/feishujira002.png)
+![img.png](https://telegraph-image-f19.pages.dev/file/555de68e046adab04b903.jpg)
 ## 流程简介
 
 通过python获取jira中需要的数据，通过python填充到卡片源代码，调用飞书发送消息接口，发送消息
@@ -431,12 +431,12 @@ if __name__ == '__main__':
 
 1. 代码结构
 
-![img.png](../../../../img/feishujira003.png)
+![img.png](https://telegraph-image-f19.pages.dev/file/fc55a34d51a37c7bfc2a5.jpg)
 # 效果展示
 
-![img.png](../../../../img/feishujira004.png)
-![img.png](../../../../img/feishujira005.png)
-![img.png](../../../../img/feishujira006.png)
+![img.png](https://telegraph-image-f19.pages.dev/file/32cd91c0beb04902e6d7f.jpg)
+![img.png](https://telegraph-image-f19.pages.dev/file/d9c2e7a72e47d3261c0ed.jpg)
+![img.png](https://telegraph-image-f19.pages.dev/file/d94a32479a9bec88602d8.jpg)
 # 总结
 
 空闲时间编写，没太多时间去构思代码设计，主要以实现功能为主，代码写的简单粗暴。更多的是提供一种思路。

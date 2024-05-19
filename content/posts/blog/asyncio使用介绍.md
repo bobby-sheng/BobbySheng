@@ -8,7 +8,7 @@ keywords:
   - Python
 description: "asyncio编写的程序可以在单线程中实现并发处理，这使得它非常适合处理IO密集型任务。在asyncio中，可以使用async/await关键字定义协程，协程可以通过事件循环的调度来实现并发执行。"
 cover:
-    image: "img/python001.png"
+    image: "https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg"
 ---
 
 # async 语法

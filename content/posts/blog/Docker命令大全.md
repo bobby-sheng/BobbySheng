@@ -8,7 +8,7 @@ keywords:
   - docker
 description: "docker主要分为镜像、容器。个人理解镜像是一个封装好的仓库，容器就是把这个仓库拿过来，里面的东西原封不动，可以随意操作而不会影响镜像内容，一个镜像可以创建多个容器。比较方便"
 cover:
-    image: "img/docker_info.jpg"
+    image: "https://telegraph-image-f19.pages.dev/file/60be1e5917d73dc700af3.jpg"
 ---
 ## 一、docker基础命令
 

@@ -10,7 +10,7 @@ keywords:
   - Flask
 description: "flask-SQLAlchemy对sqlite数据库的连接与增删改查"
 cover:
-    image: "img/flasksqlalchemy.png"
+    image: "https://telegraph-image-f19.pages.dev/file/48497bcf856737663828c.jpg"
 ---
 
 ## 简介

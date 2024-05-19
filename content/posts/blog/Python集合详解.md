@@ -8,7 +8,7 @@ keywords:
   - Python
 description: "用于关系运算的集合体，由于集合内的元素无序且集合元素不可重复，因此集合可以去重，但是去重后的集合会打乱原来元素的顺序"
 cover:
-    image: "img/python001.png"
+    image: "https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg"
 ---
 
 ## 一、集合常用方法

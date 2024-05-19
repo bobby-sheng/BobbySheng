@@ -8,7 +8,7 @@ keywords:
   - Git
 description: "flask-SQLAlchemy对sqlite数据库的连接与增删改查"
 cover:
-    image: "img/github001.png"
+    image: "https://telegraph-image-f19.pages.dev/file/4cf192d69b257bc419d4c.jpg"
 ---
 
 ### 1、通过以下地址获取速度较快的ip作为映射地址(需要在本地可以ping通的)

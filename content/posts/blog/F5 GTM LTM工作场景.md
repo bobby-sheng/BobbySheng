@@ -25,7 +25,7 @@ GTM：global-traffic-manager广域网流量管理
 3. GTM根据策略（如地理位置、数据中心健康状况、应用程序性能、负载）选择合适的数据中心。
 4. GTM响应DNS查询，返回最适数据中心的IP地址。
 5. 用户的请求由DNS解析后的IP直接送达被选定的数据中心处理。
-![img.png](../../../../img/F5002.png)
+![img.png](https://telegraph-image-f19.pages.dev/file/ad4a50d3b707fe3542767.jpg)
 
 ### **GTM**应用场景
 
@@ -46,7 +46,7 @@ GTM：global-traffic-manager广域网流量管理
 ​        当客户网站有使用多个CDN服务商时，通过全网融合流量分配解决方案可实现CDN之间的互备。
 
 # DNS解析
-![img.png](../../../../img/F5001.png)
+![img.png](https://telegraph-image-f19.pages.dev/file/86a92d97042d29798b6c4.jpg)
 
 # CDN内容分发
 

@@ -8,7 +8,7 @@ keywords:
   - Hogo
 description: "Hugo搭建手抄"
 cover:
-    image: "img/hugo001.png"
+    image: "https://telegraph-image-f19.pages.dev/file/4fef1324e9521effa7745.jpg"
 ---
 # Hugo搭建手抄
 

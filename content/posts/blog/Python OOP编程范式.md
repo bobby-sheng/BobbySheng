@@ -1,7 +1,7 @@
 ---
 title: "Python OOP编程范式"
-date: 2024-05-26
-lastmod: 2024-05-26
+date: 2022-05-26
+lastmod: 2022-05-26
 tags:
   - Python
 keywords:

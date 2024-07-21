@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Python OOP编程范式</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python-oop%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/</link>
+      <pubDate>Sun, 26 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python-oop%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/</guid>
+      <description>Python OOP编程范式</description>
+    </item>
+    
+    <item>
       <title>基于cloudflare搭建For Myself免费的图床</title>
       <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E5%9F%BA%E4%BA%8Ecloudflare%E6%90%AD%E5%BB%BAfor-myself%E5%85%8D%E8%B4%B9%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
       <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
@@ -176,15 +185,6 @@
       
       <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%9C%B0%E5%9D%80/</guid>
       <description>Python离线安装包地址</description>
-    </item>
-    
-    <item>
-      <title>Python OOP编程范式</title>
-      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python-oop%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/</link>
-      <pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python-oop%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/</guid>
-      <description>Python OOP编程范式</description>
     </item>
     
   </channel>

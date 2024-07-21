@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Python 正则表达式 | Bobby Blog</title>
+<meta name="keywords" content="Python">
+<meta name="description" content="Python 正则表达式">
+<meta name="author" content="Author:&nbsp;Bobby">
+<link rel="canonical" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E9%98%B6/">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.e56cf4f357894de110bad4354fefb20d149fe3e9909b962569b427d5538cb284.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/BobbySheng/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js"
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="apple-touch-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="mask-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E9%98%B6/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta property="og:title" content="Python 正则表达式" />
+<meta property="og:description" content="Python 正则表达式" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E9%98%B6/" />
+<meta property="og:image" content="https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-07-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-07-21T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg" />
+<meta name="twitter:title" content="Python 正则表达式"/>
+<meta name="twitter:description" content="Python 正则表达式"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "⌛ Thought",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "🏗️ Blog",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Python 正则表达式",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E9%98%B6/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Python 正则表达式",
+  "name": "Python 正则表达式",
+  "description": "Python 正则表达式",
+  "keywords": [
+    "Python"
+  ],
+  "articleBody": "背景 从业这么多年， 对正则并没有太多的研究，需要的时候上网搜一搜，能拿到结果就行。由于不太懂，在日常代码处理数据中使用的还是数据结构较多，所以正则不精通没有太影响到我的工作。刚好公司有一部分功能业务是需要使用正则去匹配的，研究了下发现正则还是很强大的。正好借这个劲头把python的正则都学了，这里做一个学习笔记。\n元字符介绍 元字符的完整列表 只需要记住以下元字符，对比操作即可。 . ^ $ * + ? { } [ ] \\ | ( ) Python re模块使用 re.compile函数 编译正则表达语句，因为正则表达语句有一些特殊字符，在python很难以识别，或者识别错误，这个方法就是把输入的字符串转换为正则的模式给到下面寻找函数的使用\n\u003e\u003e\u003eimport re \u003e\u003e\u003e pattern = re.compile(r'\\d+') # 用于匹配至少一个数字 \u003e\u003e\u003e m = pattern.match('one12twothree34four') # 查找头部，没有匹配 \u003e\u003e\u003e print( m ) re.match函数 从开头的位置查找，如果开头就没匹配到就返回None了。那么下面的这个例子返回的是个None，因为从开头的位置没找到数字。可以通过后面的位置参数定位哪里算是开头\n\u003e\u003e\u003eimport re \u003e\u003e\u003e pattern = re.compile(r'\\d+') # 用于匹配至少一个数字 \u003e\u003e\u003e m = pattern.match('one12twothree34four') # 查找头部，没有匹配 \u003e\u003e\u003e print( m ) None \u003e\u003e\u003e m = pattern.match('one12twothree34four', 2, 10) # 从'e'的位置开始匹配，没有匹配 \u003e\u003e\u003e print( m ) None \u003e\u003e\u003e m = pattern.match('one12twothree34four', 3, 10) # 从'1'的位置开始匹配，正好匹配 \u003e\u003e\u003e print( m ) re.search函数 匹配整个字符串，直到找到一个匹配。如果没找到就是None\n\u003e\u003e\u003eimport re \u003e\u003e\u003eline = \"Cats are smarter than dogs\" \u003e\u003e\u003ematchObj = re.search( r'dogs', line, re.M|re.I) \u003e\u003e\u003eif matchObj: \u003e\u003e\u003e print (\"search --\u003e matchObj.group() : \", matchObj.group()) \u003e\u003e\u003eelse: \u003e\u003e\u003e print (\"No match!!\") \u003e\u003e\u003e search --\u003e matchObj.group() : dogs re.findall函数 匹配整个字符串，找到所有匹配，返回一个列表，也可以通过字符串切片位置限制范围\n\u003e\u003e\u003eimport re \u003e\u003e\u003eresult1 = re.findall(r'\\d+','runoob 123 google 456') \u003e\u003e\u003e ['123', '456'] \u003e\u003e\u003epattern = re.compile(r'\\d+') # 查找数字 \u003e\u003e\u003eresult2 = pattern.findall('runoob 123 google 456') \u003e\u003e\u003e ['123', '456'] \u003e\u003e\u003eresult3 = pattern.findall('run88oob123google456') \u003e\u003e\u003e ['88','123', '456'] \u003e\u003e\u003eresult3 = pattern.findall('run88oob123google456'，0, 10) \u003e\u003e\u003e ['88','123'] re.split函数 通过正则表达式的匹配拆分 字符串。 如果在正则中使用捕获括号，则它们的内容也将作为结果列表的一部分返回。 如果 maxsplit 非零，则最多执行 maxsplit 次拆分。\n\u003e\u003e\u003e p = re.compile(r'\\W+') \u003e\u003e\u003e p.split('This is a test, short and sweet, of split().') ['This', 'is', 'a', 'test', 'short', 'and', 'sweet', 'of', 'split', ''] \u003e\u003e\u003e p.split('This is a test, short and sweet, of split().', 3) ['This', 'is', 'a', 'test, short and sweet, of split().'] \u003e\u003e\u003e #也可以切割逗号，或者切割空格 \u003e\u003e\u003e p = re.compile(r'\\s') \u003e\u003e\u003e p = re.compile(r',') 还可以通过把正则分组形式生成被切割的数据\n\u003e\u003e\u003e p = re.compile(r'\\W+') \u003e\u003e\u003e p2 = re.compile(r'(\\W+)') \u003e\u003e\u003e p.split('This... is a test.') ['This', 'is', 'a', 'test', ''] \u003e\u003e\u003e p2.split('This... is a test.') ['This', '... ', 'is', ' ', 'a', ' ', 'test', '.', ''] \u003e\u003e\u003e # 模块使用时参数添加到后面参数 \u003e\u003e\u003e re.split(r'[\\W]+', 'Words, words, words.') ['Words', 'words', 'words', ''] \u003e\u003e\u003e re.split(r'([\\W]+)', 'Words, words, words.') ['Words', ', ', 'words', ', ', 'words', '.', ''] \u003e\u003e\u003e re.split(r'[\\W]+', 'Words, words, words.', 1) ['Words', 'words, words.'] re.sub函数 搜索和替换函数，把正则找到的数据进行替换，也可以传入函数去处理需要替换的数据\n\u003e\u003e\u003e p = re.compile('(blue|white|red)') \u003e\u003e\u003e p.sub('colour', 'blue socks and red shoes') 'colour socks and colour shoes' \u003e\u003e\u003e p.sub('colour', 'blue socks and red shoes', count=1) 'colour socks and red shoes' subn()函数也是一样的左右，但是他会返回替换了几个数据的总结\n\u003e\u003e\u003e p = re.compile('(blue|white|red)') \u003e\u003e\u003e p.subn('colour', 'blue socks and red shoes') ('colour socks and colour shoes', 2) \u003e\u003e\u003e p.subn('colour', 'no colours at all') ('no colours at all', 0) 参考文件 正则表达式指南\nPython3 正则表达式\n总结 正则还是挺强大和有意思的，如果能用好是工作的一大利器。目前看起来其实并不难，不知道为啥之前不愿意去学这个，可能看到元字符组合比较复杂难以理解。后面就得多去应用，用多了自然就熟了。公司大佬安利的正则在线编译网站，很强大，我也是通过这个网站直观的看到数据的变化才学起来轻松的。 https://regex101.com/\n",
+  "wordCount" : "1279",
+  "inLanguage": "en",
+  "image":"https://telegraph-image-f19.pages.dev/file/b58433d3a3f238c52fcd4.jpg","datePublished": "2024-07-21T00:00:00Z",
+  "dateModified": "2024-07-21T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Bobby"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/python-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E9%98%B6/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bobby Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bobby-sheng.github.io/BobbySheng/img/title.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://bobby-sheng.github.io/BobbySheng/en/" accesskey="h" title="Bobby Blog (Alt + H)">
+                <img src="https://bobby-sheng.github.io/BobbySheng/img/title.png" alt="" aria-label="logo"
+                    height="35">Bobby Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/search" title="🔍 Search (Alt &#43; /)" accesskey=/>
+                    <span>🔍 Search</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/posts" title="📜 Blog">
+                    <span>📜 Blog</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/archives" title="💾 History">
+                    <span>💾 History</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/about" title="🙋🏻‍♂️ About">
+                    <span>🙋🏻‍♂️ About</span>
+                    
+                </a>
+            
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://bobby-sheng.github.io/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/">⌛ Thought</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/">🏗️ Blog</a></div>
+            <h1 class="post-title">
+                Python 正则表达式
+            </h1>
+            <div class="post-description">
+                Python 正则表达式
+            </div>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2024-07-21
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>1279 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>3 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/python/" style="color: var(--secondary)!important;">Python</a>
+            </span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            Visit:<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.6.15/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "https://bobby-sheng.github.io/BobbySheng/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId:  null , 
+                                region:  null , 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Catalogue</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e8%83%8c%e6%99%af" aria-label="背景">背景</a></li>
+                <li>
+                    <a href="#%e5%85%83%e5%ad%97%e7%ac%a6%e4%bb%8b%e7%bb%8d" aria-label="元字符介绍">元字符介绍</a><ul>
+                        
+                <li>
+                    <a href="#%e5%85%83%e5%ad%97%e7%ac%a6%e7%9a%84%e5%ae%8c%e6%95%b4%e5%88%97%e8%a1%a8" aria-label="元字符的完整列表">元字符的完整列表</a></li></ul>
+                </li>
+                <li>
+                    <a href="#python-re%e6%a8%a1%e5%9d%97%e4%bd%bf%e7%94%a8" aria-label="Python re模块使用">Python re模块使用</a><ul>
+                        
+                <li>
+                    <a href="#recompile%e5%87%bd%e6%95%b0" aria-label="re.compile函数">re.compile函数</a></li>
+                <li>
+                    <a href="#rematch%e5%87%bd%e6%95%b0" aria-label="re.match函数">re.match函数</a></li>
+                <li>
+                    <a href="#research%e5%87%bd%e6%95%b0" aria-label="re.search函数">re.search函数</a></li>
+                <li>
+                    <a href="#refindall%e5%87%bd%e6%95%b0" aria-label="re.findall函数">re.findall函数</a></li>
+                <li>
+                    <a href="#resplit%e5%87%bd%e6%95%b0" aria-label="re.split函数">re.split函数</a></li>
+                <li>
+                    <a href="#resub%e5%87%bd%e6%95%b0" aria-label="re.sub函数">re.sub函数</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e6%96%87%e4%bb%b6" aria-label="参考文件">参考文件</a>
+                </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+            const id = encodeURI(element.getAttribute('id')).toLowerCase();
+            if (element === activeElement){
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+            } else {
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+            }
+        })
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h1 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h1>
+<p>从业这么多年， 对正则并没有太多的研究，需要的时候上网搜一搜，能拿到结果就行。由于不太懂，在日常代码处理数据中使用的还是数据结构较多，所以正则不精通没有太影响到我的工作。刚好公司有一部分功能业务是需要使用正则去匹配的，研究了下发现正则还是很强大的。正好借这个劲头把python的正则都学了，这里做一个学习笔记。</p>
+<h1 id="元字符介绍">元字符介绍<a hidden class="anchor" aria-hidden="true" href="#元字符介绍">#</a></h1>
+<h2 id="元字符的完整列表">元字符的完整列表<a hidden class="anchor" aria-hidden="true" href="#元字符的完整列表">#</a></h2>
+<p>只需要记住以下元字符，对比操作即可。
+. ^ $ * + ? { } [ ] \ | ( )
+<img loading="lazy" src="https://telegraph-image-f19.pages.dev/file/1904ab548d77750557020.jpg" alt="image-2328"  />
+</p>
+<h1 id="python-re模块使用">Python re模块使用<a hidden class="anchor" aria-hidden="true" href="#python-re模块使用">#</a></h1>
+<h2 id="recompile函数">re.compile函数<a hidden class="anchor" aria-hidden="true" href="#recompile函数">#</a></h2>
+<p>编译正则表达语句，因为正则表达语句有一些特殊字符，在python很难以识别，或者识别错误，这个方法就是把输入的字符串转换为正则的模式给到下面寻找函数的使用</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span><span style="color:#5bc4bf">import</span> <span style="color:#fec418">re</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> pattern <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>compile(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;\d+&#39;</span>)                    <span style="color:#776e71"># 用于匹配至少一个数字</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> m <span style="color:#5bc4bf">=</span> pattern<span style="color:#5bc4bf">.</span><span style="color:#815ba4">match</span>(<span style="color:#48b685">&#39;one12twothree34four&#39;</span>)        <span style="color:#776e71"># 查找头部，没有匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> print( m )
+</span></span></code></pre></div><h2 id="rematch函数">re.match函数<a hidden class="anchor" aria-hidden="true" href="#rematch函数">#</a></h2>
+<p>从开头的位置查找，如果开头就没匹配到就返回None了。那么下面的这个例子返回的是个None，因为从开头的位置没找到数字。可以通过后面的位置参数定位哪里算是开头</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span><span style="color:#5bc4bf">import</span> <span style="color:#fec418">re</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> pattern <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>compile(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;\d+&#39;</span>)                    <span style="color:#776e71"># 用于匹配至少一个数字</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> m <span style="color:#5bc4bf">=</span> pattern<span style="color:#5bc4bf">.</span><span style="color:#815ba4">match</span>(<span style="color:#48b685">&#39;one12twothree34four&#39;</span>)        <span style="color:#776e71"># 查找头部，没有匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> print( m )
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> m <span style="color:#5bc4bf">=</span> pattern<span style="color:#5bc4bf">.</span><span style="color:#815ba4">match</span>(<span style="color:#48b685">&#39;one12twothree34four&#39;</span>, <span style="color:#f99b15">2</span>, <span style="color:#f99b15">10</span>) <span style="color:#776e71"># 从&#39;e&#39;的位置开始匹配，没有匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> print( m )
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> m <span style="color:#5bc4bf">=</span> pattern<span style="color:#5bc4bf">.</span><span style="color:#815ba4">match</span>(<span style="color:#48b685">&#39;one12twothree34four&#39;</span>, <span style="color:#f99b15">3</span>, <span style="color:#f99b15">10</span>) <span style="color:#776e71"># 从&#39;1&#39;的位置开始匹配，正好匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> print( m ) 
+</span></span></code></pre></div><h2 id="research函数">re.search函数<a hidden class="anchor" aria-hidden="true" href="#research函数">#</a></h2>
+<p>匹配整个字符串，直到找到一个匹配。如果没找到就是None</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span><span style="color:#5bc4bf">import</span> <span style="color:#fec418">re</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span>line <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#34;Cats are smarter than dogs&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span>matchObj <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>search( <span style="color:#48b685">r</span><span style="color:#48b685">&#39;dogs&#39;</span>, line, re<span style="color:#5bc4bf">.</span>M<span style="color:#5bc4bf">|</span>re<span style="color:#5bc4bf">.</span>I)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span><span style="color:#815ba4">if</span> matchObj:
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span>   print (<span style="color:#48b685">&#34;search --&gt; matchObj.group() : &#34;</span>, matchObj<span style="color:#5bc4bf">.</span>group())
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span><span style="color:#815ba4">else</span>:
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span>   print (<span style="color:#48b685">&#34;No match!!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> search <span style="color:#5bc4bf">--&gt;</span> matchObj<span style="color:#5bc4bf">.</span>group() :  dogs
+</span></span></code></pre></div><h2 id="refindall函数">re.findall函数<a hidden class="anchor" aria-hidden="true" href="#refindall函数">#</a></h2>
+<p>匹配整个字符串，找到所有匹配，返回一个列表，也可以通过字符串切片位置限制范围</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span><span style="color:#5bc4bf">import</span> <span style="color:#fec418">re</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span>result1 <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>findall(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;\d+&#39;</span>,<span style="color:#48b685">&#39;runoob 123 google 456&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> [<span style="color:#48b685">&#39;123&#39;</span>, <span style="color:#48b685">&#39;456&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span>pattern <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>compile(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;\d+&#39;</span>)   <span style="color:#776e71"># 查找数字</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span>result2 <span style="color:#5bc4bf">=</span> pattern<span style="color:#5bc4bf">.</span>findall(<span style="color:#48b685">&#39;runoob 123 google 456&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> [<span style="color:#48b685">&#39;123&#39;</span>, <span style="color:#48b685">&#39;456&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span>result3 <span style="color:#5bc4bf">=</span> pattern<span style="color:#5bc4bf">.</span>findall(<span style="color:#48b685">&#39;run88oob123google456&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> [<span style="color:#48b685">&#39;88&#39;</span>,<span style="color:#48b685">&#39;123&#39;</span>, <span style="color:#48b685">&#39;456&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span>result3 <span style="color:#5bc4bf">=</span> pattern<span style="color:#5bc4bf">.</span>findall(<span style="color:#48b685">&#39;run88oob123google456&#39;</span><span style="color:#ef6155">，</span><span style="color:#f99b15">0</span>, <span style="color:#f99b15">10</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> [<span style="color:#48b685">&#39;88&#39;</span>,<span style="color:#48b685">&#39;123&#39;</span>]
+</span></span></code></pre></div><h2 id="resplit函数">re.split函数<a hidden class="anchor" aria-hidden="true" href="#resplit函数">#</a></h2>
+<p>通过正则表达式的匹配拆分 字符串。 如果在正则中使用捕获括号，则它们的内容也将作为结果列表的一部分返回。 如果 maxsplit 非零，则最多执行 maxsplit 次拆分。</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>compile(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;\W+&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p<span style="color:#5bc4bf">.</span>split(<span style="color:#48b685">&#39;This is a test, short and sweet, of split().&#39;</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#48b685">&#39;This&#39;</span>, <span style="color:#48b685">&#39;is&#39;</span>, <span style="color:#48b685">&#39;a&#39;</span>, <span style="color:#48b685">&#39;test&#39;</span>, <span style="color:#48b685">&#39;short&#39;</span>, <span style="color:#48b685">&#39;and&#39;</span>, <span style="color:#48b685">&#39;sweet&#39;</span>, <span style="color:#48b685">&#39;of&#39;</span>, <span style="color:#48b685">&#39;split&#39;</span>, <span style="color:#48b685">&#39;&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p<span style="color:#5bc4bf">.</span>split(<span style="color:#48b685">&#39;This is a test, short and sweet, of split().&#39;</span>, <span style="color:#f99b15">3</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#48b685">&#39;This&#39;</span>, <span style="color:#48b685">&#39;is&#39;</span>, <span style="color:#48b685">&#39;a&#39;</span>, <span style="color:#48b685">&#39;test, short and sweet, of split().&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> <span style="color:#776e71">#也可以切割逗号，或者切割空格</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>compile(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;\s&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>compile(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;,&#39;</span>)
+</span></span></code></pre></div><p>还可以通过把正则分组形式生成被切割的数据</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>compile(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;\W+&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p2 <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>compile(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;(\W+)&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p<span style="color:#5bc4bf">.</span>split(<span style="color:#48b685">&#39;This... is a test.&#39;</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#48b685">&#39;This&#39;</span>, <span style="color:#48b685">&#39;is&#39;</span>, <span style="color:#48b685">&#39;a&#39;</span>, <span style="color:#48b685">&#39;test&#39;</span>, <span style="color:#48b685">&#39;&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p2<span style="color:#5bc4bf">.</span>split(<span style="color:#48b685">&#39;This... is a test.&#39;</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#48b685">&#39;This&#39;</span>, <span style="color:#48b685">&#39;... &#39;</span>, <span style="color:#48b685">&#39;is&#39;</span>, <span style="color:#48b685">&#39; &#39;</span>, <span style="color:#48b685">&#39;a&#39;</span>, <span style="color:#48b685">&#39; &#39;</span>, <span style="color:#48b685">&#39;test&#39;</span>, <span style="color:#48b685">&#39;.&#39;</span>, <span style="color:#48b685">&#39;&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> <span style="color:#776e71"># 模块使用时参数添加到后面参数</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> re<span style="color:#5bc4bf">.</span>split(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;[\W]+&#39;</span>, <span style="color:#48b685">&#39;Words, words, words.&#39;</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#48b685">&#39;Words&#39;</span>, <span style="color:#48b685">&#39;words&#39;</span>, <span style="color:#48b685">&#39;words&#39;</span>, <span style="color:#48b685">&#39;&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> re<span style="color:#5bc4bf">.</span>split(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;([\W]+)&#39;</span>, <span style="color:#48b685">&#39;Words, words, words.&#39;</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#48b685">&#39;Words&#39;</span>, <span style="color:#48b685">&#39;, &#39;</span>, <span style="color:#48b685">&#39;words&#39;</span>, <span style="color:#48b685">&#39;, &#39;</span>, <span style="color:#48b685">&#39;words&#39;</span>, <span style="color:#48b685">&#39;.&#39;</span>, <span style="color:#48b685">&#39;&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> re<span style="color:#5bc4bf">.</span>split(<span style="color:#48b685">r</span><span style="color:#48b685">&#39;[\W]+&#39;</span>, <span style="color:#48b685">&#39;Words, words, words.&#39;</span>, <span style="color:#f99b15">1</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#48b685">&#39;Words&#39;</span>, <span style="color:#48b685">&#39;words, words.&#39;</span>]
+</span></span></code></pre></div><h2 id="resub函数">re.sub函数<a hidden class="anchor" aria-hidden="true" href="#resub函数">#</a></h2>
+<p>搜索和替换函数，把正则找到的数据进行替换，也可以传入函数去处理需要替换的数据</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>compile(<span style="color:#48b685">&#39;(blue|white|red)&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p<span style="color:#5bc4bf">.</span>sub(<span style="color:#48b685">&#39;colour&#39;</span>, <span style="color:#48b685">&#39;blue socks and red shoes&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;colour socks and colour shoes&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p<span style="color:#5bc4bf">.</span>sub(<span style="color:#48b685">&#39;colour&#39;</span>, <span style="color:#48b685">&#39;blue socks and red shoes&#39;</span>, count<span style="color:#5bc4bf">=</span><span style="color:#f99b15">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#48b685">&#39;colour socks and red shoes&#39;</span>
+</span></span></code></pre></div><p>subn()函数也是一样的左右，但是他会返回替换了几个数据的总结</p>
+<div class="highlight"><pre tabindex="0" style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p <span style="color:#5bc4bf">=</span> re<span style="color:#5bc4bf">.</span>compile(<span style="color:#48b685">&#39;(blue|white|red)&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p<span style="color:#5bc4bf">.</span>subn(<span style="color:#48b685">&#39;colour&#39;</span>, <span style="color:#48b685">&#39;blue socks and red shoes&#39;</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#48b685">&#39;colour socks and colour shoes&#39;</span>, <span style="color:#f99b15">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">&gt;&gt;&gt;</span> p<span style="color:#5bc4bf">.</span>subn(<span style="color:#48b685">&#39;colour&#39;</span>, <span style="color:#48b685">&#39;no colours at all&#39;</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#48b685">&#39;no colours at all&#39;</span>, <span style="color:#f99b15">0</span>)
+</span></span></code></pre></div><h1 id="参考文件">参考文件<a hidden class="anchor" aria-hidden="true" href="#参考文件">#</a></h1>
+<p><a href="https://docs.python.org/zh-cn/3.11/howto/regex.html#introduction" target="_blank" rel="noopener" style="color:#42b983";>正则表达式指南</a></p>
+<p><a href="https://www.runoob.com/python3/python3-reg-expressions.html" target="_blank" rel="noopener" style="color:#42b983";>Python3 正则表达式</a></p>
+<p>总结
+正则还是挺强大和有意思的，如果能用好是工作的一大利器。目前看起来其实并不难，不知道为啥之前不愿意去学这个，可能看到元字符组合比较复杂难以理解。后面就得多去应用，用多了自然就熟了。公司大佬安利的正则在线编译网站，很强大，我也是通过这个网站直观的看到数据的变化才学起来轻松的。
+<a href="https://regex101.com/" target="_blank" rel="noopener" style="color:#42b983";>https://regex101.com/</a></p>
+
+
+        </div>
+        <div class="post-reward">
+            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
+                <div id="QR" style="opacity: 0;">
+                    <div id="wechat" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="wechat_qr" src="https://bobby-sheng.github.io/BobbySheng/img/wechat_pay.png" alt="wechat_pay"></a>
+                        <p>微信</p>
+                    </div>
+                    <div id="alipay" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="alipay_qr" src="https://bobby-sheng.github.io/BobbySheng/img/alipay.png" alt="alipay"></a>
+                        <p>支付宝</p>
+                    </div>
+                </div>
+                <button id="rewardButton"
+                        onclick="
+                    var qr = document.getElementById('QR');
+                    if (qr.style.opacity === '0') {
+                        qr.style.opacity='1';
+                    } else {
+                        qr.style.opacity='0'
+                    }"
+                >
+                    <span>🧧 鼓励</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="next" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E5%9F%BA%E4%BA%8Ecloudflare%E6%90%AD%E5%BB%BAfor-myself%E5%85%8D%E8%B4%B9%E7%9A%84%E5%9B%BE%E5%BA%8A/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>基于cloudflare搭建For Myself免费的图床</span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+
+
+
+    
+
+    
+    
+    
+</article>
+</main>
+
+
+<footer class="footer">
+
+    <a href="https://gohugo.io/" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/frame-hugo-blue?style=flat&logo=hugo">
+    </a>
+    <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/theme-papermod-lightgrey?style=flat&logo=BookStack">
+    </a>
+        <a href="https://dash.cloudflare.com/" target="_blank">
+        <img style="display: unset;" src="https://telegraph-image-f19.pages.dev/file/6b25043a544164be8f9d8.png">
+    </a>
+
+    <br>
+
+    <span id="runtime_span"></span>
+    <script
+        type="text/javascript">function show_runtime() { window.setTimeout("show_runtime()", 1000); X = new Date("7/13/2021 1:00:00"); Y = new Date(); T = (Y.getTime() - X.getTime()); M = 24 * 60 * 60 * 1000; a = T / M; A = Math.floor(a); b = (a - A) * 24; B = Math.floor(b); c = (b - B) * 60; C = Math.floor((b - B) * 60); D = Math.floor((c - C) * 60); runtime_span.innerHTML = "网站已运行" + A + "天" + B + "小时" + C + "分" + D + "秒" } show_runtime();</script>
+    |
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container">
+        
+        总访客数:  <span id="busuanzi_value_site_uv"></span>
+        |
+        总访问量:  <span id="busuanzi_value_site_pv"></span>
+    </span>
+
+    <br>
+
+    <a href="https://beian.miit.gov.cn/" target="_blank" style="border-bottom:1px solid">Bobby</a>&nbsp;
+    |
+    <span>
+        Copyright
+        &copy;
+        2018-2024
+        <a href="https://bobby-sheng.github.io/BobbySheng/en/" style="border-bottom:1px solid">Bobby Blog</a>
+    </span>
+
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '📄copy';
+
+        function copyingDone() {
+            copybutton.innerText = '👌🏻Code_copied!';
+            setTimeout(() => {
+                copybutton.innerText = '📄copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {
+            }
+            ;
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild === container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName === "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+
+</body>
+
+</html>

@@ -4,3 +4,7 @@
 模板仓库：https://github.com/xyming108/sulv-hugo-papermod
 
 主题仓库：https://github.com/adityatelange/hugo-PaperMod
+
+设置参考博客：https://www.lvbibir.cn/
+
+设置参考github：https://github.com/lvbibir/lvbibir.github.io

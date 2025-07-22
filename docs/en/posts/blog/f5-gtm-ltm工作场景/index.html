@@ -10,7 +10,7 @@
 <meta name="description" content="F5 GTM LTM工作场景">
 <meta name="author" content="Author:&nbsp;Bobby">
 <link rel="canonical" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/f5-gtm-ltm%E5%B7%A5%E4%BD%9C%E5%9C%BA%E6%99%AF/">
-<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.e56cf4f357894de110bad4354fefb20d149fe3e9909b962569b427d5538cb284.css" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.953b20e619a5ab28b75182985020c82400da620978081e1e845976a73f7c4223.css" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/BobbySheng/assets/js/highlight.b07f1598fbd6e36a2c5d5be53f96f80b58dce8f18b5ba91c0219a403f6291558.js"
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
@@ -76,11 +76,9 @@ var _hmt = _hmt || [];
 <meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/f5-gtm-ltm%E5%B7%A5%E4%BD%9C%E5%9C%BA%E6%99%AF/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-02-22T00:00:00+00:00" />
 <meta property="article:modified_time" content="2024-02-22T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary"/>
+ <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="F5 GTM LTM工作场景"/>
 <meta name="twitter:description" content="F5 GTM LTM工作场景"/>
-
 
 <script type="application/ld+json">
 {
@@ -352,13 +350,13 @@ var _hmt = _hmt || [];
                 <li>
                     <a href="#gtm%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af" aria-label="GTM应用场景"><strong>GTM</strong>应用场景</a></li>
                 <li>
-                    <a href="#%e5%9c%ba%e6%99%af%e4%b8%80%e4%b8%bb%e5%a4%87ip%e5%ae%b9%e7%81%be" aria-label="场景一：主备IP容灾"><strong>场景一：主备<strong><strong>IP</strong></strong>容灾</strong></a></li>
+                    <a href="#%e5%9c%ba%e6%99%af%e4%b8%80%e4%b8%bb%e5%a4%87" aria-label="场景一：主备IP容灾"><strong>场景一：主备<strong><strong>IP</strong></strong>容灾</strong></a></li>
                 <li>
                     <a href="#%e5%9c%ba%e6%99%af%e4%ba%8c%e5%a4%9a%e7%ba%a7%e5%a4%87%e4%bb%bd" aria-label="场景二：多级备份"><strong>场景二：多级备份</strong></a></li>
                 <li>
-                    <a href="#%e5%9c%ba%e6%99%af%e4%b8%89%e9%ab%98%e5%b9%b6%e5%8f%91%e4%b8%8b%e7%9a%84%e8%b4%9f%e8%bd%bd%e5%9d%87%e8%a1%a1" aria-label="场景三：高并发下的****负载均衡"><strong>场景三：高并发下的****负载均衡</strong></a></li>
+                    <a href="#%e5%9c%ba%e6%99%af%e4%b8%89%e9%ab%98%e5%b9%b6%e5%8f%91%e4%b8%8b%e7%9a%84" aria-label="场景三：高并发下的****负载均衡"><strong>场景三：高并发下的****负载均衡</strong></a></li>
                 <li>
-                    <a href="#%e5%9c%ba%e6%99%af%e5%9b%9bcdn%e6%99%ba%e8%83%bd%e4%ba%92%e5%a4%87" aria-label="场景四：CDN智能互备"><strong>场景四：<strong><strong>CDN</strong></strong>智能互备</strong></a></li></ul>
+                    <a href="#%e5%9c%ba%e6%99%af%e5%9b%9b" aria-label="场景四：CDN智能互备"><strong>场景四：<strong><strong>CDN</strong></strong>智能互备</strong></a></li></ul>
                     </ul>
                 </li>
                 <li>
@@ -453,13 +451,13 @@ var _hmt = _hmt || [];
 </li>
 </ol>
 <h3 id="gtm应用场景"><strong>GTM</strong>应用场景<a hidden class="anchor" aria-hidden="true" href="#gtm应用场景">#</a></h3>
-<h3 id="场景一主备ip容灾"><strong>场景一：主备<strong><strong>IP</strong></strong>容灾</strong><a hidden class="anchor" aria-hidden="true" href="#场景一主备ip容灾">#</a></h3>
+<h3 id="场景一主备"><strong>场景一：主备<strong><strong>IP</strong></strong>容灾</strong><a hidden class="anchor" aria-hidden="true" href="#场景一主备">#</a></h3>
 <p>​        客户网站是由多个源站（或数据中心）进行服务支撑时，使用主备智能切换可以确保服务高可用。简单说，有两个IP地址A（主）和B（备），正常情况下，用户访问IP地址A、当IP地址A故障后，用户将不再访问到IP地址A，而是访问到IP地址B。</p>
 <h3 id="场景二多级备份"><strong>场景二：多级备份</strong><a hidden class="anchor" aria-hidden="true" href="#场景二多级备份">#</a></h3>
 <p>​        客户网站是由多个数据中心进行服务支撑时，根据实际情况进行备份分级，实现有线同城备份，再次异地备份。</p>
-<h3 id="场景三高并发下的负载均衡"><strong>场景三：高并发下的****负载均衡</strong><a hidden class="anchor" aria-hidden="true" href="#场景三高并发下的负载均衡">#</a></h3>
+<h3 id="场景三高并发下的"><strong>场景三：高并发下的****负载均衡</strong><a hidden class="anchor" aria-hidden="true" href="#场景三高并发下的">#</a></h3>
 <p>​        用户量大，或者用户突增（如年中大促、双十一、618促销等）情况下，需要对源站多个IP配置负载均衡，避免源站崩溃。通过网宿GTM，只需要配置调度策略，即可实现权重负载均衡。假设源站有多个IP地址A，B，C，D，A、B设为主源，C，D作为备源，A的性能最佳，主源A，B的负载比例可设为3:2，即A的负载为60%，B的负载为40%，当主源全部故障时，备源将启用，当主源恢复时，切回主源。</p>
-<h3 id="场景四cdn智能互备"><strong>场景四：<strong><strong>CDN</strong></strong>智能互备</strong><a hidden class="anchor" aria-hidden="true" href="#场景四cdn智能互备">#</a></h3>
+<h3 id="场景四"><strong>场景四：<strong><strong>CDN</strong></strong>智能互备</strong><a hidden class="anchor" aria-hidden="true" href="#场景四">#</a></h3>
 <p>​        当客户网站有使用多个CDN服务商时，通过全网融合流量分配解决方案可实现CDN之间的互备。</p>
 <h1 id="dns解析">DNS解析<a hidden class="anchor" aria-hidden="true" href="#dns解析">#</a></h1>
 <p><img loading="lazy" src="https://telegraph-image-f19.pages.dev/file/86a92d97042d29798b6c4.jpg" alt="img.png"  />

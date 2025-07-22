@@ -16,7 +16,8 @@ buildExpired: false
 googleAnalytics:  # 谷歌统计
 # Copyright: Sulv
 
-paginate: 15    # 每页显示的文章数
+pagination:
+  pagerSize: 15    # 每页显示的文章数
 summaryLength: 140 # 文章概览的字数，默认70
 
 minify:
@@ -52,14 +53,7 @@ languages:
     #       url: posts/read
     #     - name: 🏖️ 生活
     #       url: posts/life
-    homeInfoParams:
-      Title: "Looking forward to seeing you again.🥂"
-#      Content: >
-#        本站主要内容包括读书笔记、技术积累、生活感悟。如果能有哪些内容可以帮助到你，那也是极好的。</br>
-#        精通 CSS JavaScript PHP C C++ C# java Ruby Perl Python 等单词的拼写</br>
-#        熟悉 Windows Linux Mac Android IOS 等系统的开关机</br>
-#        喜欢的事情: 🏃‍♂️ 跑步 🎮️ 游戏 🎧 音乐 📺 动漫</br>
-#        文章内容及标题随着想法或者思路可能会改变, 如果发现某些文章的链接丢失, 请善用搜索
+
 
     menu:
       main:
@@ -114,6 +108,10 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "Bobby的个人博客, hugo, papermod, shell, python, linux, mysql, redis, k8s, docker, devops"
+  
+  # 首页信息配置
+  homeInfoParams:
+    Title: "Looking forward to seeing you again.🥂"
   author: Bobby # author: ["Me", "You"] # multiple authors
   draft: flase
   defaultTheme: auto  # defaultTheme: light or  dark 
@@ -157,6 +155,11 @@ params:
 #      url: "mailto:15810243114@163.com"
 #    - name: RSS
 #      url: "index.xml"
+  
+  # 替代已废弃的 .Site.Social 配置
+  social:
+    twitter: ""  # 如果需要Twitter账号，请在此处添加用户名
+    facebook_admin: ""  # 如果需要Facebook管理员ID，请在此处添加
 
   label:
     text: "Bobby Blog"
@@ -209,6 +212,8 @@ taxonomies:
   tag: tags
   series: series
 
+# Social配置已移动到params部分
+
 markup:
   goldmark:
     renderer:
@@ -230,11 +235,6 @@ privacy:
     disabled: false
     simple: true
   
-  twitter:
-    disabled: false
-    enableDNT: true
-    simple: true
-  
   instagram:
     disabled: false
     simple: true
@@ -246,6 +246,6 @@ privacy:
 services:
   instagram:
     disableInlineCSS: true
-  twitter:
+  x:
     disableInlineCSS: true
         

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>AICodeReview ｜ 项目介绍 | Bobby Blog</title>
+<meta name="keywords" content="Porjects">
+<meta name="description" content="个人开发的AI-Code-Review代码PR">
+<meta name="author" content="Author:&nbsp;Bobby">
+<link rel="canonical" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/ai-code-review%E4%BB%A3%E7%A0%81pr/">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.953b20e619a5ab28b75182985020c82400da620978081e1e845976a73f7c4223.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/BobbySheng/assets/js/highlight.b07f1598fbd6e36a2c5d5be53f96f80b58dce8f18b5ba91c0219a403f6291558.js"
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="apple-touch-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="mask-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/ai-code-review%E4%BB%A3%E7%A0%81pr/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta property="og:title" content="AICodeReview ｜ 项目介绍" />
+<meta property="og:description" content="个人开发的AI-Code-Review代码PR" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/ai-code-review%E4%BB%A3%E7%A0%81pr/" />
+<meta property="og:image" content="https://telegraph-image-f19.pages.dev/file/AgACAgUAAyEGAASMdnD-AAMGaH8JFeBv_YDM4SyCeJ_knx4yPkEAArnEMRuO0PlXS_zLbJBRk0kBAAMCAAN3AAM2BA.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-04-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-04-10T00:00:00+00:00" />
+ <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://telegraph-image-f19.pages.dev/file/AgACAgUAAyEGAASMdnD-AAMGaH8JFeBv_YDM4SyCeJ_knx4yPkEAArnEMRuO0PlXS_zLbJBRk0kBAAMCAAN3AAM2BA.jpg" />
+<meta name="twitter:title" content="AICodeReview ｜ 项目介绍"/>
+<meta name="twitter:description" content="个人开发的AI-Code-Review代码PR"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "⌛ Thought",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "🏗️ Blog",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "AICodeReview ｜ 项目介绍",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/ai-code-review%E4%BB%A3%E7%A0%81pr/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AICodeReview ｜ 项目介绍",
+  "name": "AICodeReview ｜ 项目介绍",
+  "description": "个人开发的AI-Code-Review代码PR",
+  "keywords": [
+    "Porjects"
+  ],
+  "articleBody": "📢 重磅上线！新员工\"代码守护者\"正式入职团队 背景：代码审核的\"人肉瓶颈\"，该升级了！ 在高速迭代的研发流程中，代码审核如同一场与时间的赛跑。传统人工审核面临三大痛点： ✅ 耗时费力：动辄数千行的代码提交，肉眼逐行审查效率低下； ✅ 标准波动：不同审核者的经验差异可能导致规则执行不一致； ✅ 疲劳遗漏：重复劳动容易忽略关键隐患，深夜提交的代码更可能\"漏网\"\n为什么需要 AI 守护者？ “AI 不是替代者，而是让人类更专注创造”\n全天候哨兵：7x24 小时即时响应，凌晨提交的代码也能秒级初筛\n全景扫描：通过大语言模型理解代码逻辑，识别潜在漏洞和规范偏离\n数据卡片： 内测数据显示，守护者平均提前发现 82%的基础缺陷，人工审核时间缩短 65%。\n揭秘守护者的工作流 代码提交 → 2。 Webhook 触发 → 3。 大模型分析 → 4。 FuncCalling 结构化→ 5。 多端反馈 技术四重奏 智能触发\n对接 Bitbucket/GitLab/GitHub 等主流仓库的 OpenAPI\nWebhook 实时捕获 push/merge 请求\n深度解析\n基于 FuncCalling 技术结构化提取关键信息\n支持市面热门大模型分析代码逻辑\n三维反馈\n📱 飞书即时预警：高危问题实时推送 💬 代码评论锚定：精准定位问题行并建议优化 📊 可视化报告：缺陷分布图+改进优先级评+意见反馈收集 未来蓝图：从\"检查员\"到\"架构顾问\" 技术演进路线：\n知识库赋能：建立项目专属代码记忆库，理解整体架构上下文\n智能进化：通过持续反馈优化检测策略，支持自定义规则引擎\n质量洞察：\n📅 周度/月度代码质量白皮书\n👥 开发者成长档案（代码规范进步曲线）\n🔮 风险预测：基于历史数据预警架构腐化趋势\n量化评估\n独创代码健康度评分体系（架构/安全/规范三维度）\n历史记录对比分析，生成开发者能力画像\n文末寄语：\n“最好的技术不是取代人类，而是让我们有更多时间去做机器做不到的事——创造真正的价值。”\n",
+  "wordCount" : "765",
+  "inLanguage": "en",
+  "image":"https://telegraph-image-f19.pages.dev/file/AgACAgUAAyEGAASMdnD-AAMGaH8JFeBv_YDM4SyCeJ_knx4yPkEAArnEMRuO0PlXS_zLbJBRk0kBAAMCAAN3AAM2BA.jpg","datePublished": "2025-04-10T00:00:00Z",
+  "dateModified": "2025-04-10T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Bobby"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/ai-code-review%E4%BB%A3%E7%A0%81pr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bobby Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bobby-sheng.github.io/BobbySheng/img/title.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://bobby-sheng.github.io/BobbySheng/en/" accesskey="h" title="Bobby Blog (Alt + H)">
+                <img src="https://bobby-sheng.github.io/BobbySheng/img/title.png" alt="" aria-label="logo"
+                    height="35">Bobby Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/search" title="🔍 Search (Alt &#43; /)" accesskey=/>
+                    <span>🔍 Search</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/posts" title="📜 Blog">
+                    <span>📜 Blog</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/archives" title="💾 History">
+                    <span>💾 History</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/about" title="🙋🏻‍♂️ About">
+                    <span>🙋🏻‍♂️ About</span>
+                    
+                </a>
+            
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://bobby-sheng.github.io/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/">⌛ Thought</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/">🏗️ Blog</a></div>
+            <h1 class="post-title">
+                AICodeReview ｜ 项目介绍
+            </h1>
+            <div class="post-description">
+                个人开发的AI-Code-Review代码PR
+            </div>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2025-04-10
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>765 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>2 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/porjects/" style="color: var(--secondary)!important;">Porjects</a>
+            </span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            Visit:<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.6.15/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "https://bobby-sheng.github.io/BobbySheng/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId:  null , 
+                                region:  null , 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Catalogue</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#-%e9%87%8d%e7%a3%85%e4%b8%8a%e7%ba%bf%e6%96%b0%e5%91%98%e5%b7%a5%e4%bb%a3%e7%a0%81%e5%ae%88%e6%8a%a4%e8%80%85%e6%ad%a3%e5%bc%8f%e5%85%a5%e8%81%8c%e5%9b%a2%e9%98%9f" aria-label="📢 重磅上线！新员工&quot;代码守护者&quot;正式入职团队">📢 <strong>重磅上线！新员工&quot;代码守护者&quot;正式入职团队</strong></a><ul>
+                        
+                <li>
+                    <a href="#%e8%83%8c%e6%99%af%e4%bb%a3%e7%a0%81%e5%ae%a1%e6%a0%b8%e7%9a%84%e4%ba%ba%e8%82%89%e7%93%b6%e9%a2%88%e8%af%a5%e5%8d%87%e7%ba%a7%e4%ba%86" aria-label="背景：代码审核的&quot;人肉瓶颈&quot;，该升级了！"><strong>背景：代码审核的&quot;人肉瓶颈&quot;，该升级了！</strong></a></li>
+                <li>
+                    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81-ai-%e5%ae%88%e6%8a%a4%e8%80%85" aria-label="为什么需要 AI 守护者？"><strong>为什么需要 AI 守护者？</strong></a></li>
+                <li>
+                    <a href="#%e6%8f%ad%e7%a7%98%e5%ae%88%e6%8a%a4%e8%80%85%e7%9a%84%e5%b7%a5%e4%bd%9c%e6%b5%81" aria-label="揭秘守护者的工作流"><strong>揭秘守护者的工作流</strong></a><ul>
+                        
+                <li>
+                    <a href="#%e6%8a%80%e6%9c%af%e5%9b%9b%e9%87%8d%e5%a5%8f" aria-label="技术四重奏"><strong>技术四重奏</strong></a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%9c%aa%e6%9d%a5%e8%93%9d%e5%9b%be%e4%bb%8e%e6%a3%80%e6%9f%a5%e5%91%98%e5%88%b0%e6%9e%b6%e6%9e%84%e9%a1%be%e9%97%ae" aria-label="未来蓝图：从&quot;检查员&quot;到&quot;架构顾问&quot;"><strong>未来蓝图：从&quot;检查员&quot;到&quot;架构顾问&quot;</strong></a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+            const id = encodeURI(element.getAttribute('id')).toLowerCase();
+            if (element === activeElement){
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+            } else {
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+            }
+        })
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h3 id="-重磅上线新员工代码守护者正式入职团队">📢 <strong>重磅上线！新员工&quot;代码守护者&quot;正式入职团队</strong><a hidden class="anchor" aria-hidden="true" href="#-重磅上线新员工代码守护者正式入职团队">#</a></h3>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753155007060208711/6f74fa0f_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<hr>
+<h4 id="背景代码审核的人肉瓶颈该升级了"><strong>背景：代码审核的&quot;人肉瓶颈&quot;，该升级了！</strong><a hidden class="anchor" aria-hidden="true" href="#背景代码审核的人肉瓶颈该升级了">#</a></h4>
+<p>在高速迭代的研发流程中，代码审核如同一场与时间的赛跑。传统人工审核面临三大痛点：
+✅ <strong>耗时费力</strong>：动辄数千行的代码提交，肉眼逐行审查效率低下；
+✅ <strong>标准波动</strong>：不同审核者的经验差异可能导致规则执行不一致；
+✅ <strong>疲劳遗漏</strong>：重复劳动容易忽略关键隐患，深夜提交的代码更可能&quot;漏网&quot;</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753155013419612275/8aa5f1c1_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<hr>
+<h4 id="为什么需要-ai-守护者"><strong>为什么需要 AI 守护者？</strong><a hidden class="anchor" aria-hidden="true" href="#为什么需要-ai-守护者">#</a></h4>
+<blockquote>
+<p>&ldquo;AI 不是替代者，而是让人类更专注创造&rdquo;</p></blockquote>
+<ul>
+<li>
+<p><strong>全天候哨兵</strong>：7x24 小时即时响应，凌晨提交的代码也能秒级初筛</p>
+</li>
+<li>
+<p><strong>全景扫描</strong>：通过大语言模型理解代码逻辑，识别潜在漏洞和规范偏离</p>
+</li>
+</ul>
+<p><strong>数据卡片</strong>：
+内测数据显示，守护者平均<strong>提前发现 82%的基础缺陷</strong>，人工审核时间缩短<strong> 65%</strong>。</p>
+<hr>
+<h4 id="揭秘守护者的工作流"><strong>揭秘守护者的工作流</strong><a hidden class="anchor" aria-hidden="true" href="#揭秘守护者的工作流">#</a></h4>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753155041750888113/490a48ab_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<ol>
+<li>代码提交 → 2。 Webhook 触发 → 3。 大模型分析 → 4。 FuncCalling 结构化→ 5。 多端反馈</li>
+</ol>
+<h5 id="技术四重奏"><strong>技术四重奏</strong><a hidden class="anchor" aria-hidden="true" href="#技术四重奏">#</a></h5>
+<ol>
+<li>
+<p><strong>智能触发</strong></p>
+<ul>
+<li>
+<p>对接 Bitbucket/GitLab/GitHub 等主流仓库的 OpenAPI</p>
+</li>
+<li>
+<p>Webhook 实时捕获 push/merge 请求</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>深度解析</strong></p>
+<ul>
+<li>
+<p>基于 FuncCalling 技术结构化提取关键信息</p>
+</li>
+<li>
+<p>支持市面热门大模型分析代码逻辑</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>三维反馈</strong></p>
+<ul>
+<li>📱 <strong>飞书即时预警</strong>：高危问题实时推送</li>
+</ul>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753155050337713923/de85f31d_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<ul>
+<li>💬 <strong>代码评论锚定</strong>：精准定位问题行并建议优化</li>
+</ul>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753155125887077047/ecfb53b9_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753155145240407197/e7a08f60_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<ul>
+<li>📊 <strong>可视化报告</strong>：缺陷分布图+改进优先级评+意见反馈收集</li>
+</ul>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753155154306191570/ef544a75_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+</li>
+</ol>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753155163178404498/389d6807_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753155172557335097/3381f626_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<hr>
+<h4 id="未来蓝图从检查员到架构顾问"><strong>未来蓝图：从&quot;检查员&quot;到&quot;架构顾问&quot;</strong><a hidden class="anchor" aria-hidden="true" href="#未来蓝图从检查员到架构顾问">#</a></h4>
+<p><strong>技术演进路线</strong>：</p>
+<ul>
+<li>
+<p><strong>知识库赋能</strong>：建立项目专属代码记忆库，理解整体架构上下文</p>
+</li>
+<li>
+<p><strong>智能进化</strong>：通过持续反馈优化检测策略，支持自定义规则引擎</p>
+</li>
+<li>
+<p><strong>质量洞察</strong>：</p>
+<ul>
+<li>
+<p>📅 周度/月度代码质量白皮书</p>
+</li>
+<li>
+<p>👥 开发者成长档案（代码规范进步曲线）</p>
+</li>
+<li>
+<p>🔮 风险预测：基于历史数据预警架构腐化趋势</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>量化评估</strong></p>
+<ul>
+<li>
+<p>独创代码健康度评分体系（架构/安全/规范三维度）</p>
+</li>
+<li>
+<p>历史记录对比分析，生成开发者能力画像</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" src="https://telegraph-image-f19.pages.dev/file/AgACAgUAAyEGAASMdnD-AAMFaH8Io-bY0hseHr88-Yt6NWrRHmYAArjEMRuO0PlXrO50QhZj638BAAMCAAN3AAM2BA.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<hr>
+<p><strong>文末寄语</strong>：</p>
+<blockquote>
+<p>&ldquo;最好的技术不是取代人类，而是让我们有更多时间去做机器做不到的事——创造真正的价值。&rdquo;</p></blockquote>
+<p><img loading="lazy" src="https://telegraph-image-f19.pages.dev/file/AgACAgUAAyEGAASMdnD-AAMGaH8JFeBv_YDM4SyCeJ_knx4yPkEAArnEMRuO0PlXS_zLbJBRk0kBAAMCAAN3AAM2BA.jpg" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+
+
+        </div>
+        <div class="post-reward">
+            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
+                <div id="QR" style="opacity: 0;">
+                    <div id="wechat" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="wechat_qr" src="https://bobby-sheng.github.io/BobbySheng/img/wechat_pay.png" alt="wechat_pay"></a>
+                        <p>微信</p>
+                    </div>
+                    <div id="alipay" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="alipay_qr" src="https://bobby-sheng.github.io/BobbySheng/img/alipay.png" alt="alipay"></a>
+                        <p>支付宝</p>
+                    </div>
+                </div>
+                <button id="rewardButton"
+                        onclick="
+                    var qr = document.getElementById('QR');
+                    if (qr.style.opacity === '0') {
+                        qr.style.opacity='1';
+                    } else {
+                        qr.style.opacity='0'
+                    }"
+                >
+                    <span>🧧 鼓励</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="prev" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D/">
+    <span class="title">« Prev Page</span>
+    <br>
+    <span>工具开发 | iNetPublish发布管理平台介绍</span>
+  </a>
+  <a class="next" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/bitbucket%E4%B8%8E%E9%A3%9E%E4%B9%A6%E9%9B%86%E6%88%90%E6%8F%90%E4%BA%A4pr%E5%8F%91%E9%80%81%E9%A3%9E%E4%B9%A6%E9%80%9A%E7%9F%A5/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>Bitbucket与飞书集成|提交pr发送飞书通知</span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+
+
+
+    
+
+    
+    
+    
+</article>
+</main>
+
+
+<footer class="footer">
+
+    <a href="https://gohugo.io/" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/frame-hugo-blue?style=flat&logo=hugo">
+    </a>
+    <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/theme-papermod-lightgrey?style=flat&logo=BookStack">
+    </a>
+        <a href="https://dash.cloudflare.com/" target="_blank">
+        <img style="display: unset;" src="https://telegraph-image-f19.pages.dev/file/6b25043a544164be8f9d8.png">
+    </a>
+
+    <br>
+
+    <span id="runtime_span"></span>
+    <script
+        type="text/javascript">function show_runtime() { window.setTimeout("show_runtime()", 1000); X = new Date("7/13/2021 1:00:00"); Y = new Date(); T = (Y.getTime() - X.getTime()); M = 24 * 60 * 60 * 1000; a = T / M; A = Math.floor(a); b = (a - A) * 24; B = Math.floor(b); c = (b - B) * 60; C = Math.floor((b - B) * 60); D = Math.floor((c - C) * 60); runtime_span.innerHTML = "网站已运行" + A + "天" + B + "小时" + C + "分" + D + "秒" } show_runtime();</script>
+    |
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container">
+        
+        总访客数:  <span id="busuanzi_value_site_uv"></span>
+        |
+        总访问量:  <span id="busuanzi_value_site_pv"></span>
+    </span>
+
+    <br>
+
+    <a href="https://beian.miit.gov.cn/" target="_blank" style="border-bottom:1px solid">Bobby</a>&nbsp;
+    |
+    <span>
+        Copyright
+        &copy;
+        2018-2025
+        <a href="https://bobby-sheng.github.io/BobbySheng/en/" style="border-bottom:1px solid">Bobby Blog</a>
+    </span>
+
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '📄copy';
+
+        function copyingDone() {
+            copybutton.innerText = '👌🏻Code_copied!';
+            setTimeout(() => {
+                copybutton.innerText = '📄copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {
+            }
+            ;
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild === container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName === "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+
+</body>
+
+</html>

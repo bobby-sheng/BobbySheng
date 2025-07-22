@@ -6,7 +6,25 @@
     <description>Recent content on Bobby Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bobby-sheng.github.io/BobbySheng/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bobby-sheng.github.io/BobbySheng/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工具开发 | iNetPublish发布管理平台介绍</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Sat, 19 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D/</guid>
+      <description>个人开发的发布管理平台介绍</description>
+    </item>
+    
+    <item>
+      <title>AICodeReview ｜ 项目介绍</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/ai-code-review%E4%BB%A3%E7%A0%81pr/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/ai-code-review%E4%BB%A3%E7%A0%81pr/</guid>
+      <description>个人开发的AI-Code-Review代码PR</description>
+    </item>
+    
     <item>
       <title>Bitbucket与飞书集成|提交pr发送飞书通知</title>
       <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/bitbucket%E4%B8%8E%E9%A3%9E%E4%B9%A6%E9%9B%86%E6%88%90%E6%8F%90%E4%BA%A4pr%E5%8F%91%E9%80%81%E9%A3%9E%E4%B9%A6%E9%80%9A%E7%9F%A5/</link>
@@ -220,7 +238,111 @@
       <pubDate>Sat, 06 Nov 2021 14:57:28 +0800</pubDate>
       
       <guid>https://bobby-sheng.github.io/BobbySheng/en/about/</guid>
-      <description>About my Life 个人公众号接入AI大模型 About my Work 自动化框架从零构建与落地 飞书开发者有奖征稿｜1024创作挑战赛 一等奖 原文链接： https://open.feishu-pre.cn/community/articles/7301626669633552412 公众号推文： https://mp.weixin.qq.com/s/vmUStStlNm-2XlqZ9TaIcQ Chatgpt4.0接入飞书机器人 About My Skills 技能 掌握情况 Python ✅ Pytest ✅ Fastapi ✅ Flask ✅ JavaScript ✅ HTML/CSS ✅ SQL ✅ Git ✅ Docker ✅ Jmeter ✅ Jenkins ✅ Linux ✅ 爬虫 ✅ 专业测试 ✅ 各类项目管理平台 ✅ 其他 ✅ About My Experience 敬请</description>
+      <description>&lt;h1 id=&#34;about-my-life&#34;&gt;&lt;span style=&#34;color: Teal;&#34;&gt;About my Life&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://telegraph-image-f19.pages.dev/file/b8f22560639899cb95da7.jpg&#34; alt=&#34;img.png&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://telegraph-image-f19.pages.dev/file/340043dd69e07224f85b8.jpg&#34; alt=&#34;img.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;个人公众号接入AI大模型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://telegraph-image-f19.pages.dev/file/2101bd3e6b02a1fe160d2.png&#34; alt=&#34;img.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;about-my-work&#34;&gt;&lt;span style=&#34;color: Teal;&#34;&gt;About my Work&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://telegraph-image-f19.pages.dev/file/36abd099ac725911ba9ad.jpg&#34; alt=&#34;img.png&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://telegraph-image-f19.pages.dev/file/58e0f23c71aeb7ac08f6e.jpg&#34; alt=&#34;img.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;自动化框架从零构建与落地&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://telegraph-image-f19.pages.dev/file/2fe6b8b442f6fe1174ada.png&#34; alt=&#34;img.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;飞书开发者有奖征稿｜1024创作挑战赛 一等奖&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://telegraph-image-f19.pages.dev/file/21b8d5a199a8c1d58f96e.jpg&#34; alt=&#34;img.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;原文链接： &lt;a href=&#34;https://open.feishu-pre.cn/community/articles/7301626669633552412&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; style=&#34;color:#42b983&#34;;&gt;https://open.feishu-pre.cn/community/articles/7301626669633552412&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;公众号推文： &lt;a href=&#34;https://mp.weixin.qq.com/s/vmUStStlNm-2XlqZ9TaIcQ&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; style=&#34;color:#42b983&#34;;&gt;https://mp.weixin.qq.com/s/vmUStStlNm-2XlqZ9TaIcQ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chatgpt4.0接入飞书机器人&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://telegraph-image-f19.pages.dev/file/c4528b445352d7eb6ff27.png&#34; alt=&#34;img.png&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://telegraph-image-f19.pages.dev/file/534810295bc2076b3eb8f.png&#34; alt=&#34;img.png&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://telegraph-image-f19.pages.dev/file/67c35a32a63248bb607a2.png&#34; alt=&#34;img.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;about-my-skills&#34;&gt;&lt;span style=&#34;color: Teal;&#34;&gt;About My Skills&lt;/span&gt;&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;技能&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;掌握情况&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Python&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Pytest&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Fastapi&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Flask&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;JavaScript&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;HTML/CSS&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SQL&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Git&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Docker&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Jmeter&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Jenkins&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Linux&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;爬虫&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;专业测试&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;各类项目管理平台&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;其他&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;about-my-experience&#34;&gt;&lt;span style=&#34;color: Teal;&#34;&gt;About My Experience&lt;/span&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;敬请期待&#34;&gt;敬请期待&amp;hellip;.&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -229,7 +351,126 @@
       <pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://bobby-sheng.github.io/BobbySheng/en/links/</guid>
-      <description>👉友链为随机顺序 Bobby Blog 我的 wordpress 站点 cuikx&amp;#39;s blog cuikx&amp;#39;s blog Sulv&amp;#39;s Blog 一个记录技术、阅读、生活的博客 陈桂林博客 成功最有效的方法就是向有经验的人学习！ 黄忠德的博客 DevOps,SRE,Python,Golang程序员,开源爱好者 阿虚同学的储物间 收集了很多实用网站 老生杂谈的 IT 人 老生杂谈，后继有人。 Yunyi’s</description>
+      <description>&lt;div style=&#34;font-size: 20px;&#34;&gt;👉友链为随机顺序&lt;/div&gt;
+&lt;div class=&#34;friend&#34;&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; href=https://Bobby.cn title=Bobby&amp;#32;Blog class=&#34;friendurl&#34;&gt;
+  &lt;div class=&#34;frienddiv&#34;&gt;
+    &lt;div class=&#34;frienddivleft&#34;&gt;
+      &lt;img class=&#34;myfriend&#34; src=https://image.Bobby.cn/Bobby.jpg /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;frienddivright&#34;&gt;
+      &lt;div class=&#34;friendname&#34;&gt;Bobby Blog&lt;/div&gt;
+      &lt;div class=&#34;friendinfo&#34;&gt;我的 wordpress 站点&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a target=&#34;_blank&#34; href=https://cuikx.cn/ title=cuikx&amp;#39;s&amp;#32;blog class=&#34;friendurl&#34;&gt;
+  &lt;div class=&#34;frienddiv&#34;&gt;
+    &lt;div class=&#34;frienddivleft&#34;&gt;
+      &lt;img class=&#34;myfriend&#34; src=https://cuikx.cn/wp-content/uploads/2022/07/touxiang.jpg /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;frienddivright&#34;&gt;
+      &lt;div class=&#34;friendname&#34;&gt;cuikx&amp;#39;s blog&lt;/div&gt;
+      &lt;div class=&#34;friendinfo&#34;&gt;cuikx&amp;#39;s blog&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a target=&#34;_blank&#34; href=https://www.sulvblog.cn title=Sulv&amp;#39;s&amp;#32;Blog class=&#34;friendurl&#34;&gt;
+  &lt;div class=&#34;frienddiv&#34;&gt;
+    &lt;div class=&#34;frienddivleft&#34;&gt;
+      &lt;img class=&#34;myfriend&#34; src=https://www.sulvblog.cn/img/Q.gif /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;frienddivright&#34;&gt;
+      &lt;div class=&#34;friendname&#34;&gt;Sulv&amp;#39;s Blog&lt;/div&gt;
+      &lt;div class=&#34;friendinfo&#34;&gt;一个记录技术、阅读、生活的博客&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a target=&#34;_blank&#34; href=https://www.gl.sh.cn/ title=陈桂林博客 class=&#34;friendurl&#34;&gt;
+  &lt;div class=&#34;frienddiv&#34;&gt;
+    &lt;div class=&#34;frienddivleft&#34;&gt;
+      &lt;img class=&#34;myfriend&#34; src=https://www.gl.sh.cn/wp-content/uploads/2018/06/logo20180626052320578.png /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;frienddivright&#34;&gt;
+      &lt;div class=&#34;friendname&#34;&gt;陈桂林博客&lt;/div&gt;
+      &lt;div class=&#34;friendinfo&#34;&gt;成功最有效的方法就是向有经验的人学习！&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a target=&#34;_blank&#34; href=https://huangzhongde.cn/ title=黄忠德的博客 class=&#34;friendurl&#34;&gt;
+  &lt;div class=&#34;frienddiv&#34;&gt;
+    &lt;div class=&#34;frienddivleft&#34;&gt;
+      &lt;img class=&#34;myfriend&#34; src=https://huangzhongde.cn/img/huangzhongde.png /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;frienddivright&#34;&gt;
+      &lt;div class=&#34;friendname&#34;&gt;黄忠德的博客&lt;/div&gt;
+      &lt;div class=&#34;friendinfo&#34;&gt;DevOps,SRE,Python,Golang程序员,开源爱好者&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a target=&#34;_blank&#34; href=https://axutongxue.com/ title=阿虚同学的储物间 class=&#34;friendurl&#34;&gt;
+  &lt;div class=&#34;frienddiv&#34;&gt;
+    &lt;div class=&#34;frienddivleft&#34;&gt;
+      &lt;img class=&#34;myfriend&#34; src=https://cdn.jsdelivr.net/gh/axutongxue/axutongxue.github.io@main/favicon.ico /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;frienddivright&#34;&gt;
+      &lt;div class=&#34;friendname&#34;&gt;阿虚同学的储物间&lt;/div&gt;
+      &lt;div class=&#34;friendinfo&#34;&gt;收集了很多实用网站&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a target=&#34;_blank&#34; href=https://www.oldit.cn title=老生杂谈的&amp;#32;IT&amp;#32;人 class=&#34;friendurl&#34;&gt;
+  &lt;div class=&#34;frienddiv&#34;&gt;
+    &lt;div class=&#34;frienddivleft&#34;&gt;
+      &lt;img class=&#34;myfriend&#34; src=https://djy.oldit.cn/image/author.webp /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;frienddivright&#34;&gt;
+      &lt;div class=&#34;friendname&#34;&gt;老生杂谈的 IT 人&lt;/div&gt;
+      &lt;div class=&#34;friendinfo&#34;&gt;老生杂谈，后继有人。&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a target=&#34;_blank&#34; href=https://www.yunyitang.me/zh/ title=Yunyi’s&amp;#32;Blog class=&#34;friendurl&#34;&gt;
+  &lt;div class=&#34;frienddiv&#34;&gt;
+    &lt;div class=&#34;frienddivleft&#34;&gt;
+      &lt;img class=&#34;myfriend&#34; src=https://www.yunyitang.me/img/Avatar.png /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;frienddivright&#34;&gt;
+      &lt;div class=&#34;friendname&#34;&gt;Yunyi’s Blog&lt;/div&gt;
+      &lt;div class=&#34;friendinfo&#34;&gt;Little squirrel Hopping around&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;!-- &lt;a target=&#34;_blank&#34; href=ZgotmplZ title=ZgotmplZ class=&#34;friendurl&#34;&gt;
+  &lt;div class=&#34;frienddiv&#34;&gt;
+    &lt;div class=&#34;frienddivleft&#34;&gt;
+      &lt;img class=&#34;myfriend&#34; src=ZgotmplZ /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;frienddivright&#34;&gt;
+      &lt;div class=&#34;friendname&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;friendinfo&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+ --&gt;
+&lt;!-- &lt;details&gt;
+    &lt;summary style=&#34;cursor: pointer; margin-top: 10px; margin-bottom: 10px&#34;&gt;
+        &lt;span style=&#34;font-size: 20px;&#34;&gt;点击查看更多友链......&lt;/span&gt;
+	&lt;/summary&gt;
+    ....
+&lt;/details&gt; --&gt;
+&lt;/div&gt;
+&lt;div style=&#34;font-size: 20px;&#34;&gt;👉友链格式&lt;/div&gt;
+&lt;div style=&#34;text-indent: 1em;&#34;&gt;
+&lt;p&gt;名称: Bobby&#39;s Blog&lt;/p&gt;</description>
     </item>
     
     <item>

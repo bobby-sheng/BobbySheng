@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>工具开发 | iNetPublish发布管理平台介绍 | Bobby Blog</title>
+<meta name="keywords" content="Porjects">
+<meta name="description" content="个人开发的发布管理平台介绍">
+<meta name="author" content="Author:&nbsp;Bobby">
+<link rel="canonical" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D/">
+<link crossorigin="anonymous" href="/BobbySheng/assets/css/stylesheet.953b20e619a5ab28b75182985020c82400da620978081e1e845976a73f7c4223.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/BobbySheng/assets/js/highlight.b07f1598fbd6e36a2c5d5be53f96f80b58dce8f18b5ba91c0219a403f6291558.js"
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="apple-touch-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<link rel="mask-icon" href="https://bobby-sheng.github.io/BobbySheng/img/title.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta property="og:title" content="工具开发 | iNetPublish发布管理平台介绍" />
+<meta property="og:description" content="个人开发的发布管理平台介绍" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D/" />
+<meta property="og:image" content="https://foruda.gitee.com/images/1753152890864060330/6c9f754f_5617712.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-07-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-07-19T00:00:00+00:00" />
+ <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://foruda.gitee.com/images/1753152890864060330/6c9f754f_5617712.png" />
+<meta name="twitter:title" content="工具开发 | iNetPublish发布管理平台介绍"/>
+<meta name="twitter:description" content="个人开发的发布管理平台介绍"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "⌛ Thought",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "🏗️ Blog",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "工具开发 | iNetPublish发布管理平台介绍",
+      "item": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "工具开发 | iNetPublish发布管理平台介绍",
+  "name": "工具开发 | iNetPublish发布管理平台介绍",
+  "description": "个人开发的发布管理平台介绍",
+  "keywords": [
+    "Porjects"
+  ],
+  "articleBody": "前言 在软件研发生命周期中，发布更新占据着至关重要的工作，前期做的需求设计/研发编码/测试验收等工作全部都是为了能发布给到客户去使用，我们当前没有发布的管理平台，缺少对客户当前使用环境的了解，每一次的发布心里都没底，最近的一个客户问题在评估到可能会影响到其他客户的情况下，召集了相关的技术支持去拿他们维护对应的客户版本，单独对他们的环境使用包打包更新，这过程花费了不少时间。\n为什么去做这个平台？ 发布内容清晰：每次的更新内容都有工单记录，相关人员工作目标明确，范围清晰\n监控与管理客户组件版本：便于在发现通用紧急问题后，快速定位客户使用的组件版本，判断是否需要更新，避免问题在不同客户间重复出现。\n版本差异对比：分析客户当前使用组件版本与主线分支的差异，辅助负责人决策是否更新客户版本。\n更新计划：管理到客户环境部署到更新计划，不会遗漏忘记更新\n记录操作日志：通过接入飞书登录，精准记录每次操作更新的时间、操作人、更新组件、更新类型（热更新、dev 更新、re 更新、fe 更新）以及是否有配置更新等信息\n整合操作流程：集合研发修复提交、测试环境部署测试、打包组件版本、更新到客户环境等操作流程，实现对客户环境的智能管理，一目了然。\n怎么去使用这个平台？ 平台主要是三个模块，分别是提交发布信息、发布记录、客户版本。我列举几个场景介绍怎么使用。\n场景一 | 客户管理 小明是一位高级技术支持，他的工作更新客户环境当前使用的组件版本解决客户问题，但是他现在遇到难题了，因为公司的客户量暴增，他一个人要维护10个客户，每个客户有2个环境（测试环境、生产环境）加起来就是20个环境需要维护，日常客户组件实际维护工作占了他日常40%的工作时间。可以使用iNetPulish平台去轻松管理，只需要在刚开始录入一下客户当前的版本，即可轻松管理，具体操作如下。\n操作路径 首页-\u003e客户版本-\u003e点击【添加客户】按钮-\u003e输入客户基本信息并保存-\u003e点击新增客户-\u003e新增环境-\u003e添加组件 补充说明 添加所有组件后，那么这个客户环境的组件版本就初始化好了。\n值得注意的是，一个客户可以新增多个环境\n预览 场景二 | 发布记录提交 小熊是程序员，他最近很郁闷。他处理完一些客户环境的问题后需要单独发送给到的负责人去更新，包含了组件版本和需要更新的操作说明，有时候另外一个客户也需要更新相同问题，那么他需要找消息去找操作手册，很容易遗忘。找不到，又得花时间重新写一份\n可以使用iNetPulish平台去轻松管理。\n操作路径 首页-\u003e提交发布信息-\u003e输入修复问题需要更新的组件和操作手册-\u003e点击保存\n补充说明 保存后这个数据会存储到发布记录表中，可以在这里找到所有的记录在案的发布信息\n可以由研发、技术支持、测试操作，都可以操作\n预览 场景三 ｜ 本地部署测试 小飞是一位高级测试，他最近也很郁闷。客户环境出现一些小问题，研发修复好问题后他需要本地测试，每次都需要ssh上服务器后台去找到组件目录操作部署，如果部署测试一个组件还好，但是如果这次修复需要更新3个以上，那么更新就耗费时间做重复的工作了。那么可以使用iNetPulish平台去轻部署到测试环境测试。\n前置条件 前置条件-\u003e研发人员或者技术人员提交了发布记录\n操作类型 本地部署测试 首页-\u003e发布记录-\u003e找到需要更新的发布记录 -\u003e点击部署测试-\u003e输入部署环境-\u003e部署完成后会收到飞书通知，就可以去环境测试了\n补充说明 支持将此记录中的版本部署到不同的测试环境 预览 场景四 | 打包、部署 小白测试完成后需要高级技术支持，他本地测试完成客户更新的组件后需要打包组件，拿到离线部署组件去客户环境部署，可以使用iNetPulish平台去轻松管理。\n前置条件 前置条件-\u003e研发人员或者技术人员提交了发布记录\n操作类型 打包并更新到客户环境 首页-\u003e发布记录-\u003e找到需要更新的发布记录 -\u003e点击此问题记录，进入详情-\u003e点击打包按钮-\u003e打包完成后会收到飞书通知-\u003e点击取包下载到本地-\u003e客户环境更新-\u003e部署客户环境，留存部署证据-\u003e点击部署更新-\u003e输入部署证据和说明-\u003e选择更新到客户和客户环境-\u003e确认后此发布流程完成，更新到版本会同步更新到客户管理中，并且有操作日志\n补充说明 客户部署验证是在客户环境部署完成后再回来操作的 预览 场景五 | 不打包、部署 小白此次的更新不需要打包组件，只是更新模版和一些配置文件\n前置条件 前置条件-\u003e研发人员或者技术人员提交了发布记录\n操作类型 不打包并更新到客户环境 首页-\u003e发布记录-\u003e找到需要更新的发布记录 -\u003e点击此问题记录，进入详情-\u003e点击客户部署客户验证-\u003e客户环境更新-\u003e部署客户环境，留存部署证据-\u003e点击部署更新-\u003e输入部署证据和说明-\u003e选择更新到客户和客户环境-\u003e确认后此发布流程完成，更新到版本会同步更新到客户管理中，并且有操作日志\n补充说明 不打包更新客户环境，不要点打包按钮，直接点击客户环境更新，会到部署流程。后面流程是一样的 预览 场景六 | 环境版本对比 白菜维护了多个客户环境，每个客户都有多个环境。这些环境组件版本的管理很麻烦，因为要保持环境版本的一致时比较困难的事情的。那么有这个平台可以很轻松的管理\n前置条件 前置条件-\u003e客户版本初始化了所有的客户还款\n操作类型 不同环境的所有版本组件对比 首页-\u003e客户版本-\u003e版本对比-\u003e选择客户环境对比\n补充说明 可以通过对比环境的组件版本，清晰的看到哪些版本没有 同步，为什么没有更新 预览 场景七 | 更新安排管理 小白是高级技术支持，维护了多个环境。突然有一周，客户环境问题、需求较多。定好了什么时候要更新上去，那么我可以通过定义更新安排管理去做管理。可以希望更新内容和定好的更新时间，并且可以关联发布申请的工单。\n研发相关 后端是一个基于python微服务组件发布管理系统，用于管理不同客户环境中的组件版本和部署状态。系统主要功能包括：\n用户认证：通过飞书OAuth2进行用户登录认证\n发布记录管理：创建、查询和更新发布记录\n客户环境管理：管理不同客户的环境和组件版本\nJenkins集成：支持组件打包和部署到测试环境\n飞书通知：自动发送打包和部署状态通知\n前端是一个基于Svelte框架开发的单页应用，提供了组件发布管理系统的用户界面。主要功能包括：\n用户认证：通过飞书OAuth2进行登录\n发布记录管理：创建、查看和管理组件发布记录\n客户环境管理：管理不同客户的环境和组件版本\n部署管理：支持组件打包和部署到测试环境\n",
+  "wordCount" : "2711",
+  "inLanguage": "en",
+  "image":"https://foruda.gitee.com/images/1753152890864060330/6c9f754f_5617712.png","datePublished": "2025-07-19T00:00:00Z",
+  "dateModified": "2025-07-19T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Bobby"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bobby Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bobby-sheng.github.io/BobbySheng/img/title.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://bobby-sheng.github.io/BobbySheng/en/" accesskey="h" title="Bobby Blog (Alt + H)">
+                <img src="https://bobby-sheng.github.io/BobbySheng/img/title.png" alt="" aria-label="logo"
+                    height="35">Bobby Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/search" title="🔍 Search (Alt &#43; /)" accesskey=/>
+                    <span>🔍 Search</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/posts" title="📜 Blog">
+                    <span>📜 Blog</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/archives" title="💾 History">
+                    <span>💾 History</span>
+                    
+                </a>
+            
+            </li>
+            <li class="menu-item">
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/about" title="🙋🏻‍♂️ About">
+                    <span>🙋🏻‍♂️ About</span>
+                    
+                </a>
+            
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://bobby-sheng.github.io/BobbySheng/en/">Home</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/">⌛ Thought</a>&nbsp;»&nbsp;<a href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/">🏗️ Blog</a></div>
+            <h1 class="post-title">
+                工具开发 | iNetPublish发布管理平台介绍
+            </h1>
+            <div class="post-description">
+                个人开发的发布管理平台介绍
+            </div>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2025-07-19
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2711 Char
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>6 min
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Author:&nbsp;Bobby
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                Tags:
+                <a href="https://bobby-sheng.github.io/BobbySheng/en/tags/porjects/" style="color: var(--secondary)!important;">Porjects</a>
+            </span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            Visit:<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.6.15/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "https://bobby-sheng.github.io/BobbySheng/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId:  null , 
+                                region:  null , 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Catalogue</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e5%89%8d%e8%a8%80" aria-label="前言">前言</a></li>
+                <li>
+                    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e5%8e%bb%e5%81%9a%e8%bf%99%e4%b8%aa%e5%b9%b3%e5%8f%b0" aria-label="为什么去做这个平台？">为什么去做这个平台？</a></li>
+                <li>
+                    <a href="#%e6%80%8e%e4%b9%88%e5%8e%bb%e4%bd%bf%e7%94%a8%e8%bf%99%e4%b8%aa%e5%b9%b3%e5%8f%b0" aria-label="怎么去使用这个平台？">怎么去使用这个平台？</a><ul>
+                        
+                <li>
+                    <a href="#%e5%9c%ba%e6%99%af%e4%b8%80--%e5%ae%a2%e6%88%b7%e7%ae%a1%e7%90%86" aria-label="场景一 | 客户管理">场景一 | 客户管理</a><ul>
+                        
+                <li>
+                    <a href="#%e6%93%8d%e4%bd%9c%e8%b7%af%e5%be%84" aria-label="操作路径">操作路径</a></li>
+                <li>
+                    <a href="#%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e" aria-label="补充说明">补充说明</a></li>
+                <li>
+                    <a href="#%e9%a2%84%e8%a7%88" aria-label="预览">预览</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%9c%ba%e6%99%af%e4%ba%8c--%e5%8f%91%e5%b8%83%e8%ae%b0%e5%bd%95%e6%8f%90%e4%ba%a4" aria-label="场景二 | 发布记录提交">场景二 | 发布记录提交</a><ul>
+                        
+                <li>
+                    <a href="#%e6%93%8d%e4%bd%9c%e8%b7%af%e5%be%84-1" aria-label="操作路径">操作路径</a></li>
+                <li>
+                    <a href="#%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e-1" aria-label="补充说明">补充说明</a></li>
+                <li>
+                    <a href="#%e9%a2%84%e8%a7%88-1" aria-label="预览">预览</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%9c%ba%e6%99%af%e4%b8%89--%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%e6%b5%8b%e8%af%95" aria-label="场景三 ｜ 本地部署测试">场景三 ｜ 本地部署测试</a><ul>
+                        
+                <li>
+                    <a href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="前置条件">前置条件</a></li>
+                <li>
+                    <a href="#%e6%93%8d%e4%bd%9c%e7%b1%bb%e5%9e%8b" aria-label="操作类型">操作类型</a><ul>
+                        
+                <li>
+                    <a href="#%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%e6%b5%8b%e8%af%95" aria-label="本地部署测试">本地部署测试</a></li>
+                <li>
+                    <a href="#%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e-2" aria-label="补充说明">补充说明</a></li>
+                <li>
+                    <a href="#%e9%a2%84%e8%a7%88-2" aria-label="预览">预览</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%9c%ba%e6%99%af%e5%9b%9b--%e6%89%93%e5%8c%85%e9%83%a8%e7%bd%b2" aria-label="场景四 | 打包、部署">场景四 | 打包、部署</a><ul>
+                        
+                <li>
+                    <a href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6-1" aria-label="前置条件">前置条件</a></li>
+                <li>
+                    <a href="#%e6%93%8d%e4%bd%9c%e7%b1%bb%e5%9e%8b-1" aria-label="操作类型">操作类型</a><ul>
+                        
+                <li>
+                    <a href="#%e6%89%93%e5%8c%85%e5%b9%b6%e6%9b%b4%e6%96%b0%e5%88%b0%e5%ae%a2%e6%88%b7%e7%8e%af%e5%a2%83" aria-label="打包并更新到客户环境">打包并更新到客户环境</a></li>
+                <li>
+                    <a href="#%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e-3" aria-label="补充说明">补充说明</a></li>
+                <li>
+                    <a href="#%e9%a2%84%e8%a7%88-3" aria-label="预览">预览</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%9c%ba%e6%99%af%e4%ba%94--%e4%b8%8d%e6%89%93%e5%8c%85%e9%83%a8%e7%bd%b2" aria-label="场景五 | 不打包、部署">场景五 | 不打包、部署</a><ul>
+                        
+                <li>
+                    <a href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6-2" aria-label="前置条件">前置条件</a></li>
+                <li>
+                    <a href="#%e6%93%8d%e4%bd%9c%e7%b1%bb%e5%9e%8b-2" aria-label="操作类型">操作类型</a><ul>
+                        
+                <li>
+                    <a href="#%e4%b8%8d%e6%89%93%e5%8c%85%e5%b9%b6%e6%9b%b4%e6%96%b0%e5%88%b0%e5%ae%a2%e6%88%b7%e7%8e%af%e5%a2%83" aria-label="不打包并更新到客户环境">不打包并更新到客户环境</a></li>
+                <li>
+                    <a href="#%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e-4" aria-label="补充说明">补充说明</a></li>
+                <li>
+                    <a href="#%e9%a2%84%e8%a7%88-4" aria-label="预览">预览</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%9c%ba%e6%99%af%e5%85%ad----%e7%8e%af%e5%a2%83%e7%89%88%e6%9c%ac%e5%af%b9%e6%af%94" aria-label="场景六  |  环境版本对比">场景六  |  环境版本对比</a><ul>
+                        
+                <li>
+                    <a href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6-3" aria-label="前置条件">前置条件</a></li>
+                <li>
+                    <a href="#%e6%93%8d%e4%bd%9c%e7%b1%bb%e5%9e%8b-3" aria-label="操作类型">操作类型</a><ul>
+                        
+                <li>
+                    <a href="#%e4%b8%8d%e5%90%8c%e7%8e%af%e5%a2%83%e7%9a%84%e6%89%80%e6%9c%89%e7%89%88%e6%9c%ac%e7%bb%84%e4%bb%b6%e5%af%b9%e6%af%94" aria-label="不同环境的所有版本组件对比">不同环境的所有版本组件对比</a></li>
+                <li>
+                    <a href="#%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e-5" aria-label="补充说明">补充说明</a></li>
+                <li>
+                    <a href="#%e9%a2%84%e8%a7%88-5" aria-label="预览">预览</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%9c%ba%e6%99%af%e4%b8%83---%e6%9b%b4%e6%96%b0%e5%ae%89%e6%8e%92%e7%ae%a1%e7%90%86" aria-label="场景七 |  更新安排管理">场景七 |  更新安排管理</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e7%a0%94%e5%8f%91%e7%9b%b8%e5%85%b3" aria-label="研发相关">研发相关</a>
+                </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+            const id = encodeURI(element.getAttribute('id')).toLowerCase();
+            if (element === activeElement){
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+            } else {
+                document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+            }
+        })
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h1 id="前言">前言<a hidden class="anchor" aria-hidden="true" href="#前言">#</a></h1>
+<p>在软件研发生命周期中，发布更新占据着至关重要的工作，前期做的需求设计/研发编码/测试验收等工作全部都是为了能发布给到客户去使用，我们当前没有发布的管理平台，缺少对客户当前使用环境的了解，每一次的发布心里都没底，最近的一个客户问题在评估到可能会影响到其他客户的情况下，召集了相关的技术支持去拿他们维护对应的客户版本，单独对他们的环境使用包打包更新，这过程花费了不少时间。</p>
+<h1 id="为什么去做这个平台">为什么去做这个平台？<a hidden class="anchor" aria-hidden="true" href="#为什么去做这个平台">#</a></h1>
+<ol>
+<li>
+<p><strong>发布内容清晰：</strong>每次的更新内容都有工单记录，相关人员工作目标明确，范围清晰</p>
+</li>
+<li>
+<p><strong>监控与管理客户组件版本：</strong>便于在发现通用紧急问题后，快速定位客户使用的组件版本，判断是否需要更新，避免问题在不同客户间重复出现。</p>
+</li>
+<li>
+<p><strong>版本差异对比：</strong>分析客户当前使用组件版本与主线分支的差异，辅助负责人决策是否更新客户版本。</p>
+</li>
+<li>
+<p><strong>更新计划：</strong>管理到客户环境部署到更新计划，不会遗漏忘记更新</p>
+</li>
+<li>
+<p><strong>记录操作日志：</strong>通过接入飞书登录，精准记录每次操作更新的时间、操作人、更新组件、更新类型（热更新、dev 更新、re 更新、fe 更新）以及是否有配置更新等信息</p>
+</li>
+<li>
+<p><strong>整合操作流程：</strong>集合研发修复提交、测试环境部署测试、打包组件版本、更新到客户环境等操作流程，实现对客户环境的智能管理，一目了然。</p>
+</li>
+</ol>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753152890864060330/6c9f754f_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<h1 id="怎么去使用这个平台">怎么去使用这个平台？<a hidden class="anchor" aria-hidden="true" href="#怎么去使用这个平台">#</a></h1>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153018374588296/2cc6c26d_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p>平台主要是三个模块，分别是提交发布信息、发布记录、客户版本。我列举几个场景介绍怎么使用。</p>
+<h2 id="场景一--客户管理">场景一 | 客户管理<a hidden class="anchor" aria-hidden="true" href="#场景一--客户管理">#</a></h2>
+<p>小明是一位高级技术支持，他的工作更新客户环境当前使用的组件版本解决客户问题，但是他现在遇到难题了，因为公司的客户量暴增，他一个人要维护10个客户，每个客户有2个环境（测试环境、生产环境）加起来就是20个环境需要维护，日常客户组件实际维护工作占了他日常40%的工作时间。可以使用iNetPulish平台去轻松管理，只需要在刚开始录入一下客户当前的版本，即可轻松管理，具体操作如下。</p>
+<h3 id="操作路径">操作路径<a hidden class="anchor" aria-hidden="true" href="#操作路径">#</a></h3>
+<p>首页-&gt;客户版本-&gt;点击【添加客户】按钮-&gt;输入客户基本信息并保存-&gt;点击新增客户-&gt;新增环境-&gt;添加组件 </p>
+<h3 id="补充说明">补充说明<a hidden class="anchor" aria-hidden="true" href="#补充说明">#</a></h3>
+<ul>
+<li>
+<p>添加所有组件后，那么这个客户环境的组件版本就初始化好了。</p>
+</li>
+<li>
+<p>值得注意的是，一个客户可以新增多个环境</p>
+</li>
+</ul>
+<h3 id="预览">预览<a hidden class="anchor" aria-hidden="true" href="#预览">#</a></h3>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153053168224822/4f642239_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<h2 id="场景二--发布记录提交">场景二 | 发布记录提交<a hidden class="anchor" aria-hidden="true" href="#场景二--发布记录提交">#</a></h2>
+<p>小熊是程序员，他最近很郁闷。他处理完一些客户环境的问题后需要单独发送给到的负责人去更新，包含了组件版本和需要更新的操作说明，有时候另外一个客户也需要更新相同问题，那么他需要找消息去找操作手册，很容易遗忘。找不到，又得花时间重新写一份</p>
+<p>可以使用iNetPulish平台去轻松管理。</p>
+<h3 id="操作路径-1">操作路径<a hidden class="anchor" aria-hidden="true" href="#操作路径-1">#</a></h3>
+<p>首页-&gt;提交发布信息-&gt;输入修复问题需要更新的组件和操作手册-&gt;点击保存</p>
+<h3 id="补充说明-1">补充说明<a hidden class="anchor" aria-hidden="true" href="#补充说明-1">#</a></h3>
+<ul>
+<li>
+<p>保存后这个数据会存储到发布记录表中，可以在这里找到所有的记录在案的发布信息</p>
+</li>
+<li>
+<p>可以由研发、技术支持、测试操作，都可以操作</p>
+</li>
+</ul>
+<h3 id="预览-1">预览<a hidden class="anchor" aria-hidden="true" href="#预览-1">#</a></h3>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153075378712509/d58ce91a_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153098549095823/9e8da432_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<h2 id="场景三--本地部署测试">场景三 ｜ 本地部署测试<a hidden class="anchor" aria-hidden="true" href="#场景三--本地部署测试">#</a></h2>
+<p>小飞是一位高级测试，他最近也很郁闷。客户环境出现一些小问题，研发修复好问题后他需要本地测试，每次都需要ssh上服务器后台去找到组件目录操作部署，如果部署测试一个组件还好，但是如果这次修复需要更新3个以上，那么更新就耗费时间做重复的工作了。那么可以使用iNetPulish平台去轻部署到测试环境测试。</p>
+<h3 id="前置条件">前置条件<a hidden class="anchor" aria-hidden="true" href="#前置条件">#</a></h3>
+<p>前置条件-&gt;研发人员或者技术人员提交了发布记录</p>
+<h3 id="操作类型">操作类型<a hidden class="anchor" aria-hidden="true" href="#操作类型">#</a></h3>
+<h4 id="本地部署测试">本地部署测试<a hidden class="anchor" aria-hidden="true" href="#本地部署测试">#</a></h4>
+<p>首页-&gt;发布记录-&gt;找到需要更新的发布记录 -&gt;点击部署测试-&gt;输入部署环境-&gt;部署完成后会收到飞书通知，就可以去环境测试了</p>
+<h4 id="补充说明-2">补充说明<a hidden class="anchor" aria-hidden="true" href="#补充说明-2">#</a></h4>
+<ul>
+<li>支持将此记录中的版本部署到不同的测试环境</li>
+</ul>
+<h4 id="预览-2">预览<a hidden class="anchor" aria-hidden="true" href="#预览-2">#</a></h4>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153113927948075/68fbd8bd_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153131990651913/0aa5fb71_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<h2 id="场景四--打包部署">场景四 | 打包、部署<a hidden class="anchor" aria-hidden="true" href="#场景四--打包部署">#</a></h2>
+<p>小白测试完成后需要高级技术支持，他本地测试完成客户更新的组件后需要打包组件，拿到离线部署组件去客户环境部署，可以使用iNetPulish平台去轻松管理。</p>
+<h3 id="前置条件-1">前置条件<a hidden class="anchor" aria-hidden="true" href="#前置条件-1">#</a></h3>
+<p>前置条件-&gt;研发人员或者技术人员提交了发布记录</p>
+<h3 id="操作类型-1">操作类型<a hidden class="anchor" aria-hidden="true" href="#操作类型-1">#</a></h3>
+<h4 id="打包并更新到客户环境">打包并更新到客户环境<a hidden class="anchor" aria-hidden="true" href="#打包并更新到客户环境">#</a></h4>
+<p>首页-&gt;发布记录-&gt;找到需要更新的发布记录 -&gt;点击此问题记录，进入详情-&gt;点击打包按钮-&gt;打包完成后会收到飞书通知-&gt;点击取包下载到本地-&gt;客户环境更新-&gt;部署客户环境，留存部署证据-&gt;点击部署更新-&gt;输入部署证据和说明-&gt;选择更新到客户和客户环境-&gt;确认后此发布流程完成，更新到版本会同步更新到客户管理中，并且有操作日志</p>
+<h4 id="补充说明-3">补充说明<a hidden class="anchor" aria-hidden="true" href="#补充说明-3">#</a></h4>
+<ul>
+<li>客户部署验证是在客户环境部署完成后再回来操作的</li>
+</ul>
+<h4 id="预览-3">预览<a hidden class="anchor" aria-hidden="true" href="#预览-3">#</a></h4>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153164911875508/21471b6c_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153195422063934/83f1d11c_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153224884300236/a4876166_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153256745362884/c0cd13e1_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153282394803893/5785965d_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<h2 id="场景五--不打包部署">场景五 | 不打包、部署<a hidden class="anchor" aria-hidden="true" href="#场景五--不打包部署">#</a></h2>
+<p>小白此次的更新不需要打包组件，只是更新模版和一些配置文件</p>
+<h3 id="前置条件-2">前置条件<a hidden class="anchor" aria-hidden="true" href="#前置条件-2">#</a></h3>
+<p>前置条件-&gt;研发人员或者技术人员提交了发布记录</p>
+<h3 id="操作类型-2">操作类型<a hidden class="anchor" aria-hidden="true" href="#操作类型-2">#</a></h3>
+<h4 id="不打包并更新到客户环境">不打包并更新到客户环境<a hidden class="anchor" aria-hidden="true" href="#不打包并更新到客户环境">#</a></h4>
+<p>首页-&gt;发布记录-&gt;找到需要更新的发布记录 -&gt;点击此问题记录，进入详情-&gt;点击客户部署客户验证-&gt;客户环境更新-&gt;部署客户环境，留存部署证据-&gt;点击部署更新-&gt;输入部署证据和说明-&gt;选择更新到客户和客户环境-&gt;确认后此发布流程完成，更新到版本会同步更新到客户管理中，并且有操作日志</p>
+<h4 id="补充说明-4">补充说明<a hidden class="anchor" aria-hidden="true" href="#补充说明-4">#</a></h4>
+<ul>
+<li>不打包更新客户环境，不要点打包按钮，直接点击客户环境更新，会到部署流程。后面流程是一样的</li>
+</ul>
+<h4 id="预览-4">预览<a hidden class="anchor" aria-hidden="true" href="#预览-4">#</a></h4>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153303534203748/b5052b26_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153329819665335/8edd9eb0_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<h2 id="场景六----环境版本对比">场景六  |  环境版本对比<a hidden class="anchor" aria-hidden="true" href="#场景六----环境版本对比">#</a></h2>
+<p>白菜维护了多个客户环境，每个客户都有多个环境。这些环境组件版本的管理很麻烦，因为要保持环境版本的一致时比较困难的事情的。那么有这个平台可以很轻松的管理</p>
+<h3 id="前置条件-3">前置条件<a hidden class="anchor" aria-hidden="true" href="#前置条件-3">#</a></h3>
+<p>前置条件-&gt;客户版本初始化了所有的客户还款</p>
+<h3 id="操作类型-3">操作类型<a hidden class="anchor" aria-hidden="true" href="#操作类型-3">#</a></h3>
+<h4 id="不同环境的所有版本组件对比">不同环境的所有版本组件对比<a hidden class="anchor" aria-hidden="true" href="#不同环境的所有版本组件对比">#</a></h4>
+<p>首页-&gt;客户版本-&gt;版本对比-&gt;选择客户环境对比</p>
+<h4 id="补充说明-5">补充说明<a hidden class="anchor" aria-hidden="true" href="#补充说明-5">#</a></h4>
+<ul>
+<li>可以通过对比环境的组件版本，清晰的看到哪些版本没有 同步，为什么没有更新</li>
+</ul>
+<h4 id="预览-5">预览<a hidden class="anchor" aria-hidden="true" href="#预览-5">#</a></h4>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153355103657610/7ebe3fbd_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<p><img loading="lazy" src="https://foruda.gitee.com/images/1753153380395741586/3fc1c399_5617712.png" alt="输入图片说明"  title="屏幕截图"  />
+</p>
+<h2 id="场景七---更新安排管理">场景七 |  更新安排管理<a hidden class="anchor" aria-hidden="true" href="#场景七---更新安排管理">#</a></h2>
+<p>小白是高级技术支持，维护了多个环境。突然有一周，客户环境问题、需求较多。定好了什么时候要更新上去，那么我可以通过定义更新安排管理去做管理。可以希望更新内容和定好的更新时间，并且可以关联发布申请的工单。</p>
+<h1 id="研发相关">研发相关<a hidden class="anchor" aria-hidden="true" href="#研发相关">#</a></h1>
+<p>后端是一个基于python微服务组件发布管理系统，用于管理不同客户环境中的组件版本和部署状态。系统主要功能包括：</p>
+<ul>
+<li>
+<p>用户认证：通过飞书OAuth2进行用户登录认证</p>
+</li>
+<li>
+<p>发布记录管理：创建、查询和更新发布记录</p>
+</li>
+<li>
+<p>客户环境管理：管理不同客户的环境和组件版本</p>
+</li>
+<li>
+<p>Jenkins集成：支持组件打包和部署到测试环境</p>
+</li>
+<li>
+<p>飞书通知：自动发送打包和部署状态通知</p>
+</li>
+</ul>
+<p>前端是一个基于Svelte框架开发的单页应用，提供了组件发布管理系统的用户界面。主要功能包括：</p>
+<ul>
+<li>
+<p>用户认证：通过飞书OAuth2进行登录</p>
+</li>
+<li>
+<p>发布记录管理：创建、查看和管理组件发布记录</p>
+</li>
+<li>
+<p>客户环境管理：管理不同客户的环境和组件版本</p>
+</li>
+<li>
+<p>部署管理：支持组件打包和部署到测试环境</p>
+</li>
+</ul>
+
+
+        </div>
+        <div class="post-reward">
+            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
+                <div id="QR" style="opacity: 0;">
+                    <div id="wechat" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="wechat_qr" src="https://bobby-sheng.github.io/BobbySheng/img/wechat_pay.png" alt="wechat_pay"></a>
+                        <p>微信</p>
+                    </div>
+                    <div id="alipay" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="alipay_qr" src="https://bobby-sheng.github.io/BobbySheng/img/alipay.png" alt="alipay"></a>
+                        <p>支付宝</p>
+                    </div>
+                </div>
+                <button id="rewardButton"
+                        onclick="
+                    var qr = document.getElementById('QR');
+                    if (qr.style.opacity === '0') {
+                        qr.style.opacity='1';
+                    } else {
+                        qr.style.opacity='0'
+                    }"
+                >
+                    <span>🧧 鼓励</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="next" href="https://bobby-sheng.github.io/BobbySheng/en/posts/blog/ai-code-review%E4%BB%A3%E7%A0%81pr/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>AICodeReview ｜ 项目介绍</span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+
+
+
+    
+
+    
+    
+    
+</article>
+</main>
+
+
+<footer class="footer">
+
+    <a href="https://gohugo.io/" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/frame-hugo-blue?style=flat&logo=hugo">
+    </a>
+    <a href="https://github.com/adityatelange/hugo-PaperMod" target="_blank">
+        <img style="display: unset;" src="https://img.shields.io/badge/theme-papermod-lightgrey?style=flat&logo=BookStack">
+    </a>
+        <a href="https://dash.cloudflare.com/" target="_blank">
+        <img style="display: unset;" src="https://telegraph-image-f19.pages.dev/file/6b25043a544164be8f9d8.png">
+    </a>
+
+    <br>
+
+    <span id="runtime_span"></span>
+    <script
+        type="text/javascript">function show_runtime() { window.setTimeout("show_runtime()", 1000); X = new Date("7/13/2021 1:00:00"); Y = new Date(); T = (Y.getTime() - X.getTime()); M = 24 * 60 * 60 * 1000; a = T / M; A = Math.floor(a); b = (a - A) * 24; B = Math.floor(b); c = (b - B) * 60; C = Math.floor((b - B) * 60); D = Math.floor((c - C) * 60); runtime_span.innerHTML = "网站已运行" + A + "天" + B + "小时" + C + "分" + D + "秒" } show_runtime();</script>
+    |
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container">
+        
+        总访客数:  <span id="busuanzi_value_site_uv"></span>
+        |
+        总访问量:  <span id="busuanzi_value_site_pv"></span>
+    </span>
+
+    <br>
+
+    <a href="https://beian.miit.gov.cn/" target="_blank" style="border-bottom:1px solid">Bobby</a>&nbsp;
+    |
+    <span>
+        Copyright
+        &copy;
+        2018-2025
+        <a href="https://bobby-sheng.github.io/BobbySheng/en/" style="border-bottom:1px solid">Bobby Blog</a>
+    </span>
+
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '📄copy';
+
+        function copyingDone() {
+            copybutton.innerText = '👌🏻Code_copied!';
+            setTimeout(() => {
+                copybutton.innerText = '📄copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {
+            }
+            ;
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild === container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName === "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+
+</body>
+
+</html>

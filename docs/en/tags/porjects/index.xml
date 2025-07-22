@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Porjects on Bobby Blog</title>
+    <link>https://bobby-sheng.github.io/BobbySheng/en/tags/porjects/</link>
+    <description>Recent content in Porjects on Bobby Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bobby-sheng.github.io/BobbySheng/en/tags/porjects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工具开发 | iNetPublish发布管理平台介绍</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Sat, 19 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E4%BB%8B%E7%BB%8D/</guid>
+      <description>个人开发的发布管理平台介绍</description>
+    </item>
+    
+    <item>
+      <title>AICodeReview ｜ 项目介绍</title>
+      <link>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/ai-code-review%E4%BB%A3%E7%A0%81pr/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://bobby-sheng.github.io/BobbySheng/en/posts/blog/ai-code-review%E4%BB%A3%E7%A0%81pr/</guid>
+      <description>个人开发的AI-Code-Review代码PR</description>
+    </item>
+    
+  </channel>
+</rss>

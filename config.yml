@@ -132,7 +132,7 @@ params:
 
   ShowToc: true # 显示目录
   TocOpen: true # 自动展开目录
-  comments: true # 是否开启评论
+  comments: false # 是否开启评论
   
   extendCodeBackground: false # 代码块是否横向展开
 
@@ -204,8 +204,8 @@ params:
   Alipay: img/alipay.png #打赏支付宝图片地址
 
   # twkioo评论
-  twikoo:
-    version: 1.6.15
+  # twikoo:
+  #   version: 1.6.15
 
 taxonomies:
   category: categories
